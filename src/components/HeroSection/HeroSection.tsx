@@ -20,6 +20,7 @@ import {
 import React, { useState, useEffect } from "react";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import Link from "next/link";
+import { ShinyButton } from "../ui/shiny-button";
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -246,6 +247,13 @@ export function HeroSection() {
       animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
       duration: 7,
     },
+    {
+      Icon: Wand2,
+      color: "text-rose-400",
+      position: { top: "50%", left: "38%" },
+      animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
+      duration: 7,
+    },
   ];
 
   return (
@@ -392,7 +400,7 @@ export function HeroSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-white text-violet-600 hover:bg-white/90 font-semibold px-8"
+                  className="bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase"
                 >
                   <Apple className="mr-2 h-5 w-5" />
                   App Store
@@ -405,7 +413,7 @@ export function HeroSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-white text-violet-600 hover:bg-white/90 font-semibold px-8"
+                  className="bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase"
                 >
                   <Smartphone className="mr-2 h-5 w-5" />
                   Google Play
@@ -415,13 +423,7 @@ export function HeroSection() {
                 target="_blank"
                 href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
               >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-border hover:bg-white/10 font-semibold px-8 bg-transparent"
-                >
-                  Try on Web
-                </Button>
+                <ShinyButton>Try on Web</ShinyButton>
               </Link>
             </motion.div>
 
