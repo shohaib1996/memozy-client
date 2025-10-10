@@ -28,23 +28,23 @@ export function FloatingNavbar() {
               <SheetContent side="left" className="w-[300px]">
                 <div className="flex flex-col gap-6 mt-8 mx-3">
                   <Link
-                    href="/how-to-use"
-                    className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setOpen(false)}
+                    target="_blank"
+                    href="https://www.memozy.ai/how-to-use-memozy.html"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     How to use Memozy
                   </Link>
                   <Link
-                    href="/web-app"
-                    className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setOpen(false)}
+                    target="_blank"
+                    href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Web App
                   </Link>
                   <Link
-                    href="/versusly-ai"
-                    className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setOpen(false)}
+                    target="_blank"
+                    href="https://versusly.ai/"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Versusly AI
                   </Link>
@@ -59,19 +59,22 @@ export function FloatingNavbar() {
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <Link
+                target="_blank"
                 href="https://www.memozy.ai/how-to-use-memozy.html"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 How to use Memozy
               </Link>
               <Link
-                href="/web-app"
+                target="_blank"
+                href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Web App
               </Link>
               <Link
-                href="/versusly-ai"
+                target="_blank"
+                href="https://versusly.ai/"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Versusly AI
@@ -81,12 +84,6 @@ export function FloatingNavbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <Link
-              href="/memozy"
-              className="hidden md:block text-sm font-medium hover:text-primary transition-colors"
-            >
-              Memozy
-            </Link>
             <ModeToggle />
           </div>
         </div>
