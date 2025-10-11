@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Star,
+  HeartHandshake,
   Apple,
+  Flame,
   Smartphone,
   MessageSquare,
   Drama,
@@ -16,12 +18,15 @@ import {
   Bell,
   Sparkles,
   Wand2,
+  SmilePlus,
+  Feather,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import Link from "next/link";
 import { ShinyButton } from "../ui/shiny-button";
 import Image from "next/image";
+import { BorderBeam } from "../ui/border-beam";
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -116,9 +121,16 @@ export function HeroSection() {
       duration: 9,
     },
     {
-      Icon: MessageSquare,
+      Icon: HeartHandshake,
       color: "text-violet-400",
       position: { top: "15%", left: "35%" },
+      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+      duration: 8,
+    },
+    {
+      Icon: Flame,
+      color: "text-violet-400",
+      position: { top: "35%", left: "45%" },
       animation: { x: [-20, 20, -20], y: [0, -30, 0] },
       duration: 8,
     },
@@ -151,9 +163,16 @@ export function HeroSection() {
       duration: 9,
     },
     {
-      Icon: ImageIcon,
+      Icon: Feather,
       color: "text-blue-400",
       position: { top: "45%", left: "48%" },
+      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+      duration: 9,
+    },
+    {
+      Icon: Feather,
+      color: "text-blue-400",
+      position: { top: "70%", left: "48%" },
       animation: { x: [0, 30, 0], y: [-20, 20, -20] },
       duration: 9,
     },
@@ -165,9 +184,16 @@ export function HeroSection() {
       duration: 6.5,
     },
     {
-      Icon: Mic,
+      Icon: SmilePlus,
       color: "text-emerald-400",
       position: { top: "60%", right: "40%" },
+      animation: { x: [-15, 15, -15], y: [20, -20, 20] },
+      duration: 6.5,
+    },
+    {
+      Icon: SmilePlus,
+      color: "text-emerald-400",
+      position: { top: "85%", left: "30%" },
       animation: { x: [-15, 15, -15], y: [20, -20, 20] },
       duration: 6.5,
     },
@@ -237,9 +263,30 @@ export function HeroSection() {
     {
       Icon: Sparkles,
       color: "text-fuchsia-400",
-      position: { top: "80%", left: "30%" },
+      position: { top: "80%", right: "10%" },
       animation: { x: [15, -15, 15], y: [-20, 20, -20] },
       duration: 8,
+    },
+    {
+      Icon: Flame,
+      color: "text-violet-400",
+      position: { top: "75%", right: "15%" },
+      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+      duration: 8,
+    },
+    {
+      Icon: Feather,
+      color: "text-blue-400",
+      position: { top: "70%", right: "10%" },
+      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+      duration: 9,
+    },
+    {
+      Icon: SmilePlus,
+      color: "text-emerald-400",
+      position: { top: "75%", left: "40%" },
+      animation: { x: [-15, 15, -15], y: [20, -20, 20] },
+      duration: 6.5,
     },
     {
       Icon: Wand2,
@@ -402,10 +449,11 @@ export function HeroSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase"
+                  className="relative overflow-hidden bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase rounded-lg"
                 >
                   <Apple className="mr-2 h-5 w-5" />
                   App Store
+                  <BorderBeam />
                 </Button>
               </Link>
               <Link
@@ -416,10 +464,11 @@ export function HeroSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase"
+                  className="relative overflow-hidden bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase rounded-lg"
                 >
                   <Smartphone className="mr-2 h-5 w-5" />
                   Google Play
+                  <BorderBeam />
                 </Button>
               </Link>
               <Link
