@@ -12,16 +12,17 @@ const benefits = [
   {
     icon: "MessageSquare",
     title: "Natural AI conversations",
-    description:"Talk, journal, take notes, and organize tasks like you're chatting with a thoughtful friend.",
+    description:
+      "Talk, journal, take notes, and organize tasks like you're chatting with a thoughtful friend.",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: "Drama",
     title: "AI Roleplay",
-    description: "Engage in playful, romantic, emotional, or fantasy chats tailored to your vibe.",
+    description:
+      "Engage in playful, romantic, emotional, or fantasy chats tailored to your vibe.",
     color: "from-purple-500 to-pink-500",
   },
-
   {
     icon: "ImageIcon",
     title: "Image Input & Interpretation",

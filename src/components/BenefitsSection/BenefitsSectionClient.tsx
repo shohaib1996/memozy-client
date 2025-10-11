@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion, useScroll } from "framer-motion";
@@ -33,7 +32,7 @@ const iconMap = {
 
 export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const {  } = useScroll({
+  const {} = useScroll({
     container: containerRef,
   });
 
@@ -42,7 +41,7 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
       {/* Horizontally Scrollable Cards */}
       <div
         ref={containerRef}
-        className="overflow-x-auto scrollbar-hide pb-8 -mx-4 px-4 py-4"
+        className="overflow-x-auto overflow-y-hidden scrollbar-hide pb-8 -mx-4 px-4 py-4"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -62,8 +61,8 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -5 }}
                 className="w-80 flex-shrink-0 cursor-pointer"
               >
                 <div className="h-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 shadow-lg hover:shadow-2xl transition-all duration-300">
@@ -86,6 +85,7 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                   <BorderBeam
                     duration={6}
                     size={400}
+                    borderWidth={2}
                     className="from-transparent via-emerald-500 to-transparent"
                   />
                   <BorderBeam
@@ -117,12 +117,11 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
             ←
           </motion.span>
           <span>
-            <AnimatedShinyText>
-              Swipe to explore all features
-            </AnimatedShinyText>
+            <AnimatedShinyText>Swipe to explore all features</AnimatedShinyText>
           </span>
           <motion.span
             animate={{ x: [0, 10, 0] }}
+            // transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
             transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
           >
             →

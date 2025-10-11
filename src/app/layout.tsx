@@ -14,11 +14,77 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Memozy - Your AI Memory & Companion",
-  description: "Your AI Assistant & AI Companion",
+  title: "Memozy – Your AI Memory & Companion",
+  description:
+    "Talk, reflect, and stay organized with Memozy — your AI companion that remembers, understands, and grows with you. Chat naturally, manage your thoughts, and rediscover your best self.",
+  keywords: [
+    "AI Companion",
+    "AI Memory app",
+    "AI Chat app",
+    "Memozy",
+    "AI Friend",
+    "AI Assistant",
+    "Journal app",
+    "AI Reflection",
+    "AI Notes",
+    "AI Therapy",
+    "Personal AI",
+    "AI Organizer",
+    "Voice AI",
+    "Image AI",
+    "AI Roleplay",
+    "Calendar Sync",
+    "Meeting Scheduler",
+    "Weekly Summary",
+    "Mental Wellness AI",
+    "Productivity AI",
+    "Creative AI",
+    "AI Life Coach",
+    "Emotional Support AI",
+    "Task Management AI",
+    "AI Note Taking",
+    "AI Journaling",
+    "AI Self Improvement",
+    "AI Personal Growth",
+    "AI Mindfulness",
+    "AI Habit Tracker",
+    "AI Goal Setting",
+    "AI Time Management",
+    "AI Study Buddy",
+    "AI Learning Companion",
+  ],
+  authors: [{ name: "Memozy Team" }],
+  creator: "Memozy AI",
+  openGraph: {
+    title: "Memozy – Your AI Memory & Companion",
+    description:
+      "Memozy helps you talk, reflect, and stay organized — an AI companion that remembers and understands you.",
+    url: "https://memozy.ai",
+    siteName: "Memozy",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Memozy – Your AI Memory & Companion",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Memozy – Your AI Memory & Companion",
+    description:
+      "Chat, reflect, and stay organized with your personal AI memory assistant.",
+    images: ["/og-image.png"],
+    creator: "@memozyai",
+  },
   icons: {
     icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -33,7 +99,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

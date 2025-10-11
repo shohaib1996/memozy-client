@@ -50,9 +50,6 @@ export function VisualDemoSectionClient() {
             }}
             className="absolute -bottom-8 -left-8 z-20"
           >
-            {/* <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-500 dark:from-violet-400 dark:to-purple-400 flex items-center justify-center shadow-lg backdrop-blur-sm">
-              <Brain className="w-8 h-8 text-white" />
-            </div> */}
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-500 dark:from-violet-400 dark:to-purple-400 flex items-center justify-center shadow-lg backdrop-blur-sm">
               <Brain className="w-8 h-8 text-white" />
             </div>
@@ -124,7 +121,7 @@ export function VisualDemoSectionClient() {
             ease: "easeInOut",
             delay: 0.5,
           }}
-          className="absolute top-20 right-0 w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 rounded-full -z-10"
+          className="absolute top-20 right-15 w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 rounded-full -z-10"
           style={{
             background:
               "radial-gradient(circle at 30% 30%, rgba(196, 181, 253, 0.4), rgba(139, 92, 246, 0.2))",
@@ -143,7 +140,7 @@ export function VisualDemoSectionClient() {
             ease: "easeInOut",
             delay: 1,
           }}
-          className="absolute top-40 right-20 w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full -z-10"
+          className="absolute top-40 right-30 w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full -z-10"
           style={{
             background:
               "radial-gradient(circle at 30% 30%, rgba(216, 180, 254, 0.4), rgba(168, 85, 247, 0.2))",
@@ -252,7 +249,6 @@ export function VisualDemoSectionClient() {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance bg-gradient-to-r from-violet-600 to-blue-500 dark:from-blue-400 dark:to-violet-600 bg-clip-text text-transparent ">
           Chat, Reflect, and Stay Organized — All in One AI Companion.
         </h2>
-        {/* text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 */}
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
           Experience the future of personal AI assistance. Memozy combines
           intelligent conversations, emotional support, and smart organization
