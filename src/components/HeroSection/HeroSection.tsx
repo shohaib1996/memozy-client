@@ -21,6 +21,7 @@ import React, { useState, useEffect } from "react";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import Link from "next/link";
 import { ShinyButton } from "../ui/shiny-button";
+import Image from "next/image";
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -394,6 +395,7 @@ export function HeroSection() {
               className="flex flex-wrap gap-4"
             >
               <Link
+                rel="noopener noreferrer"
                 target="_blank"
                 href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
               >
@@ -407,6 +409,7 @@ export function HeroSection() {
                 </Button>
               </Link>
               <Link
+                rel="noopener noreferrer"
                 target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
               >
@@ -420,6 +423,7 @@ export function HeroSection() {
                 </Button>
               </Link>
               <Link
+                rel="noopener noreferrer"
                 target="_blank"
                 href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
               >
@@ -465,43 +469,92 @@ export function HeroSection() {
               }}
               className="relative"
             >
-              {/* Phone mockup placeholder */}
-              <div className="relative w-[300px] h-[530px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-[3rem] border-4 border-gray-400/40 shadow-2xl overflow-hidden">
+              {/* === Glowing Radiations (Behind the phone) === */}
+              <motion.div className="absolute inset-0 pointer-events-none z-0">
+                {/* Top Glow */}
+                <motion.div
+                  className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
+                  animate={{
+                    opacity: [0.4, 0.8, 0.4],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                </motion.div>
+
+                {/* Bottom Glow */}
+                <motion.div
+                  className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
+                  animate={{
+                    opacity: [0.4, 0.8, 0.4],
+                    scale: [1.1, 1.3, 1.1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                </motion.div>
+
+                {/* Left Glow */}
+                <motion.div
+                  className="absolute top-1/2 -left-20 -translate-y-1/2 w-72 h-72 rounded-full"
+                  animate={{
+                    opacity: [0.3, 0.7, 0.3],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <div className="w-full h-full bg-blue-600 blur-[80px] rounded-full" />
+                </motion.div>
+
+                {/* Right Glow */}
+                <motion.div
+                  className="absolute top-1/2 -right-20 -translate-y-1/2 w-72 h-72 rounded-full"
+                  animate={{
+                    opacity: [0.3, 0.7, 0.3],
+                    scale: [1.1, 1.3, 1.1],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                >
+                  <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                </motion.div>
+              </motion.div>
+
+              {/* === Phone Mockup (Above Glows) === */}
+              <div className="relative z-10 w-[300px] h-[530px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-[3rem] border-4 border-gray-400/40 shadow-2xl overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black/50 rounded-b-3xl" />
 
-                {/* Chat interface mockup */}
-                <div className="p-6 pt-12 space-y-4">
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1, duration: 0.5 }}
-                    className="bg-black/20 backdrop-blur-sm rounded-2xl p-4  text-sm"
-                  >
-                    Hey Memozy, remind me about my meeting tomorrow
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.5, duration: 0.5 }}
-                    className="bg-primary/80 backdrop-blur-sm rounded-2xl p-4 text-white text-sm ml-8"
-                  >
-                    Got it! I&apos;ll remind you about your meeting at 10 AM
-                    tomorrow. Would you like me to add it to your calendar?
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 2, duration: 0.5 }}
-                    className="bg-black/20 backdrop-blur-sm rounded-2xl p-4 text-sm"
-                  >
-                    Yes please!
-                  </motion.div>
+                {/* Chat interface with captured image */}
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="https://i.imgur.com/gFkfwTH.jpeg"
+                    alt="A screenshot of the Memozy app showing a chat interface
+         with an AI companion."
+                    className="object-contain rounded-2xl shadow-lg"
+                    width={300}
+                    height={530}
+                  />
                 </div>
               </div>
 
-              {/* Floating elements around phone */}
+              {/* === Floating elements (Above everything) === */}
               <motion.div
                 animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
                 transition={{
@@ -509,7 +562,7 @@ export function HeroSection() {
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-8 -right-8 w-20 h-20 bg-accent/30 backdrop-blur-xl rounded-2xl border border-gray-600/40 dark:border-white/40 flex items-center justify-center"
+                className="absolute -top-8 -right-8 z-20 w-20 h-20 backdrop-blur-xl rounded-2xl border border-gray-600/40 dark:border-white/40 flex items-center justify-center"
               >
                 <span className="text-3xl">🧠</span>
               </motion.div>
@@ -522,9 +575,9 @@ export function HeroSection() {
                   ease: "easeInOut",
                   delay: 1,
                 }}
-                className="absolute -bottom-8 -left-8 w-20 h-20 bg-secondary/30 backdrop-blur-xl rounded-2xl border border-gray-600/40 dark:border-white/40 flex items-center justify-center"
+                className="absolute -bottom-8 -left-8 z-20 w-20 h-20 backdrop-blur-xl rounded-2xl border border-gray-600/40 dark:border-white/40 flex items-center justify-center"
               >
-                <span className="text-3xl">💫</span>
+                <span className="text-3xl">❤️</span>
               </motion.div>
             </motion.div>
           </motion.div>
