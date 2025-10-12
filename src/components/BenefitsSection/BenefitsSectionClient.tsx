@@ -100,7 +100,7 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                 <div
                   className={`h-full relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-${
                     isMobile ? "md" : "xl"
-                  } rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                  } rounded-2xl p-6 bodrder border-gray-200/50 dark:border-gray-800/50 shadow-lg hover:shadow-2xl transition-all duration-300 ${
                     isMobile ? "shadow-md hover:shadow-lg" : ""
                   }`}
                 >
@@ -164,7 +164,7 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
             }
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <span> Swipe</span>{" "}
+            <span> Swipe</span>
             <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
           </motion.div>
         )}

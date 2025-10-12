@@ -492,7 +492,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-6xl font-bold leading-tight text-balance text-violet-500"
+              className="text-5xl md:text-6xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
             >
               Your AI Memory & Companion
             </motion.h1>

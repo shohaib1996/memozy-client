@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { BorderBeam } from "../ui/border-beam";
 import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import playStore from "../../../public/play-store.png";
+import appStore from "../../../public/app-store.png";
+import Image from "next/image";
 
 export function VisualDemoSectionClient() {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -25,7 +28,9 @@ export function VisualDemoSectionClient() {
         <div className="relative">
           {/* Top-right floating icon */}
           <motion.div
-            animate={isSmallScreen ? {} : { y: [0, -15, 0], rotate: [0, 10, 0] }}
+            animate={
+              isSmallScreen ? {} : { y: [0, -15, 0], rotate: [0, 10, 0] }
+            }
             transition={
               isSmallScreen
                 ? {}
@@ -44,7 +49,9 @@ export function VisualDemoSectionClient() {
 
           {/* Bottom-left floating icon */}
           <motion.div
-            animate={isSmallScreen ? {} : { y: [0, 15, 0], rotate: [0, -10, 0] }}
+            animate={
+              isSmallScreen ? {} : { y: [0, 15, 0], rotate: [0, -10, 0] }
+            }
             transition={
               isSmallScreen
                 ? {}
@@ -63,7 +70,7 @@ export function VisualDemoSectionClient() {
           </motion.div>
 
           {/* Phone Frame */}
-          <div className="relative w-[310px] sm:w-[320px] md:w-[450px] aspect-[9/15] md:aspect-[9/16] lg:aspect-[9/14] bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-[3rem] p-3 shadow-2xl">
+          <div className="relative w-[280px] sm:w-[340px] md:w-[450px] aspect-[9/15] md:aspect-[9/16] lg:aspect-[9/14] bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-[3rem] p-3 shadow-2xl">
             {/* Screen */}
             <div className="relative w-full h-full bg-black rounded-[2.5rem] overflow-hidden">
               {/* Video */}
@@ -293,7 +300,7 @@ export function VisualDemoSectionClient() {
           to help you navigate life with clarity and confidence.
         </p>
 
-        <div className="pt-4">
+        <div className="pt-4 flex items-center gap-3 flex-wrap justify-center lg:justify-start">
           <Link
             href="https://app.memozy.ai/?_gl=1*1bn9gnb*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxNTcwNjkkbzExJGcwJHQxNzYwMTU3MDcwJGo1OSRsMCRoMA..#/login"
             target="_blank"
@@ -302,14 +309,49 @@ export function VisualDemoSectionClient() {
             <Button
               variant="outline"
               size="lg"
-              className="relative overflow-hidden group text-violet-500 shadow-lg hover:shadow-xl hover:text-blue-500 transition-all duration-300"
+              className="relative overflow-hidden group text-violet-500 shadow-lg hover:shadow-xl hover:text-blue-500 transition-all duration-300 px-5"
             >
               Try Memozy on Web
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-1 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               {/* Border beam effect */}
               <BorderBeam />
             </Button>
           </Link>
+          <span>Or</span>
+          <div className="flex gap-3">
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
+            >
+              <Button
+                size="lg"
+                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-1 md:px-3 lg:px-3 lg:py-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+              >
+                <Image
+                  src={playStore}
+                  alt="Play Store"
+                  width={32}
+                  height={32}
+                />
+                <BorderBeam borderWidth={2} />
+              </Button>
+            </Link>
+
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
+            >
+              <Button
+                size="lg"
+                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-1 md:px-3 lg:px-3 lg:py-3 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+              >
+                <Image src={appStore} alt="App Store" width={32} height={32} />
+                <BorderBeam borderWidth={2} />
+              </Button>
+            </Link>
+          </div>
         </div>
         {/* Feature Pills */}
         <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4">

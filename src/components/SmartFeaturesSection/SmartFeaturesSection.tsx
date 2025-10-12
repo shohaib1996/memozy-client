@@ -312,7 +312,7 @@ export function SmartFeaturesSection() {
             >
               <Button
                 size="lg"
-                className="relative overflow-hidden text-lg px-5 py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
               >
                 <Image
                   src={playStore}
@@ -332,7 +332,7 @@ export function SmartFeaturesSection() {
             >
               <Button
                 size="lg"
-                className="relative overflow-hidden text-lg px-5 py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
               >
                 <Image src={appStore} alt="App Store" width={24} height={24} />
                 App Store
