@@ -16,6 +16,7 @@ import {
 import { useRef } from "react";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import { BorderBeam } from "../ui/border-beam";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const iconMap = {
   MessageSquare,
@@ -36,6 +37,8 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
     container: containerRef,
   });
 
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
     <>
       {/* Horizontally Scrollable Cards */}
@@ -47,28 +50,39 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
           msOverflowStyle: "none",
         }}
       >
-        <motion.div
+        <div
           className="flex gap-6 w-max"
-          drag="x"
-          dragConstraints={containerRef}
-          dragElastic={0.1}
+          {...(!isMobile && {
+            drag: "x" as const,
+            dragConstraints: { ref: containerRef },
+            dragElastic: 0.1,
+          })}
         >
           {benefits.map((benefit, index) => {
             const Icon = iconMap[benefit.icon as keyof typeof iconMap];
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 50 }}
+                initial={
+                  isMobile ? { opacity: 0, x: 20 } : { opacity: 0, x: 50 }
+                }
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{
+                  duration: isMobile ? 0.5 : 0.3,
+                  delay: isMobile ? index * 0.05 : index * 0.1,
+                }}
+                whileHover={isMobile ? undefined : { scale: 1.02, y: -5 }}
                 className="w-80 flex-shrink-0 cursor-pointer"
               >
                 <div className="h-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 dark:border-gray-800/50 shadow-lg hover:shadow-2xl transition-all duration-300">
                   {/* Icon with gradient background */}
                   <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.color} flex items-center justify-center mb-4 shadow-lg pulse-glow`}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${
+                      benefit.color
+                    } flex items-center justify-center mb-4 shadow-lg ${
+                      isMobile ? "pulse-glow-slow" : "pulse-glow"
+                    }`}
                   >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -83,23 +97,23 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                     {benefit.description}
                   </p>
                   <BorderBeam
-                    duration={6}
+                    duration={isMobile ? 12 : 6}
                     size={400}
-                    borderWidth={2}
+                    borderWidth={isMobile ? 1 : 2}
                     className="from-transparent via-emerald-500 to-transparent"
                   />
                   <BorderBeam
-                    duration={6}
-                    delay={3}
+                    duration={isMobile ? 12 : 6}
+                    delay={isMobile ? 6 : 3}
                     size={400}
-                    borderWidth={2}
+                    borderWidth={isMobile ? 1 : 2}
                     className="from-transparent via-blue-500 to-transparent"
                   />
                 </div>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
@@ -110,28 +124,20 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
         className="text-center mt-8"
       >
         <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-          <motion.span
-            animate={{ x: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-          >
-            ←
-          </motion.span>
+          ←
           <span>
             <AnimatedShinyText>Swipe to explore all features</AnimatedShinyText>
           </span>
-          <motion.span
-            animate={{ x: [0, 10, 0] }}
-            // transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-          >
-            →
-          </motion.span>
+          →
         </p>
       </motion.div>
 
       <style jsx global>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
+        }
+        .pulse-glow-slow {
+          animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
       `}</style>
     </>
