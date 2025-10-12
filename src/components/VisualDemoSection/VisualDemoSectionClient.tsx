@@ -5,8 +5,13 @@ import { ArrowRight, MessageSquare, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "../ui/border-beam";
 import Link from "next/link";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export function VisualDemoSectionClient() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isTablet = useMediaQuery("(max-width: 1024px)");
+  const isSmallScreen = isMobile || isTablet;
+
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
       {/* Left Side - Mobile Mockup with Video */}
@@ -20,15 +25,16 @@ export function VisualDemoSectionClient() {
         <div className="relative">
           {/* Top-right floating icon */}
           <motion.div
-            animate={{
-              y: [0, -15, 0],
-              rotate: [0, 10, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
+            animate={isSmallScreen ? {} : { y: [0, -15, 0], rotate: [0, 10, 0] }}
+            transition={
+              isSmallScreen
+                ? {}
+                : {
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }
+            }
             className="absolute -top-8 -right-8 z-20"
           >
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-500 dark:from-blue-400 dark:to-violet-400 flex items-center justify-center shadow-lg backdrop-blur-sm">
@@ -38,16 +44,17 @@ export function VisualDemoSectionClient() {
 
           {/* Bottom-left floating icon */}
           <motion.div
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, -10, 0],
-            }}
-            transition={{
-              duration: 3.5,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-              delay: 0.5,
-            }}
+            animate={isSmallScreen ? {} : { y: [0, 15, 0], rotate: [0, -10, 0] }}
+            transition={
+              isSmallScreen
+                ? {}
+                : {
+                    duration: 3.5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }
+            }
             className="absolute -bottom-8 -left-8 z-20"
           >
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-500 dark:from-violet-400 dark:to-purple-400 flex items-center justify-center shadow-lg backdrop-blur-sm">
