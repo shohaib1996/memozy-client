@@ -21,7 +21,7 @@ import {
   SmilePlus,
   Feather,
 } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import Link from "next/link";
 import { ShinyButton } from "../ui/shiny-button";
@@ -90,9 +90,9 @@ function TypingSubheading() {
   }, [charIndex, isDeleting, currentTextIndex, texts]);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden min-h-[6rem] sm:min-h-[5.5rem] md:min-h-[4.5rem] lg:min-h-[3.75rem]">
       <motion.span
-        className="text-xl md:text-2xl leading-relaxed text-pretty inline-block"
+        className="text-xl md:text-2xl leading-relaxed text-pretty block" // Changed to block for better height control
         initial={{ width: 0 }}
         animate={{ width: displayedText.length > 0 ? "100%" : 0 }}
         transition={{ duration: 0.1 }}
