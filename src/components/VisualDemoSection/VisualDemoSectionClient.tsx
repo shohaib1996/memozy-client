@@ -103,12 +103,16 @@ export function VisualDemoSectionClient() {
       >
         {/* Bubble 1 */}
         <motion.div
-          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-          transition={{
-            duration: 6,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
+          animate={isSmallScreen ? {} : { y: [0, -20, 0], x: [0, 10, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 6,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                }
+          }
           className="absolute top-0 right-10 w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 rounded-full -z-10"
           style={{
             background:
@@ -121,13 +125,17 @@ export function VisualDemoSectionClient() {
 
         {/* Bubble 2 */}
         <motion.div
-          animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
-          transition={{
-            duration: 5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, 15, 0], x: [0, -10, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }
+          }
           className="absolute top-20 right-15 w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 rounded-full -z-10"
           style={{
             background:
@@ -140,13 +148,17 @@ export function VisualDemoSectionClient() {
 
         {/* Bubble 3 */}
         <motion.div
-          animate={{ y: [0, -15, 0], x: [0, 15, 0] }}
-          transition={{
-            duration: 7,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 1,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, -15, 0], x: [0, 15, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 7,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 1,
+                }
+          }
           className="absolute top-40 right-30 w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full -z-10"
           style={{
             background:
@@ -158,19 +170,22 @@ export function VisualDemoSectionClient() {
         />
 
         {/* Bubble 4 */}
-
         <motion.div
-          animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
-          transition={{
-            duration: 5.5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 1.5,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, 20, 0], x: [0, -15, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 5.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 1.5,
+                }
+          }
           className="absolute bottom-40 right-5 w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full -z-10"
           style={{
             background:
-              "radial-gradient(circle at 30% 30%, rgba(147, 197, 253, 0.4), rgba(59, 130, 246, 0.2)",
+              "radial-gradient(circle at 30% 30%, rgba(147, 197, 253, 0.4), rgba(59, 130, 246, 0.2))",
             border: "1px solid rgba(147, 197, 253, 0.3)",
             boxShadow:
               "inset -2px -2px 9px rgba(59, 130, 246, 0.3), inset 2px 2px 9px rgba(255, 255, 255, 0.2)",
@@ -179,13 +194,17 @@ export function VisualDemoSectionClient() {
 
         {/* Bubble 5 */}
         <motion.div
-          animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
-          transition={{
-            duration: 6.5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 2,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, -10, 0], x: [0, 10, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 6.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 2,
+                }
+          }
           className="absolute bottom-20 right-16 w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 rounded-full -z-10"
           style={{
             background:
@@ -198,13 +217,17 @@ export function VisualDemoSectionClient() {
 
         {/* Bubble 6 */}
         <motion.div
-          animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
-          transition={{
-            duration: 5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 2.5,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, 15, 0], x: [0, -10, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 2.5,
+                }
+          }
           className="absolute bottom-0 right-8 w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 rounded-full -z-10"
           style={{
             background:
@@ -217,13 +240,17 @@ export function VisualDemoSectionClient() {
 
         {/* Bubble 7 */}
         <motion.div
-          animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
-          transition={{
-            duration: 7,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 3,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, -20, 0], x: [0, 15, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 7,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 3,
+                }
+          }
           className="absolute top-1/2 right-2 w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full -z-10"
           style={{
             background:
@@ -236,13 +263,17 @@ export function VisualDemoSectionClient() {
 
         {/* Bubble 8 */}
         <motion.div
-          animate={{ y: [0, 10, 0], x: [0, -15, 0] }}
-          transition={{
-            duration: 6,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 3.5,
-          }}
+          animate={isSmallScreen ? {} : { y: [0, 10, 0], x: [0, -15, 0] }}
+          transition={
+            isSmallScreen
+              ? {}
+              : {
+                  duration: 6,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 3.5,
+                }
+          }
           className="absolute top-1/3 right-12 w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full -z-10"
           style={{
             background:
