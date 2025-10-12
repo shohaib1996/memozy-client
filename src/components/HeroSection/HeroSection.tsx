@@ -353,8 +353,12 @@ export function HeroSection() {
 
   const floatingIcons = isMobile || isTablet ? mobileFloatingIcons : desktopFloatingIcons
 
+  const sectionBgClass = isMobile || isTablet 
+    ? "bg-gradient-to-b from-blue-400/30 via-blue-700/30 to-violet-400/40" 
+    : "gradient-bg"
+
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden gradient-bg">
+    <section className={`relative min-h-[85vh] flex items-center justify-center overflow-hidden ${sectionBgClass}`}>
       {floatingIcons.map((item, index) => (
         <motion.div
           key={index}
