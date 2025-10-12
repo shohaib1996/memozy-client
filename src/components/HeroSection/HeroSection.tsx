@@ -361,28 +361,20 @@ export function HeroSection() {
           className="absolute pointer-events-none z-0"
           style={{ ...item.position, willChange: "transform" }}
           initial={{ opacity: 0, scale: 0 }}
-          animate={
-            isMobile || isTablet
-              ? { opacity: 0.5, scale: 1 } // Static on mobile/tablet
-              : {
-                  opacity: [0.3, 0.6, 0.3],
-                  scale: [1, 1.1, 1],
-                  ...item.animation,
-                }
-          }
-          transition={
-            isMobile || isTablet
-              ? { duration: 0.5 } // Quick fade in on mobile/tablet
-              : {
-                  duration: item.duration,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  delay: index * 0.3,
-                }
-          }
+          animate={{
+            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.05, 1],
+            ...item.animation,
+          }}
+          transition={{
+            duration: isMobile || isTablet ? item.duration * 1.5 : item.duration, // Slower on mobile
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: index * 0.2,
+          }}
         >
           <div className="relative">
-            <div className={`absolute inset-0 ${item.color} opacity-20 ${isMobile ? "blur-md" : "blur-xl"}`} />
+            <div className={`absolute inset-0 ${item.color} opacity-20 ${isMobile ? "blur-sm" : "blur-xl"}`} />
             <item.Icon
               className={`${isMobile ? "h-6 w-6" : "h-8 w-8"} ${item.color} relative z-10`}
               strokeWidth={1.5}
@@ -575,72 +567,74 @@ export function HeroSection() {
               className="relative"
             >
               {/* === Glowing Radiations (Behind the phone) === */}
-              <motion.div className="absolute inset-0 pointer-events-none z-0">
-                {/* Top Glow */}
-                <motion.div
-                  className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
-                  animate={{
-                    opacity: [0.4, 0.8, 0.4],
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
-                </motion.div>
+              {!(isMobile || isTablet) && (
+                <motion.div className="absolute inset-0 pointer-events-none z-0">
+                  {/* Top Glow */}
+                  <motion.div
+                    className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
+                    animate={{
+                      opacity: [0.4, 0.8, 0.4],
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                  </motion.div>
 
-                {/* Bottom Glow */}
-                <motion.div
-                  className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
-                  animate={{
-                    opacity: [0.4, 0.8, 0.4],
-                    scale: [1.1, 1.3, 1.1],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
-                </motion.div>
+                  {/* Bottom Glow */}
+                  <motion.div
+                    className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
+                    animate={{
+                      opacity: [0.4, 0.8, 0.4],
+                      scale: [1.1, 1.3, 1.1],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                  </motion.div>
 
-                {/* Left Glow */}
-                <motion.div
-                  className="absolute top-1/2 -left-20 -translate-y-1/2 w-72 h-72 rounded-full"
-                  animate={{
-                    opacity: [0.3, 0.7, 0.3],
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <div className="w-full h-full bg-blue-600 blur-[80px] rounded-full" />
-                </motion.div>
+                  {/* Left Glow */}
+                  <motion.div
+                    className="absolute top-1/2 -left-20 -translate-y-1/2 w-72 h-72 rounded-full"
+                    animate={{
+                      opacity: [0.3, 0.7, 0.3],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <div className="w-full h-full bg-blue-600 blur-[80px] rounded-full" />
+                  </motion.div>
 
-                {/* Right Glow */}
-                <motion.div
-                  className="absolute top-1/2 -right-20 -translate-y-1/2 w-72 h-72 rounded-full"
-                  animate={{
-                    opacity: [0.3, 0.7, 0.3],
-                    scale: [1.1, 1.3, 1.1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                    delay: 1,
-                  }}
-                >
-                  <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                  {/* Right Glow */}
+                  <motion.div
+                    className="absolute top-1/2 -right-20 -translate-y-1/2 w-72 h-72 rounded-full"
+                    animate={{
+                      opacity: [0.3, 0.7, 0.3],
+                      scale: [1.1, 1.3, 1.1],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                      delay: 1,
+                    }}
+                  >
+                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              )}
 
               {/* === Phone Mockup (Above Glows) === */}
               <div className="relative z-10 w-[300px] h-[530px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-[3rem] border-4 border-gray-400/40 shadow-2xl overflow-hidden">
