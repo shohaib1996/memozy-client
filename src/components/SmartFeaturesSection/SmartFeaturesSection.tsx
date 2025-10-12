@@ -18,6 +18,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "../ui/border-beam";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
+import Image from "next/image";
+import playStore from "../../../public/play-store.png";
+import appStore from "../../../public/app-store.png";
+import Link from "next/link";
 
 const iconGradients = [
   // Organization features
@@ -278,10 +282,7 @@ export function SmartFeaturesSection() {
           className="text-center mb-16 md:mb-24 space-y-4"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
-            Smart Features That{" "}
-            <span className="">
-              Understand You
-            </span>
+            Smart Features That <span className="">Understand You</span>
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
@@ -301,13 +302,45 @@ export function SmartFeaturesSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mt-20 md:mt-24"
+          className="text-center mt-20 md:mt-24 flex items-center justify-center gap-2 flex-wrap"
         >
-          <Button size="lg" className="text-lg px-8 py-6">
-            Experience Memozy Today
-          </Button>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
+            >
+              <Button
+                size="lg"
+                className="relative overflow-hidden text-lg px-5 py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+              >
+                <Image
+                  src={playStore}
+                  alt="Play Store"
+                  width={24}
+                  height={24}
+                />
+                Play Store
+                <BorderBeam borderWidth={2} />
+              </Button>
+            </Link>
+
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
+            >
+              <Button
+                size="lg"
+                className="relative overflow-hidden text-lg px-5 py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+              >
+                <Image src={appStore} alt="App Store" width={24} height={24} />
+                App Store
+                <BorderBeam borderWidth={2} />
+              </Button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
