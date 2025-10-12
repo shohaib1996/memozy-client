@@ -9,9 +9,9 @@ export function FloatingDownloadButton() {
   const platform = usePlatform()
 
   const downloadLinks = {
-    android: "https://play.google.com/store/apps/details?id=com.memozy",
-    ios: "https://apps.apple.com/app/memozy/id123456789",
-    desktop: "https://memozy.ai/web",
+    android: "https://play.google.com/store/apps/details?id=com.memozy.memozy",
+    ios: "https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131",
+    desktop: "https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login",
   }
 
   const config = {
@@ -39,7 +39,7 @@ export function FloatingDownloadButton() {
       href={downloadLinks[platform]}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group fixed bottom-6 left-6 bg-gradient-to-r ${gradient} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center gap-2 px-4 py-3 hover:scale-105 active:scale-95`}
+      className={`group fixed bottom-6 left-5 bg-gradient-to-r ${gradient} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center gap-1 px-2 py-2 hover:scale-105 active:scale-95`}
     >
       <Icon className="w-5 h-5 flex-shrink-0" />
       <span className="text-xs font-medium whitespace-nowrap font-outfit">{label}</span>
