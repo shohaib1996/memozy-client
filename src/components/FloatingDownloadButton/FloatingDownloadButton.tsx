@@ -24,7 +24,7 @@ export function FloatingDownloadButton() {
       href={downloadLinks[platform]}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300 z-50"
+      className="fixed bottom-4 left-1/2 -translate-x-1/2 text-xs bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300 z-50"
     >
       {label}
     </Link>
