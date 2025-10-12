@@ -1,13 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import {
   Star,
   HeartHandshake,
-  Apple,
   Flame,
-  Smartphone,
   MessageSquare,
   Drama,
   ImageIcon,
@@ -20,14 +18,16 @@ import {
   Wand2,
   SmilePlus,
   Feather,
-} from "lucide-react"
-import React, { useState, useEffect } from "react"
-import { AnimatedShinyText } from "../ui/animated-shiny-text"
-import Link from "next/link"
-import { ShinyButton } from "../ui/shiny-button"
-import Image from "next/image"
-import { BorderBeam } from "../ui/border-beam"
-import { useMediaQuery } from "@/hooks/use-media-query"
+} from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { AnimatedShinyText } from "../ui/animated-shiny-text";
+import Link from "next/link";
+import { ShinyButton } from "../ui/shiny-button";
+import Image from "next/image";
+import { BorderBeam } from "../ui/border-beam";
+import { useMediaQuery } from "@/hooks/use-media-query";
+import playStore from "../../../public/play-store.png";
+import appStore from "../../../public/app-store.png";
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -38,55 +38,55 @@ function TypingSubheading() {
       "🔊 Voice Messages & Custom AI Voice – Hear Memozy reply in realistic voices that match your mood and style.",
       "🧠 Smart Organization – Let Memozy auto-tag and neatly organize your notes, reminders, and thoughts.",
     ],
-    [],
-  )
+    []
+  );
 
-  const [displayedText, setDisplayedText] = useState("")
-  const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [charIndex, setCharIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
 
-  const isMobile = useMediaQuery("(max-width: 768px)")
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     if (isMobile) {
-      setDisplayedText(texts[0])
-      return
+      setDisplayedText(texts[0]);
+      return;
     }
 
-    const currentText = texts[currentTextIndex]
-    const typingSpeed = 50
-    const deletingSpeed = 30
-    const pauseTime = 2000
+    const currentText = texts[currentTextIndex];
+    const typingSpeed = 50;
+    const deletingSpeed = 30;
+    const pauseTime = 2000;
 
     if (!isDeleting && charIndex < currentText.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(currentText.slice(0, charIndex + 1))
-        setCharIndex(charIndex + 1)
-      }, typingSpeed)
-      return () => clearTimeout(timeout)
+        setDisplayedText(currentText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }, typingSpeed);
+      return () => clearTimeout(timeout);
     } else if (!isDeleting && charIndex === currentText.length) {
       const timeout = setTimeout(() => {
-        setIsDeleting(true)
-        setCharIndex(currentText.length)
-      }, pauseTime)
-      return () => clearTimeout(timeout)
+        setIsDeleting(true);
+        setCharIndex(currentText.length);
+      }, pauseTime);
+      return () => clearTimeout(timeout);
     } else if (isDeleting && charIndex > 0) {
       const timeout = setTimeout(() => {
-        setDisplayedText(currentText.slice(0, charIndex - 1))
-        setCharIndex(charIndex - 1)
-      }, deletingSpeed)
-      return () => clearTimeout(timeout)
+        setDisplayedText(currentText.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      }, deletingSpeed);
+      return () => clearTimeout(timeout);
     } else if (isDeleting && charIndex === 0) {
       const timeout = setTimeout(() => {
-        const nextIndex = (currentTextIndex + 1) % texts.length
-        setCurrentTextIndex(nextIndex)
-        setIsDeleting(false)
-        setCharIndex(0)
-      }, 500)
-      return () => clearTimeout(timeout)
+        const nextIndex = (currentTextIndex + 1) % texts.length;
+        setCurrentTextIndex(nextIndex);
+        setIsDeleting(false);
+        setCharIndex(0);
+      }, 500);
+      return () => clearTimeout(timeout);
     }
-  }, [charIndex, isDeleting, currentTextIndex, texts, isMobile])
+  }, [charIndex, isDeleting, currentTextIndex, texts, isMobile]);
 
   return (
     <div className="overflow-hidden min-h-[8rem] sm:min-h-[6.5rem] md:min-h-[5.5rem] lg:min-h-[4.75rem]">
@@ -97,15 +97,17 @@ function TypingSubheading() {
         transition={{ duration: 0.1 }}
       >
         {displayedText}
-        {!isMobile && <span className="inline-block w-1 h-6 animate-pulse ml-1">|</span>}
+        {!isMobile && (
+          <span className="inline-block w-1 h-6 animate-pulse ml-1">|</span>
+        )}
       </motion.span>
     </div>
-  )
+  );
 }
 
 export function HeroSection() {
-  const isMobile = useMediaQuery("(max-width: 768px)")
-  const isTablet = useMediaQuery("(max-width: 1024px)")
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isTablet = useMediaQuery("(max-width: 1024px)");
 
   const mobileFloatingIcons = [
     {
@@ -150,7 +152,7 @@ export function HeroSection() {
       animation: { x: [-10, 10, -10], y: [0, -15, 0] },
       duration: 10,
     },
-  ]
+  ];
 
   const desktopFloatingIcons = [
     {
@@ -349,16 +351,20 @@ export function HeroSection() {
       animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
       duration: 7,
     },
-  ]
+  ];
 
-  const floatingIcons = isMobile || isTablet ? mobileFloatingIcons : desktopFloatingIcons
+  const floatingIcons =
+    isMobile || isTablet ? mobileFloatingIcons : desktopFloatingIcons;
 
-  const sectionBgClass = isMobile || isTablet 
-    ? "bg-gradient-to-b from-blue-400/30 via-blue-700/30 to-violet-400/40" 
-    : "gradient-bg"
+  const sectionBgClass =
+    isMobile || isTablet
+      ? "bg-gradient-to-b from-blue-400/30 via-blue-700/30 to-violet-400/40"
+      : "gradient-bg";
 
   return (
-    <section className={`relative min-h-[85vh] flex items-center justify-center overflow-hidden ${sectionBgClass}`}>
+    <section
+      className={`relative min-h-[85vh] flex items-center justify-center overflow-hidden ${sectionBgClass}`}
+    >
       {floatingIcons.map((item, index) => (
         <motion.div
           key={index}
@@ -371,16 +377,23 @@ export function HeroSection() {
             ...item.animation,
           }}
           transition={{
-            duration: isMobile || isTablet ? item.duration * 1.5 : item.duration, // Slower on mobile
+            duration:
+              isMobile || isTablet ? item.duration * 1.5 : item.duration, // Slower on mobile
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
             delay: index * 0.2,
           }}
         >
           <div className="relative">
-            <div className={`absolute inset-0 ${item.color} opacity-20 ${isMobile ? "blur-sm" : "blur-xl"}`} />
+            <div
+              className={`absolute inset-0 ${item.color} opacity-20 ${
+                isMobile ? "blur-sm" : "blur-xl"
+              }`}
+            />
             <item.Icon
-              className={`${isMobile ? "h-6 w-6" : "h-8 w-8"} ${item.color} relative z-10`}
+              className={`${isMobile ? "h-6 w-6" : "h-8 w-8"} ${
+                item.color
+              } relative z-10`}
               strokeWidth={1.5}
             />
           </div>
@@ -484,7 +497,11 @@ export function HeroSection() {
               Your AI Memory & Companion
             </motion.h1>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
               <TypingSubheading />
             </motion.div>
 
@@ -492,36 +509,45 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 items-center justify-center lg:justify-start"
             >
-              <Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="relative overflow-hidden bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase rounded-lg"
-                >
-                  <Apple className="mr-2 h-5 w-5" />
-                  App Store
-                  <BorderBeam />
-                </Button>
-              </Link>
               <Link
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
               >
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="relative overflow-hidden bg-white text-violet-600 hover:bg-white/90 font-semibold px-8 uppercase rounded-lg"
+                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase"
                 >
-                  <Smartphone className="mr-2 h-5 w-5" />
-                  Google Play
-                  <BorderBeam />
+                  <Image
+                    src={playStore}
+                    alt="Play Store"
+                    width={24}
+                    height={24}
+                  />
+                  Play Store
+                  <BorderBeam borderWidth={2} />
+                </Button>
+              </Link>
+
+              <Link
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
+              >
+                <Button
+                  size="lg"
+                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase"
+                >
+                  <Image
+                    src={appStore}
+                    alt="App Store"
+                    width={24}
+                    height={24}
+                  />
+                  App Store
+                  <BorderBeam borderWidth={2} />
                 </Button>
               </Link>
               <Link
@@ -529,7 +555,11 @@ export function HeroSection() {
                 target="_blank"
                 href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
               >
-                <ShinyButton>Try on Web</ShinyButton>
+                <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
+                  <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300">
+                    Try on Web
+                  </ShinyButton>
+                </div>
               </Link>
             </motion.div>
 
@@ -541,11 +571,16 @@ export function HeroSection() {
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <Star
+                    key={i}
+                    className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                  />
                 ))}
               </div>
               <span className="text-sm font-medium">
-                <AnimatedShinyText>Trusted by thousands across iOS & Android</AnimatedShinyText>
+                <AnimatedShinyText>
+                  Trusted by thousands across iOS & Android
+                </AnimatedShinyText>
               </span>
             </motion.div>
           </motion.div>
@@ -702,5 +737,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
