@@ -160,13 +160,12 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
             className="absolute right-0 top-1/2 flex items-center -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-900/90 rounded-full p-3 shadow-lg border border-gray-200/50 dark:border-gray-800/50"
             initial={{ opacity: 1, scale: 1 }}
             animate={
-              hasSwiped
-                ? { opacity: 0, scale: 0.8 }
-                : { opacity: 1, scale: 1 }
+              hasSwiped ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }
             }
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-           <span> Swipe</span> <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+            <span> Swipe</span>{" "}
+            <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
           </motion.div>
         )}
       </div>
@@ -183,9 +182,11 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
             isMobile ? "text-base font-medium" : ""
           }`}
         >
+          ←
           <span className="whitespace-nowrap">
             <AnimatedShinyText>Swipe to explore</AnimatedShinyText>
           </span>
+          →
         </p>
         {isMobile && !hasSwiped && (
           <p className="text-xs text-muted-foreground mt-1">
