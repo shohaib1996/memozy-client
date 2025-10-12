@@ -118,6 +118,20 @@ export function HeroSection() {
       duration: 10,
     },
     {
+      Icon: Flame,
+      color: "text-violet-400",
+      position: { top: "10%", left: "10%" },
+      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+      duration: 10,
+    },
+    {
+      Icon: HeartHandshake,
+      color: "text-violet-400",
+      position: { top: "15%", right: "15%" },
+      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+      duration: 8,
+    },
+    {
       Icon: Drama,
       color: "text-pink-400",
       position: { top: "25%", right: "15%" },
@@ -151,6 +165,20 @@ export function HeroSection() {
       position: { top: "35%", right: "20%" },
       animation: { x: [-10, 10, -10], y: [0, -15, 0] },
       duration: 10,
+    },
+    {
+      Icon: Feather,
+      color: "text-blue-400",
+      position: { top: "35%", right: "10%" },
+      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+      duration: 9,
+    },
+    {
+      Icon: Feather,
+      color: "text-blue-400",
+      position: { top: "35%", left: "10%" },
+      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+      duration: 9,
     },
   ];
 

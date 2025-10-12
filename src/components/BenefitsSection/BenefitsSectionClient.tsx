@@ -145,7 +145,7 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                       duration={12}
                       size={cardSize}
                       borderWidth={2}
-                      className="from-transparent via-emerald-400/50 to-transparent"
+                      className="from-transparent via-emerald-500/50 to-transparent"
                     />
                   )}
                 </div>

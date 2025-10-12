@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSection/>
       <BenefitsSection/>
       <VisualDemoSection/>
-      {/* <SmartFeaturesSection/> */}
+      <SmartFeaturesSection/>
     </div>
   );
 }
