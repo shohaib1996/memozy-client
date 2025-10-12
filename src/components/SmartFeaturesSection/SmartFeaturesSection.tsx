@@ -23,6 +23,9 @@ import Link from "next/link";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
 import Image from "next/image";
+import organizedAnimation from "../../../public/organized-animation.json";
+import toolsAnimation from "../../../public/tools-animation.json";
+import vibeAnimation from "../../../public/vibe-animation.json";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -48,7 +51,7 @@ const features = [
     title: "Stay Organized Effortlessly",
     description:
       "Let Memozy handle the mental load. From auto-tagging notes to sending timely reminders, your thoughts are always organized and accessible.",
-    animation: require("../../../public/organized-animation.json"),
+    animation: organizedAnimation,
     subFeatures: [
       {
         icon: Brain,
@@ -72,7 +75,7 @@ const features = [
     title: "Your AI Companion, Your Way",
     description:
       "Whether you need a professional assistant, a romantic chat partner, or someone to roast you — Memozy adapts to your mood and style with realistic AI voices.",
-    animation: require("../../../public/vibe-animation.json"),
+    animation: vibeAnimation,
     subFeatures: [
       {
         icon: Drama,
@@ -96,7 +99,7 @@ const features = [
     title: "Powerful Tools for Everyday Life",
     description:
       "From syncing meetings to your calendar, interpreting images, to decoding confusing situations with tarot-style readings — Memozy is your all-in-one AI toolkit.",
-    animation: require("../../../public/tools-animation.json"),
+    animation: toolsAnimation,
     subFeatures: [
       {
         icon: Calendar,
@@ -133,7 +136,7 @@ function FeatureBlock({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const isReversed = index % 2 === 1;
 
-  const startingGradientIndex = feature.subFeatures.reduce((acc, _, idx) => {
+  const startingGradientIndex = feature.subFeatures.reduce(() => {
     if (index === 0) return 0;
     if (index === 1) return 3;
     return 6;
