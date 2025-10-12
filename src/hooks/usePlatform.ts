@@ -2,19 +2,24 @@
 
 import { useEffect, useState } from "react"
 
-export type PlatformType = "android" | "ios" | "desktop"
+type Platform = "android" | "ios" | "desktop"
 
-export function usePlatform(): PlatformType {
-  const [platform, setPlatform] = useState<PlatformType>("desktop")
+export function usePlatform(): Platform {
+  const [platform, setPlatform] = useState<Platform>("desktop")
 
   useEffect(() => {
-    const userAgent = navigator.userAgent.toLowerCase()
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera
 
-    if (/android/.test(userAgent)) {
-      setPlatform("android")
-    } else if (/iphone|ipad|ipod/.test(userAgent)) {
+    // Check for iOS devices
+    if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
       setPlatform("ios")
-    } else {
+    }
+    // Check for Android devices
+    else if (/android/i.test(userAgent)) {
+      setPlatform("android")
+    }
+    // Default to desktop
+    else {
       setPlatform("desktop")
     }
   }, [])

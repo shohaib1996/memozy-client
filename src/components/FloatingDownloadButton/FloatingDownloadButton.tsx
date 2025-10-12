@@ -1,7 +1,9 @@
 "use client"
 
-import { usePlatform } from "@/hooks/usePlatform"
+
 import Link from "next/link"
+import { Apple, Smartphone, Monitor } from "lucide-react"
+import { usePlatform } from "@/hooks/usePlatform"
 
 export function FloatingDownloadButton() {
   const platform = usePlatform()
@@ -12,21 +14,35 @@ export function FloatingDownloadButton() {
     desktop: "https://memozy.ai/web",
   }
 
-  const label =
-    platform === "android"
-      ? "Download for Android"
-      : platform === "ios"
-      ? "Download for iOS"
-      : "Open Web App"
+  const config = {
+    android: {
+      icon: Smartphone,
+      label: "Get Android App",
+      gradient: "from-green-500 to-emerald-600",
+    },
+    ios: {
+      icon: Apple,
+      label: "Get iOS App",
+      gradient: "from-blue-500 to-indigo-600",
+    },
+    desktop: {
+      icon: Monitor,
+      label: "Open Web App",
+      gradient: "from-purple-500 to-pink-600",
+    },
+  }
+
+  const { icon: Icon, label, gradient } = config[platform]
 
   return (
     <Link
       href={downloadLinks[platform]}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-4 ${platform == "desktop" ? "left-1/2" : "left-24"} -translate-x-1/2 text-xs bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300 z-50`}
+      className={`group fixed bottom-6 right-6 bg-gradient-to-r ${gradient} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center gap-2 px-4 py-3 hover:scale-105 active:scale-95`}
     >
-      {label}
+      <Icon className="w-5 h-5 flex-shrink-0" />
+      <span className="text-sm font-medium whitespace-nowrap">{label}</span>
     </Link>
   )
 }
