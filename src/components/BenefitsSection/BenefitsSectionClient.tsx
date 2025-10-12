@@ -201,26 +201,26 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
           </div>
         </div>
 
-        {canScrollLeft && (
+        {!isMobile && canScrollLeft && (
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollLeft}
-           className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-violet-500 to-blue-500 hover:from-violet-600 hover:to-blue-600 text-white rounded-full p-3 shadow-xl border border-transparent transition-all duration-200 hover:scale-110 active:scale-95"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-violet-500 to-blue-500 hover:from-violet-600 hover:to-blue-600 text-white rounded-full p-3 shadow-xl border border-transparent transition-all duration-200 hover:scale-110 active:scale-95"
             aria-label="Scroll left"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </motion.button>
         )}
 
-        {canScrollRight && (
+        {!isMobile && canScrollRight && (
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollRight}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-violet-500 to-blue-500 hover:from-violet-600 hover:to-blue-600 rounded-full p-3 shadow-xl border border-transparent transition-all duration-200 hover:scale-110 active:scale-95"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-violet-500 to-blue-500 hover:from-violet-600 hover:to-blue-600 text-white rounded-full p-3 shadow-xl border border-transparent transition-all duration-200 hover:scale-110 active:scale-95"
             aria-label="Scroll right"
           >
             <ChevronRight className="w-6 h-6 text-white" />
@@ -240,11 +240,23 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
             isMobile ? "text-base font-medium" : ""
           }`}
         >
-          ←
-          <span className="whitespace-nowrap font-outfit">
-            <AnimatedShinyText>Use arrows to explore</AnimatedShinyText>
-          </span>
-          →
+          {isMobile ? (
+            <>
+              ←
+              <span className="whitespace-nowrap font-outfit">
+                <AnimatedShinyText>Swipe to explore</AnimatedShinyText>
+              </span>
+              →
+            </>
+          ) : (
+            <>
+              ←
+              <span className="whitespace-nowrap font-outfit">
+                <AnimatedShinyText>Use arrows to explore</AnimatedShinyText>
+              </span>
+              →
+            </>
+          )}
         </p>
       </motion.div>
 
