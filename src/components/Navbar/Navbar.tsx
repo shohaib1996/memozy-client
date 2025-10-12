@@ -26,7 +26,7 @@ export function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[300px]">
-                <ul className="flex flex-col gap-6 mt-8 mx-3">
+                <ul className="flex flex-col gap-6 mt-8 mx-3 font-outfit">
                   <li>
                     <Link
                       target="_blank"
@@ -62,11 +62,11 @@ export function Navbar() {
             </Sheet>
             <Link
               href="/"
-              className="font-semibold text-lg hover:text-primary transition-colors"
+              className="font-semibold text-lg hover:text-primary transition-colors font-outfit"
             >
               Memozy
             </Link>
-            <ul className="hidden md:flex items-center gap-6">
+            <ul className="hidden md:flex items-center gap-6 font-outfit">
               <li>
                 <Link
                   target="_blank"

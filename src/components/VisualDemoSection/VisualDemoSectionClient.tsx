@@ -291,7 +291,7 @@ export function VisualDemoSectionClient() {
           }}
         />
 
-        <h2 className="text-3xl font-outfit md:text-4xl lg:text-5xl font-bold text-balance bg-gradient-to-r from-violet-600 to-blue-500 dark:from-blue-400 dark:to-violet-600 bg-clip-text text-transparent ">
+        <h2 className="text-3xl font-outfit md:text-4xl lg:text-5xl font-bold text-balance bg-gradient-to-r from-violet-800 via-purple-500 to-blue-500 dark:from-blue-500 dark:via-purple-400 dark:to-violet-700 bg-clip-text text-transparent ">
           Chat, Reflect, and Stay Organized — All in One AI Companion.
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 font-outfit">

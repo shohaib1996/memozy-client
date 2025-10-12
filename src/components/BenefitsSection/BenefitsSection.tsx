@@ -1,13 +1,5 @@
 import { BenefitsSectionClient } from "./BenefitsSectionClient";
 
-//   {
-//     icon: "Drama",
-//     title: "AI Roleplay",
-//     description:
-//       "Engage in playful, romantic, emotional, or fantasy chats tailored to your vibe.",
-//     color: "from-purple-500 to-pink-500",
-//   },
-
 const benefits = [
   {
     icon: "MessageSquare",
