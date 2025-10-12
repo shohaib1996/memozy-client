@@ -554,12 +554,16 @@ export function HeroSection() {
             className="relative flex items-center justify-center pt-10"
           >
             <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{
-                duration: 6,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
+              animate={isMobile || isTablet ? {} : { y: [0, -20, 0] }}
+              transition={
+                isMobile || isTablet
+                  ? {}
+                  : {
+                      duration: 6,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }
+              }
               className="relative"
             >
               {/* === Glowing Radiations (Behind the phone) === */}
