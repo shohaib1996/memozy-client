@@ -361,17 +361,25 @@ export function HeroSection() {
           className="absolute pointer-events-none z-0"
           style={{ ...item.position, willChange: "transform" }}
           initial={{ opacity: 0, scale: 0 }}
-          animate={{
-            opacity: [0.3, 0.6, 0.3],
-            scale: [1, 1.1, 1],
-            ...item.animation,
-          }}
-          transition={{
-            duration: item.duration,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: index * 0.3,
-          }}
+          animate={
+            isMobile || isTablet
+              ? { opacity: 0.5, scale: 1 } // Static on mobile/tablet
+              : {
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [1, 1.1, 1],
+                  ...item.animation,
+                }
+          }
+          transition={
+            isMobile || isTablet
+              ? { duration: 0.5 } // Quick fade in on mobile/tablet
+              : {
+                  duration: item.duration,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: index * 0.3,
+                }
+          }
         >
           <div className="relative">
             <div className={`absolute inset-0 ${item.color} opacity-20 ${isMobile ? "blur-md" : "blur-xl"}`} />
@@ -652,25 +660,41 @@ export function HeroSection() {
 
               {/* === Floating elements (Above everything) === */}
               <motion.div
-                animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
+                animate={
+                  isMobile || isTablet
+                    ? {} // No animation on mobile/tablet
+                    : { y: [0, -15, 0], rotate: [0, 5, 0] }
+                }
+                transition={
+                  isMobile || isTablet
+                    ? {}
+                    : {
+                        duration: 4,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "easeInOut",
+                      }
+                }
                 className="absolute -top-8 -right-8 z-20 w-20 h-20 backdrop-blur-xl rounded-2xl border border-gray-600/40 dark:border-white/40 flex items-center justify-center"
               >
                 <span className="text-3xl">🧠</span>
               </motion.div>
 
               <motion.div
-                animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
-                transition={{
-                  duration: 5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
+                animate={
+                  isMobile || isTablet
+                    ? {} // No animation on mobile/tablet
+                    : { y: [0, 15, 0], rotate: [0, -5, 0] }
+                }
+                transition={
+                  isMobile || isTablet
+                    ? {}
+                    : {
+                        duration: 5,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "easeInOut",
+                        delay: 1,
+                      }
+                }
                 className="absolute -bottom-8 -left-8 z-20 w-20 h-20 backdrop-blur-xl rounded-2xl border border-gray-600/40 dark:border-white/40 flex items-center justify-center"
               >
                 <span className="text-3xl">❤️</span>
