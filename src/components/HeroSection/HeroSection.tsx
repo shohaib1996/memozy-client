@@ -87,11 +87,10 @@ function TypingSubheading() {
       return () => clearTimeout(timeout);
     }
   }, [charIndex, isDeleting, currentTextIndex, texts, isMobile]);
-
   return (
     <div className="overflow-hidden min-h-[8rem] sm:min-h-[6.5rem] md:min-h-[5.5rem] lg:min-h-[4.75rem]">
       <motion.span
-        className="text-xl md:text-2xl leading-relaxed text-pretty block"
+        className="text-xl md:text-2xl leading-relaxed text-pretty block font-outfit"
         initial={{ width: 0 }}
         animate={{ width: displayedText.length > 0 ? "100%" : 0 }}
         transition={{ duration: 0.1 }}
@@ -176,7 +175,7 @@ export function HeroSection() {
     {
       Icon: Feather,
       color: "text-blue-400",
-      position: { top: "35%", left: "10%" },
+      position: { top: "40%", left: "5%" },
       animation: { x: [0, 30, 0], y: [-20, 20, -20] },
       duration: 9,
     },
@@ -511,7 +510,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className=" text-sm font-medium tracking-wider uppercase"
+              className=" text-sm font-medium tracking-wider uppercase font-outfit"
             >
               Memozy AI Companion
             </motion.p>
@@ -520,7 +519,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
+              className="text-5xl font-outfit md:text-6xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
             >
               Your AI Memory & Companion
             </motion.h1>
@@ -546,7 +545,7 @@ export function HeroSection() {
               >
                 <Button
                   size="lg"
-                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase"
+                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
                 >
                   <Image
                     src={playStore}
@@ -566,7 +565,7 @@ export function HeroSection() {
               >
                 <Button
                   size="lg"
-                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase"
+                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
                 >
                   <Image
                     src={appStore}
@@ -584,7 +583,7 @@ export function HeroSection() {
                 href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
               >
                 <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                  <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300">
+                  <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
                     Try on Web
                   </ShinyButton>
                 </div>
@@ -605,7 +604,7 @@ export function HeroSection() {
                   />
                 ))}
               </div>
-              <span className="text-sm font-medium">
+              <span className="text-sm font-medium font-outfit">
                 <AnimatedShinyText>
                   Trusted by thousands across iOS & Android
                 </AnimatedShinyText>

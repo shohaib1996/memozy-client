@@ -165,7 +165,7 @@ function FeatureBlock({
             transition={{ duration: 0.5, delay: 0.3 }}
             className="inline-block"
           >
-            <span className="relative inline-block text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full overflow-visible">
+            <span className="relative inline-block text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full overflow-visible font-outfit">
               <AnimatedShinyText>{feature.category}</AnimatedShinyText>
               <BorderBeam />
             </span>
@@ -179,7 +179,7 @@ function FeatureBlock({
                 : { opacity: 0, x: isReversed ? 20 : -20 }
             }
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-3xl md:text-4xl font-bold text-balance"
+            className="text-3xl md:text-4xl font-bold text-balance font-outfit"
           >
             {feature.title}
           </motion.h3>
@@ -192,7 +192,7 @@ function FeatureBlock({
                 : { opacity: 0, x: isReversed ? 20 : -20 }
             }
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-muted-foreground text-lg text-pretty leading-relaxed"
+            className="text-muted-foreground text-lg text-pretty leading-relaxed font-outfit"
           >
             {feature.description}
           </motion.p>
@@ -210,7 +210,7 @@ function FeatureBlock({
                   : { opacity: 0, x: isReversed ? 20 : -20 }
               }
               transition={{ duration: 0.5, delay: 0.6 + subIndex * 0.1 }}
-              className="flex items-start gap-3 group"
+              className="flex items-start gap-3 group font-outfit"
             >
               <div
                 className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br ${
@@ -249,9 +249,9 @@ function FeatureBlock({
           <div className="absolute inset-0 " />
 
           {/* Lottie Animation */}
-          <Lottie 
-            animationData={feature.animation} 
-            loop={true} 
+          <Lottie
+            animationData={feature.animation}
+            loop={true}
             className="w-full h-64 md:h-80 object-cover"
           />
         </div>
@@ -280,11 +280,11 @@ export function SmartFeaturesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-24 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
-            Smart Features That <span className="">Understand You</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent font-outfit">
+            Smart Features That <span>Understand You</span>
           </h2>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed font-outfit">
             Dive deeper into how Memozy combines cutting-edge AI with intuitive
             design to become your perfect digital companion.
           </p>
@@ -306,13 +306,13 @@ export function SmartFeaturesSection() {
         >
           <div className="flex flex-wrap gap-4">
             <Link
-              rel="noopener noreferrer"
+              rel="noopener noreferrer "
               target="_blank"
               href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
             >
               <Button
                 size="lg"
-                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer font-outfit"
               >
                 <Image
                   src={playStore}
@@ -324,7 +324,6 @@ export function SmartFeaturesSection() {
                 <BorderBeam borderWidth={2} />
               </Button>
             </Link>
-
             <Link
               rel="noopener noreferrer"
               target="_blank"
@@ -332,7 +331,7 @@ export function SmartFeaturesSection() {
             >
               <Button
                 size="lg"
-                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
+                className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer font-outfit"
               >
                 <Image src={appStore} alt="App Store" width={24} height={24} />
                 App Store

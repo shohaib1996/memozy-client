@@ -291,10 +291,10 @@ export function VisualDemoSectionClient() {
           }}
         />
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance bg-gradient-to-r from-violet-600 to-blue-500 dark:from-blue-400 dark:to-violet-600 bg-clip-text text-transparent ">
+        <h2 className="text-3xl font-outfit md:text-4xl lg:text-5xl font-bold text-balance bg-gradient-to-r from-violet-600 to-blue-500 dark:from-blue-400 dark:to-violet-600 bg-clip-text text-transparent ">
           Chat, Reflect, and Stay Organized — All in One AI Companion.
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 font-outfit">
           Experience the future of personal AI assistance. Memozy combines
           intelligent conversations, emotional support, and smart organization
           to help you navigate life with clarity and confidence.
@@ -309,7 +309,7 @@ export function VisualDemoSectionClient() {
             <Button
               variant="outline"
               size="lg"
-              className="relative overflow-hidden group text-violet-500 shadow-lg hover:shadow-xl hover:text-blue-500 transition-all duration-300 px-5"
+              className="relative overflow-hidden group text-violet-500 shadow-lg hover:shadow-xl hover:text-blue-500 transition-all duration-300 px-5 font-outfit"
             >
               Try Memozy on Web
               <ArrowRight className="ml-1 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -354,7 +354,7 @@ export function VisualDemoSectionClient() {
           </div>
         </div>
         {/* Feature Pills */}
-        <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4">
+        <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4 font-outfit">
           <span className="px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium">
             AI Conversations
           </span>

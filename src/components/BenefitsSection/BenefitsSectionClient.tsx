@@ -116,12 +116,12 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-foreground mb-3">
+                  <h3 className="text-xl font-bold text-foreground mb-3 font-outfit">
                     {benefit.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed font-outfit">
                     {benefit.description}
                   </p>
                   {!isMobile ? (
@@ -164,7 +164,7 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
             }
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <span> Swipe</span>
+            <span className="font-outfit"> Swipe</span>
             <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
           </motion.div>
         )}
@@ -183,13 +183,13 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
           }`}
         >
           ←
-          <span className="whitespace-nowrap">
+          <span className="whitespace-nowrap font-outfit">
             <AnimatedShinyText>Swipe to explore</AnimatedShinyText>
           </span>
           →
         </p>
         {isMobile && !hasSwiped && (
-          <p className="text-xs text-muted-foreground mt-1">
+          <p className="text-xs text-muted-foreground mt-1 font-outfit">
             Swipe left or right
           </p>
         )}
