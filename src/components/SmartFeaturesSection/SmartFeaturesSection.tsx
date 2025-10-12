@@ -18,10 +18,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "../ui/border-beam";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
-import Link from "next/link";
+import Image from "next/image";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const iconGradients = [
   // Organization features
@@ -45,8 +48,7 @@ const features = [
     title: "Stay Organized Effortlessly",
     description:
       "Let Memozy handle the mental load. From auto-tagging notes to sending timely reminders, your thoughts are always organized and accessible.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/organized-notes-and-reminders-interface-GzztELoldFpaQo3bWJpT8Qc931WvnZ.jpg",
+    animation: require("../../../public/organized-animation.json"),
     subFeatures: [
       {
         icon: Brain,
@@ -70,8 +72,7 @@ const features = [
     title: "Your AI Companion, Your Way",
     description:
       "Whether you need a professional assistant, a romantic chat partner, or someone to roast you — Memozy adapts to your mood and style with realistic AI voices.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/ai-chat-interface-with-different-personality-modes-j2RQrliB5jLAMwaJ3hnuUAMBbuRZiy.jpg",
+    animation: require("../../../public/vibe-animation.json"),
     subFeatures: [
       {
         icon: Drama,
@@ -95,8 +96,7 @@ const features = [
     title: "Powerful Tools for Everyday Life",
     description:
       "From syncing meetings to your calendar, interpreting images, to decoding confusing situations with tarot-style readings — Memozy is your all-in-one AI toolkit.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/ai-utility-tools-calendar-and-image-analysis-DyUeWzoOwRW3IylVdm1Ei0DbraKB0y.jpg",
+    animation: require("../../../public/tools-animation.json"),
     subFeatures: [
       {
         icon: Calendar,
@@ -230,7 +230,7 @@ function FeatureBlock({
         </div>
       </div>
 
-      {/* Image/Visual */}
+      {/* Lottie Animation */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={
@@ -241,21 +241,17 @@ function FeatureBlock({
           isReversed ? "md:col-start-1 md:row-start-1" : ""
         }`}
       >
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
+        <div className="relative rounded-2xl overflow-hidden ">
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 z-10" />
+          <div className="absolute inset-0 " />
 
-          {/* Image */}
-          <img
-            src={feature.image || "/placeholder.svg"}
-            alt={feature.title}
-            className="w-full h-auto object-cover"
+          {/* Lottie Animation */}
+          <Lottie 
+            animationData={feature.animation} 
+            loop={true} 
+            className="w-full h-64 md:h-80 object-cover"
           />
         </div>
-
-        {/* Decorative elements */}
-        <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
       </motion.div>
     </motion.div>
   );
