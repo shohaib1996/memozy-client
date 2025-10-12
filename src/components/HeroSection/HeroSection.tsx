@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
 import {
   Star,
   HeartHandshake,
@@ -20,92 +20,139 @@ import {
   Wand2,
   SmilePlus,
   Feather,
-} from "lucide-react";
-import React, { useState, useEffect, useRef } from "react";
-import { AnimatedShinyText } from "../ui/animated-shiny-text";
-import Link from "next/link";
-import { ShinyButton } from "../ui/shiny-button";
-import Image from "next/image";
-import { BorderBeam } from "../ui/border-beam";
+} from "lucide-react"
+import React, { useState, useEffect } from "react"
+import { AnimatedShinyText } from "../ui/animated-shiny-text"
+import Link from "next/link"
+import { ShinyButton } from "../ui/shiny-button"
+import Image from "next/image"
+import { BorderBeam } from "../ui/border-beam"
+import { useMediaQuery } from "@/hooks/use-media-query"
 
 function TypingSubheading() {
   const texts = React.useMemo(
     () => [
-      "🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you’re chatting with a thoughtful friend.",
+      "🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you're chatting with a thoughtful friend.",
       "🎭 AI Roleplay – Engage in playful, romantic, emotional, or fantasy chats tailored to your vibe.",
       "🖼️ Image Input & Interpretation – Upload pictures for outfit feedback, math help, text extraction, or creative AI insights.",
       "🔊 Voice Messages & Custom AI Voice – Hear Memozy reply in realistic voices that match your mood and style.",
       "🧠 Smart Organization – Let Memozy auto-tag and neatly organize your notes, reminders, and thoughts.",
-      "📅 Calendar & Meeting Sync – Schedule meetings and sync them effortlessly to your phone’s calendar.",
-      "📖 Weekly Journal Summaries – Get reflective, AI-generated recaps of your week every Sunday.",
-      "⏰ Personalized Reminders – Stay on track with smart, friendly nudges just when you need them.",
-      "💫 Customizable AI Vibes – Choose your vibe: Professional, Friendly, Romantic, or even bold “RoastMe” mode.",
-      "🔮 Creative Tarot Decoder – Decode confusing situationships with playful tarot-style AI readings.",
     ],
-    []
-  );
+    [],
+  )
 
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("")
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [charIndex, setCharIndex] = useState(0)
+
+  const isMobile = useMediaQuery("(max-width: 768px)")
 
   useEffect(() => {
-    const currentText = texts[currentTextIndex];
-    const typingSpeed = 50;
-    const deletingSpeed = 30;
-    const pauseTime = 2000;
+    if (isMobile) {
+      setDisplayedText(texts[0])
+      return
+    }
+
+    const currentText = texts[currentTextIndex]
+    const typingSpeed = 50
+    const deletingSpeed = 30
+    const pauseTime = 2000
 
     if (!isDeleting && charIndex < currentText.length) {
-      // Typing
       const timeout = setTimeout(() => {
-        setDisplayedText(currentText.slice(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      }, typingSpeed);
-      return () => clearTimeout(timeout);
+        setDisplayedText(currentText.slice(0, charIndex + 1))
+        setCharIndex(charIndex + 1)
+      }, typingSpeed)
+      return () => clearTimeout(timeout)
     } else if (!isDeleting && charIndex === currentText.length) {
-      // Pause after typing
       const timeout = setTimeout(() => {
-        setIsDeleting(true);
-        setCharIndex(currentText.length);
-      }, pauseTime);
-      return () => clearTimeout(timeout);
+        setIsDeleting(true)
+        setCharIndex(currentText.length)
+      }, pauseTime)
+      return () => clearTimeout(timeout)
     } else if (isDeleting && charIndex > 0) {
-      // Deleting
       const timeout = setTimeout(() => {
-        setDisplayedText(currentText.slice(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-      }, deletingSpeed);
-      return () => clearTimeout(timeout);
+        setDisplayedText(currentText.slice(0, charIndex - 1))
+        setCharIndex(charIndex - 1)
+      }, deletingSpeed)
+      return () => clearTimeout(timeout)
     } else if (isDeleting && charIndex === 0) {
-      // Move to next text
       const timeout = setTimeout(() => {
-        const nextIndex = (currentTextIndex + 1) % texts.length;
-        setCurrentTextIndex(nextIndex);
-        setIsDeleting(false);
-        setCharIndex(0);
-      }, 500);
-      return () => clearTimeout(timeout);
+        const nextIndex = (currentTextIndex + 1) % texts.length
+        setCurrentTextIndex(nextIndex)
+        setIsDeleting(false)
+        setCharIndex(0)
+      }, 500)
+      return () => clearTimeout(timeout)
     }
-  }, [charIndex, isDeleting, currentTextIndex, texts]);
+  }, [charIndex, isDeleting, currentTextIndex, texts, isMobile])
 
   return (
-    <div className="overflow-hidden min-h-[6rem] sm:min-h-[5.5rem] md:min-h-[4.5rem] lg:min-h-[3.75rem]">
+    <div className="overflow-hidden min-h-[8rem] sm:min-h-[6.5rem] md:min-h-[5.5rem] lg:min-h-[4.75rem]">
       <motion.span
-        className="text-xl md:text-2xl leading-relaxed text-pretty block" // Changed to block for better height control
+        className="text-xl md:text-2xl leading-relaxed text-pretty block"
         initial={{ width: 0 }}
         animate={{ width: displayedText.length > 0 ? "100%" : 0 }}
         transition={{ duration: 0.1 }}
       >
         {displayedText}
-        <span className="inline-block w-1 h-6 animate-pulse ml-1">|</span>
+        {!isMobile && <span className="inline-block w-1 h-6 animate-pulse ml-1">|</span>}
       </motion.span>
     </div>
-  );
+  )
 }
 
 export function HeroSection() {
-  const floatingIcons = [
+  const isMobile = useMediaQuery("(max-width: 768px)")
+  const isTablet = useMediaQuery("(max-width: 1024px)")
+
+  const mobileFloatingIcons = [
+    {
+      Icon: MessageSquare,
+      color: "text-violet-400",
+      position: { top: "15%", left: "10%" },
+      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+      duration: 10,
+    },
+    {
+      Icon: Drama,
+      color: "text-pink-400",
+      position: { top: "25%", right: "15%" },
+      animation: { x: [10, -10, 10], y: [0, 10, 0] },
+      duration: 11,
+    },
+    {
+      Icon: Brain,
+      color: "text-purple-400",
+      position: { top: "45%", left: "8%" },
+      animation: { x: [0, -12, 0], y: [8, -8, 8] },
+      duration: 12,
+    },
+    {
+      Icon: Sparkles,
+      color: "text-fuchsia-400",
+      position: { top: "60%", right: "12%" },
+      animation: { x: [8, -8, 8], y: [-10, 10, -10] },
+      duration: 10,
+    },
+    {
+      Icon: HeartHandshake,
+      color: "text-violet-400",
+      position: { top: "75%", left: "15%" },
+      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+      duration: 11,
+    },
+    {
+      Icon: Flame,
+      color: "text-violet-400",
+      position: { top: "35%", right: "20%" },
+      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+      duration: 10,
+    },
+  ]
+
+  const desktopFloatingIcons = [
     {
       Icon: MessageSquare,
       color: "text-violet-400",
@@ -302,7 +349,9 @@ export function HeroSection() {
       animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
       duration: 7,
     },
-  ];
+  ]
+
+  const floatingIcons = isMobile || isTablet ? mobileFloatingIcons : desktopFloatingIcons
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden gradient-bg">
@@ -310,7 +359,7 @@ export function HeroSection() {
         <motion.div
           key={index}
           className="absolute pointer-events-none z-0"
-          style={item.position}
+          style={{ ...item.position, willChange: "transform" }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{
             opacity: [0.3, 0.6, 0.3],
@@ -325,80 +374,84 @@ export function HeroSection() {
           }}
         >
           <div className="relative">
-            <div
-              className={`absolute inset-0 ${item.color} opacity-20 blur-xl`}
-            />
+            <div className={`absolute inset-0 ${item.color} opacity-20 ${isMobile ? "blur-md" : "blur-xl"}`} />
             <item.Icon
-              className={`h-8 w-8 ${item.color} relative z-10`}
+              className={`${isMobile ? "h-6 w-6" : "h-8 w-8"} ${item.color} relative z-10`}
               strokeWidth={1.5}
             />
           </div>
         </motion.div>
       ))}
 
-      <motion.div
-        className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <motion.div
-          className="absolute top-0 left-0 w-64 h-64 rounded-full bg-violet-700/40 blur-3xl"
-          animate={{
-            opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-8 left-8 w-48 h-48 rounded-full bg-emerald-500/40 blur-2xl"
-          animate={{
-            opacity: [0.4, 1, 0.4],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 2.5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        />
-      </motion.div>
+      {!isMobile && (
+        <>
+          <motion.div
+            className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            style={{ willChange: "transform, opacity" }}
+          >
+            <motion.div
+              className="absolute top-0 left-0 w-64 h-64 rounded-full bg-violet-700/40 blur-3xl"
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute top-8 left-8 w-48 h-48 rounded-full bg-emerald-500/40 blur-2xl"
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+            />
+          </motion.div>
 
-      <motion.div
-        className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <motion.div
-          className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-emerald-500/40 blur-3xl"
-          animate={{
-            opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 2.2,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-8 right-8 w-48 h-48 rounded-full bg-violet-700/40 blur-2xl"
-          animate={{
-            opacity: [0.4, 1, 0.4],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 2.7,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 0.7,
-          }}
-        />
-      </motion.div>
+          <motion.div
+            className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            style={{ willChange: "transform, opacity" }}
+          >
+            <motion.div
+              className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-emerald-500/40 blur-3xl"
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 2.2,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute bottom-8 right-8 w-48 h-48 rounded-full bg-violet-700/40 blur-2xl"
+              animate={{
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 2.7,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+                delay: 0.7,
+              }}
+            />
+          </motion.div>
+        </>
+      )}
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -427,11 +480,7 @@ export function HeroSection() {
               Your AI Memory & Companion
             </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
               <TypingSubheading />
             </motion.div>
 
@@ -488,16 +537,11 @@ export function HeroSection() {
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                  />
+                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               <span className="text-sm font-medium">
-                <AnimatedShinyText>
-                  Trusted by thousands across iOS & Android
-                </AnimatedShinyText>
+                <AnimatedShinyText>Trusted by thousands across iOS & Android</AnimatedShinyText>
               </span>
             </motion.div>
           </motion.div>
@@ -594,8 +638,7 @@ export function HeroSection() {
                 <div className="flex items-center justify-center">
                   <Image
                     src="https://i.imgur.com/gFkfwTH.jpeg"
-                    alt="A screenshot of the Memozy app showing a chat interface
-         with an AI companion."
+                    alt="A screenshot of the Memozy app showing a chat interface with an AI companion."
                     className="object-contain rounded-2xl shadow-lg"
                     width={300}
                     height={530}
@@ -633,5 +676,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
