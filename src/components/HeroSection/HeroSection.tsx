@@ -28,6 +28,9 @@ import { BorderBeam } from "../ui/border-beam";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
+import qrCode from "../../../public/qr-code.png";
+import { usePlatform } from "@/hooks/usePlatform";
+import { ReusableDialog } from "../ui/reusable-dialog";
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -107,6 +110,7 @@ function TypingSubheading() {
 export function HeroSection() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
+  const platform = usePlatform();
 
   const mobileFloatingIcons = [
     {
@@ -577,6 +581,26 @@ export function HeroSection() {
                   <BorderBeam borderWidth={2} />
                 </Button>
               </Link>
+              {platform === "desktop" && (
+                <ReusableDialog
+                  trigger={
+                    <Button
+                      size="lg"
+                      className="relative cursor-pointer overflow-hidden text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointert"
+                    >
+                      <Image
+                        src={qrCode}
+                        alt="Qr Code"
+                        width={24}
+                        height={24}
+                      />{" "}
+                      QR Code
+                    </Button>
+                  }
+                  title="Download by QR Code"
+                  description="This is a placeholder for IOS and Androild App download QR Code."
+                />
+              )}
               <Link
                 rel="noopener noreferrer"
                 target="_blank"

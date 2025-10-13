@@ -9,11 +9,15 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
 import Image from "next/image";
+import { usePlatform } from "@/hooks/usePlatform";
+import qrCode from "../../../public/qr-code.png";
+import { ReusableDialog } from "../ui/reusable-dialog";
 
 export function VisualDemoSectionClient() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
   const isSmallScreen = isMobile || isTablet;
+  const platform = usePlatform();
 
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
@@ -351,6 +355,20 @@ export function VisualDemoSectionClient() {
                 <BorderBeam borderWidth={2} />
               </Button>
             </Link>
+            {platform === "desktop" && (
+              <ReusableDialog
+                trigger={
+                  <Button
+                    size="lg"
+                    className="relative cursor-pointer overflow-hidden text-sm px-1 md:px-3 lg:px-4 lg:py-3 md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointert"
+                  >
+                    <Image src={qrCode} alt="Qr Code" width={24} height={24} />
+                  </Button>
+                }
+                title="Download by QR Code"
+                description="This is a placeholder for IOS and Androild App download QR Code."
+              />
+            )}
           </div>
         </div>
         {/* Feature Pills */}

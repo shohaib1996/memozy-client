@@ -6,7 +6,8 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "../ModeToggle/ModeToggle";
+// import { ModeToggle } from "../ModeToggle/ModeToggle";
+import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -102,7 +103,8 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <ModeToggle />
+            {/* <ModeToggle/> */}
+            <AnimatedThemeToggler/>
           </div>
         </div>
       </div>

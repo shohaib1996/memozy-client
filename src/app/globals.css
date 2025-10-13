@@ -162,3 +162,8 @@ html {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

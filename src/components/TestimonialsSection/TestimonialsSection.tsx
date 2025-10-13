@@ -17,6 +17,9 @@ import Image from "next/image";
 import { BorderBeam } from "../ui/border-beam";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
+import qrCode from "../../../public/qr-code.png";
+import { usePlatform } from "@/hooks/usePlatform";
+import { ReusableDialog } from "@/components/ui/reusable-dialog";
 
 const featuredLogos = [
   { name: "TechCrunch", color: "text-green-500" },
@@ -26,6 +29,7 @@ const featuredLogos = [
 ];
 
 export function TestimonialsSection() {
+  const platform = usePlatform();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -189,7 +193,7 @@ export function TestimonialsSection() {
                     onMouseEnter={() => setAutoPlay(false)}
                     onMouseLeave={() => setAutoPlay(true)}
                   >
-                    <div className="relative h-[200px] p-6 rounded-2xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-violet-500/50 transition-all duration-300 shadow-lg hover:shadow-violet-500/20 overflow-hidden">
+                    <div className="relative h-[220px] p-6 rounded-2xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-violet-500/50 transition-all duration-300 shadow-lg hover:shadow-violet-500/20 overflow-hidden">
                       {/* Corner Glow Effect - Layer 1 (Outer) */}
                       <motion.div
                         className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-violet-500/30 to-blue-500/20 rounded-full  -mr-16 -mt-16"
@@ -206,7 +210,7 @@ export function TestimonialsSection() {
 
                       {/* Corner Glow Effect - Layer 2 (Middle) */}
                       <motion.div
-                        className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/35 to-cyan-500/25 rounded-full   -mr-14 -mt-14"
+                        className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/35 to-cyan-500/25 rounded-full -mr-14 -mt-14"
                         animate={{
                           scale: [1, 1.1, 1],
                           opacity: [0.6, 0.9, 0.6],
@@ -278,7 +282,10 @@ export function TestimonialsSection() {
                       </div>
 
                       {/* Border Beam - ✅ now correctly positioned */}
-                      <BorderBeam borderWidth={2} className="from-violet-500 via-emerald-500 to-transparent" />
+                      <BorderBeam
+                        borderWidth={2}
+                        className="from-violet-500 via-emerald-500 to-transparent"
+                      />
                     </div>
                   </div>
                 </div>
@@ -289,14 +296,14 @@ export function TestimonialsSection() {
           {/* Navigation Buttons */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-0 bg-gradient-to-r from-violet-500 to-blue-500 top-[40%] sm:top-[40%] md:top-[40%] lg:top-[43%] -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 hover:border-violet-500/50 hover:bg-violet-500/10 transition-all duration-300 flex items-center justify-center group shadow-lg z-20"
+            className="hidden lg:flex absolute left-3 bg-gradient-to-r from-violet-500 to-blue-500 top-[43%] -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 hover:border-violet-500/50 hover:bg-violet-500/10 transition-all duration-300 items-center justify-center group shadow-lg z-20"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6 text-white group-hover:text-white transition-colors" />
           </button>
           <button
             onClick={() => paginate(1)}
-            className="absolute right-0 bg-gradient-to-r from-violet-500 to-blue-500 top-[40%] sm:top-[40%] md:top-[40%] lg:top-[43%] -translate-y-1/2 translate-x-1/2 w-12 h-12 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 hover:border-violet-500/50 hover:bg-violet-500/10 transition-all duration-300 flex items-center justify-center group shadow-lg z-20"
+            className="hidden lg:flex absolute right-3 bg-gradient-to-r from-violet-500 to-blue-500 top-[43%] -translate-y-1/2 translate-x-1/2 w-12 h-12 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 hover:border-violet-500/50 hover:bg-violet-500/10 transition-all duration-300 items-center justify-center group shadow-lg z-20"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6 text-white group-hover:text-white transition-colors" />
@@ -324,7 +331,10 @@ export function TestimonialsSection() {
               // First ellipsis
               if (totalSlides > 5 && currentIndex > 2) {
                 elements.push(
-                  <span key="ellipsis1" className="text-muted-foreground text-sm mx-1">
+                  <span
+                    key="ellipsis1"
+                    className="text-muted-foreground text-sm mx-1"
+                  >
                     ...
                   </span>
                 );
@@ -351,7 +361,10 @@ export function TestimonialsSection() {
               // Second ellipsis
               if (totalSlides > 5 && currentIndex < totalSlides - 3) {
                 elements.push(
-                  <span key="ellipsis2" className="text-muted-foreground text-sm mx-1">
+                  <span
+                    key="ellipsis2"
+                    className="text-muted-foreground text-sm mx-1"
+                  >
                     ...
                   </span>
                 );
@@ -444,6 +457,21 @@ export function TestimonialsSection() {
                 <BorderBeam borderWidth={2} />
               </Button>
             </Link>
+            {platform === "desktop" && (
+              <ReusableDialog
+                trigger={
+                  <Button
+                    size="lg"
+                    className="relative cursor-pointer overflow-hidden text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointert"
+                  >
+                    <Image src={qrCode} alt="Qr Code" width={24} height={24} />{" "}
+                    QR Code
+                  </Button>
+                }
+                title="Download by QR Code"
+                description="This is a placeholder for IOS and Androild App download QR Code."
+              />
+            )}
           </div>
         </div>
       </div>
