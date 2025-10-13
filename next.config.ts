@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "*", // allow all hostnames
+        port: "",
+        pathname: "**", // allow all paths
       },
     ],
   },
