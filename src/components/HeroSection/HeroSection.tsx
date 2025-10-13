@@ -111,7 +111,6 @@ function TypingSubheading() {
 export function HeroSection() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
-  const platform = usePlatform();
 
   const mobileFloatingIcons = [
     {
@@ -635,7 +634,7 @@ export function HeroSection() {
                 </AnimatedShinyText>
               </span>
             </motion.div>
-            <Image className="hidden lg:flex" src={qrCodeAll} alt="qrcode" width={100} height={100} />
+            <Image className="hidden lg:flex rounded-xl" src={qrCodeAll} alt="qrcode" width={100} height={100} />
           </motion.div>
 
           {/* Right side - Animated mockup */}
