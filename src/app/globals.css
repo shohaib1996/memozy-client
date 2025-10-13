@@ -155,3 +155,10 @@ html {
       /* brighter violet */ 0 0 70px rgba(59, 130, 246, 0.5); /* stronger blue */
   }
 }
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

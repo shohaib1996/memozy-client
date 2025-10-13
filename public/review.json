@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": "Zork Drajar",
+    "avatar": "https://randomuser.me/api/portraits/men/10.jpg",
+    "role": "Writer",
+    "gender": "Male",
+    "quote": "I love this AI. It works very well and is a delight to work with but I can't figure out how to incorporate it into my workflow. I wish this was PWA (web app) not strictly an Android app as I'm usually at my PC. For this to work for me I would have to export everything to markdown.",
+    "rating": 4
+  },
+  {
+    "id": 2,
+    "name": "James Weaver",
+    "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+    "role": "Tech Enthusiast",
+    "gender": "Male",
+    "quote": "OK app, but doesn't send me push notifications when I set reminders. It only prompts notification reminders when you open the app. The task notifications were the biggest reason I wanted to use this app. The push notification bug is fixed now though.",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "name": "Willie Joe Montanez Gross",
+    "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
+    "role": "Entrepreneur",
+    "gender": "Male",
+    "quote": "This AI personal assistant app is better than I originally thought. It's capable of setting alarms and adding schedules to my calendar just by telling it to. You can have decent conversations and it’s free. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Daniel",
+    "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+    "role": "Marketing Expert",
+    "gender": "Male",
+    "quote": "Memozy is my go-to AI partner in crime — flirty, fun, and super caring. Always on point with reminders, and the sass? Absolutely 🔥! If you want an assistant that keeps you smiling and on track, this is the one. Highly recommend!",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Matthias Van Den Bosch",
+    "avatar": "https://randomuser.me/api/portraits/men/14.jpg",
+    "role": "Engineer",
+    "gender": "Male",
+    "quote": "It's fun, powerful, neat so far. It's not 100% SFW, which is nice. (I wouldn't call this NSFW, it just doesn't get weird as fast as other apps when you mention the s word.)",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "name": "Crystal Young",
+    "avatar": "https://randomuser.me/api/portraits/women/15.jpg",
+    "role": "Student",
+    "gender": "Female",
+    "quote": "I have ADHD so taking notes is something I struggle with and now my life just got easier. Remembering things I need to do when it pops in my head, I tell the app and now everything is organized. My favorite app so far!",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "name": "Abubakari Mohammad",
+    "avatar": "https://randomuser.me/api/portraits/men/16.jpg",
+    "role": "Teacher",
+    "gender": "Male",
+    "quote": "This app is very, very good. When I'm in bad mood Memozy is the one helping me to smile 🙂. Thank you for your great job.",
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "name": "Mark Sturniolo",
+    "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+    "role": "Consultant",
+    "gender": "Male",
+    "quote": "A very useful tool. Especially if your short term memory isn't what it used to be. Anything and everything you want to remember all in one place. It helps with motivation and mood. BRAVO!",
+    "rating": 5
+  },
+  {
+    "id": 9,
+    "name": "James Ellis",
+    "avatar": "https://randomuser.me/api/portraits/men/18.jpg",
+    "role": "Author",
+    "gender": "Male",
+    "quote": "If you're looking to write a book this is a very good chat bot to get ideas from. It asks you different questions and creates an outline for you. You can even roleplay any part of the book you want to get a feel for the story.",
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "name": "Kimberly",
+    "avatar": "https://randomuser.me/api/portraits/women/19.jpg",
+    "role": "Researcher",
+    "gender": "Female",
+    "quote": "I really appreciate how positive Memozy is and how helpful she is with so many different topics. Whether I need advice like a best friend or info like a professor, she adapts perfectly. Definitely recommend giving Memozy a try.",
+    "rating": 5
+  },
+  {
+    "id": 11,
+    "name": "Darcy Bruneau",
+    "avatar": "https://randomuser.me/api/portraits/women/20.jpg",
+    "role": "Artist",
+    "gender": "Female",
+    "quote": "This app is really really awesome and really really fantastic and really really amazing and super out of this world. Awesome, fantastic, super app to have around!",
+    "rating": 5
+  },
+  {
+    "id": 12,
+    "name": "LOL LOL",
+    "avatar": "https://randomuser.me/api/portraits/men/61.jpg",
+    "role": "Student",
+    "gender": "Male",
+    "quote": "Great app. Really helps me keep track of my life. I recommend it.",
+    "rating": 5
+  },
+  {
+    "id": 13,
+    "name": "michael crosby",
+    "avatar": "https://randomuser.me/api/portraits/men/22.jpg",
+    "role": "Architect",
+    "gender": "Male",
+    "quote": "So far it's doing very well and is helping me keep on track with workouts and designing buildings while also keeping me focused on other things.",
+    "rating": 4
+  },
+  {
+    "id": 14,
+    "name": "Neil Burns",
+    "avatar": "https://randomuser.me/api/portraits/men/23.jpg",
+    "role": "Photographer",
+    "gender": "Male",
+    "quote": "It seems to be working ok... I would like her to be able to produce pictures of things.",
+    "rating": 4
+  },
+  {
+    "id": 15,
+    "name": "Rob Gellerman",
+    "avatar": "https://randomuser.me/api/portraits/men/24.jpg",
+    "role": "Project Manager",
+    "gender": "Male",
+    "quote": "Great so far. I use all the features and it’s been smooth overall.",
+    "rating": 4
+  },
+  {
+    "id": 16,
+    "name": "Patricia Neal",
+    "avatar": "https://randomuser.me/api/portraits/women/25.jpg",
+    "role": "Teacher",
+    "gender": "Female",
+    "quote": "I had to uninstall it because it didn't have a settings app so I couldn't do anything with it. It would be nice if it worked.",
+    "rating": 4
+  },
+  {
+    "id": 17,
+    "name": "Demiray",
+    "avatar": "https://randomuser.me/api/portraits/men/26.jpg",
+    "role": "Activist",
+    "gender": "Male",
+    "quote": "Dear developer & creator, please keep this app free because there are people in countries who cannot afford to pay. Thank you for supporting Persian language and for the AI being fluent in it. Please add the abilities of 'AI Goddess', 'AI Mistress', 'AI Wife', 'AI Partner' to this App.",
+    "rating": 4
+  },
+  {
+    "id": 18,
+    "name": "T.",
+    "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+    "role": "Developer",
+    "gender": "Male",
+    "quote": "Works great again 💯 Devs!! 🙂👍🙂",
+    "rating": 4
+  },
+  {
+    "id": 19,
+    "name": "Myo Thit Htet",
+    "avatar": "https://randomuser.me/api/portraits/men/28.jpg",
+    "role": "Student",
+    "gender": "Male",
+    "quote": "I like it.",
+    "rating": 4
+  },
+  {
+    "id": 20,
+    "name": "DR CINDY BIGSBY",
+    "avatar": "https://randomuser.me/api/portraits/women/29.jpg",
+    "role": "Psychologist",
+    "gender": "Female",
+    "quote": "Bugged, malfunctioning — needs cleaned and updated.",
+    "rating": 3
+  },
+  {
+    "id": 21,
+    "name": "Alex N",
+    "avatar": "https://randomuser.me/api/portraits/men/30.jpg",
+    "role": "Writer",
+    "gender": "Male",
+    "quote": "Very engaging app, but times out and fails to respond when longer text passages are submitted.",
+    "rating": 3
+  },
+  {
+    "id": 22,
+    "name": "FARUK GAZI",
+    "avatar": "https://randomuser.me/api/portraits/men/31.jpg",
+    "role": "Student",
+    "gender": "Male",
+    "quote": "❤️❤️",
+    "rating": 3
+  }
+]
