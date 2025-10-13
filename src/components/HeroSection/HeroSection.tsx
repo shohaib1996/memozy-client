@@ -28,9 +28,10 @@ import { BorderBeam } from "../ui/border-beam";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
-import qrCode from "../../../public/qr-code.png";
+// import qrCode from "../../../public/qr-code.png";
+import qrCodeAll from "../../../public/qrcode-all.png";
 import { usePlatform } from "@/hooks/usePlatform";
-import { ReusableDialog } from "../ui/reusable-dialog";
+// import { ReusableDialog } from "../ui/reusable-dialog";
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -581,7 +582,7 @@ export function HeroSection() {
                   <BorderBeam borderWidth={2} />
                 </Button>
               </Link>
-              {platform === "desktop" && (
+              {/* {platform === "desktop" && (
                 <ReusableDialog
                   trigger={
                     <Button
@@ -600,7 +601,7 @@ export function HeroSection() {
                   title="Download by QR Code"
                   description="This is a placeholder for IOS and Androild App download QR Code."
                 />
-              )}
+              )} */}
               <Link
                 rel="noopener noreferrer"
                 target="_blank"
@@ -634,6 +635,7 @@ export function HeroSection() {
                 </AnimatedShinyText>
               </span>
             </motion.div>
+            <Image className="hidden lg:flex" src={qrCodeAll} alt="qrcode" width={100} height={100} />
           </motion.div>
 
           {/* Right side - Animated mockup */}
