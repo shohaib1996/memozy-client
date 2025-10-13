@@ -241,12 +241,10 @@ export function TestimonialsSection() {
                       <div className="relative z-10 font-outfit">
                         {/* Avatar and Name */}
                         <div className="flex items-center gap-3 mb-4">
-                          <Image
+                          <img
                             src={testimonial.avatar}
                             alt={testimonial.name}
                             className="w-10 h-10 rounded-full object-cover"
-                            width={40}
-                            height={40}
                           />
                           <div>
                             <h3 className="font-semibold text-base text-foreground">
