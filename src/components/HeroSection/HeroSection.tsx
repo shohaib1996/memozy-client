@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import React, { useState, useEffect } from "react";
@@ -14,7 +13,23 @@ import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
 import qrCodeAll from "../../../public/qrcode-all.png";
 import heroMockup from "../../../public/hero-mockup.jpeg";
+import { motion } from "framer-motion";
 
+// Large Static Lightning Circle Component
+const LightningCircle = ({ size = 500, opacity = 0.3, zIndex = 0, offsetX = 0, offsetY = 0 }) => {
+  return (
+    <div
+      className="absolute rounded-full bg-gradient-to-r from-blue-400/30 via-blue-600/30 to-violet-500/30 animate-pulse"
+      style={{
+        width: size,
+        height: size,
+        opacity: opacity,
+        zIndex: zIndex,
+        transform: `translate(${offsetX}px, ${offsetY}px)`,
+      }}
+    />
+  );
+};
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -74,6 +89,7 @@ function TypingSubheading() {
       return () => clearTimeout(timeout);
     }
   }, [charIndex, isDeleting, currentTextIndex, texts, isMobile]);
+
   return (
     <div className="overflow-hidden min-h-[8rem] sm:min-h-[6.5rem] md:min-h-[5.5rem] lg:min-h-[4.75rem]">
       <motion.span
@@ -98,7 +114,10 @@ export function HeroSection() {
   const sectionBgClass =
     isMobile || isTablet
       ? "bg-gradient-to-b from-blue-400/30 via-blue-700/30 to-violet-400/40"
-      : "gradient-bg";
+      : "bg-gradient-to-tl dark:from-blue-400/30 dark:via-blue-700/30 dark:to-violet-400/40";
+
+  // Responsive circle sizes
+  const circleSize = isMobile ? 400 : isTablet ? 450 : 600;
 
   return (
     <section
@@ -179,7 +198,7 @@ export function HeroSection() {
           {/* Left side - Text content */}
           {isMobile ? (
             <div className="space-y-8 flex items-center flex-col text-center lg:text-left lg:items-start">
-              <p className=" text-sm font-medium tracking-wider uppercase font-outfit">
+              <p className="text-sm font-medium tracking-wider uppercase font-outfit">
                 Memozy AI Companion
               </p>
               <h1 className="text-5xl font-outfit leading-tight md:text-6xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600">
@@ -275,7 +294,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className=" text-sm font-medium tracking-wider uppercase font-outfit"
+                className="text-sm font-medium tracking-wider uppercase font-outfit"
               >
                 Memozy AI Companion
               </motion.p>
@@ -348,7 +367,7 @@ export function HeroSection() {
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
                   <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                    <ShinyButton isMobile={isMobile} className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                    <ShinyButton isMobile={isMobile} className="py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
                       Try on Web
                     </ShinyButton>
                   </div>
@@ -392,20 +411,33 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative flex items-center justify-center pt-10"
           >
-            <motion.div
-              animate={isMobile || isTablet ? {} : { y: [0, -20, 0] }}
-              transition={
-                isMobile || isTablet
-                  ? {}
-                  : {
-                      duration: 6,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                    }
-              }
-              className="relative"
-            >
-              {/* === Phone Mockup (Above Glows) === */}
+            <div className="relative">
+              {/* === Lightning Circles - BEHIND MOCKUP (z-0) === */}
+              <div className="absolute inset-0 z-0 flex items-center justify-center">
+                <LightningCircle
+                  size={circleSize}
+                  opacity={0.2}
+                  zIndex={0}
+                  offsetX={0}
+                  offsetY={0}
+                />
+                <LightningCircle
+                  size={circleSize * 0.85}
+                  opacity={0.3}
+                  zIndex={1}
+                  offsetX={10}
+                  offsetY={10}
+                />
+                <LightningCircle
+                  size={circleSize * 0.7}
+                  opacity={0.4}
+                  zIndex={2}
+                  offsetX={20}
+                  offsetY={20}
+                />
+              </div>
+
+              {/* === Phone Mockup (z-10) === */}
               <div className="relative z-10 w-[300px] h-[530px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-[3rem] border-4 border-gray-400/40 shadow-2xl overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black/50 rounded-b-3xl" />
 
@@ -422,11 +454,11 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* === Floating elements (Above everything) === */}
+              {/* === Floating elements (Above everything - z-20) === */}
               <motion.div
                 animate={
                   isMobile || isTablet
-                    ? {} // No animation on mobile/tablet
+                    ? {}
                     : { y: [0, -15, 0], rotate: [0, 5, 0] }
                 }
                 transition={
@@ -446,7 +478,7 @@ export function HeroSection() {
               <motion.div
                 animate={
                   isMobile || isTablet
-                    ? {} // No animation on mobile/tablet
+                    ? {}
                     : { y: [0, 15, 0], rotate: [0, -5, 0] }
                 }
                 transition={
@@ -463,7 +495,7 @@ export function HeroSection() {
               >
                 <span className="text-3xl">❤️</span>
               </motion.div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
