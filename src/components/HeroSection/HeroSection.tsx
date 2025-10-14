@@ -599,7 +599,13 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <TypingSubheading />
+              {isMobile ? (
+                <p className="text-xl md:text-2xl leading-relaxed text-pretty block font-outfit min-h-[8rem] sm:min-h-[6.5rem]">
+                  🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you're chatting with a thoughtful friend.
+                </p>
+              ) : (
+                <TypingSubheading />
+              )}
             </motion.div>
 
             <motion.div
