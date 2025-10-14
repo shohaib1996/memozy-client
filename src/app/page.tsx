@@ -5,8 +5,8 @@ const BenefitsSection = dynamic(() => import("@/components/BenefitsSection/Benef
 const VisualDemoSection = dynamic(() => import("@/components/VisualDemoSection/VisualDemoSection").then(mod => mod.VisualDemoSection));
 const SmartFeaturesSection = dynamic(() => import("@/components/SmartFeaturesSection/SmartFeaturesSection").then(mod => mod.SmartFeaturesSection));
 const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection/TestimonialsSection").then(mod => mod.TestimonialsSection));
-// const FaqSection = dynamic(() => import("@/components/FaqSection/FaqSection").then(mod => mod.FaqSection));
-// const SecondaryCTASection = dynamic(() => import("@/components/SecondaryCTASection/SecondaryCTASection").then(mod => mod.SecondaryCTASection));
+const FaqSection = dynamic(() => import("@/components/FaqSection/FaqSection").then(mod => mod.FaqSection));
+const SecondaryCTASection = dynamic(() => import("@/components/SecondaryCTASection/SecondaryCTASection").then(mod => mod.SecondaryCTASection));
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
       <VisualDemoSection/>
       <SmartFeaturesSection/>
       <TestimonialsSection/>
-      {/* <FaqSection/> */}
-      {/* <SecondaryCTASection/> */}
+      <FaqSection/>
+      <SecondaryCTASection/>
     </div>
   );
 }

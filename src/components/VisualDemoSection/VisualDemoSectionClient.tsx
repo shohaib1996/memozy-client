@@ -19,7 +19,6 @@ export function VisualDemoSectionClient() {
   const isSmallScreen = isMobile || isTablet;
   const platform = usePlatform();
 
-
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
       {/* Left Side - Mobile Mockup with Video */}
@@ -364,11 +363,11 @@ export function VisualDemoSectionClient() {
                     className="relative cursor-pointer overflow-hidden text-sm px-1 md:px-3 lg:px-4 lg:py-3 md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300"
                   >
                     <Image src={qrCode} alt="Qr Code" width={24} height={24} />
-                    <BorderBeam borderWidth={2}/>
+                    <BorderBeam borderWidth={2} />
                   </Button>
                 }
                 title="Download by QR Code"
-                description="This is a placeholder for iOS and Android App download QR Codes."
+                description="Scan to download 📲Available on iOS & Android.Your journey starts in one tap."
               />
             )}
           </div>
