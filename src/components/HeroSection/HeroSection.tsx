@@ -810,6 +810,7 @@ export function HeroSection() {
                     className="object-contain rounded-2xl shadow-lg"
                     width={300}
                     height={530}
+                    priority
                   />
                 </div>
               </div>

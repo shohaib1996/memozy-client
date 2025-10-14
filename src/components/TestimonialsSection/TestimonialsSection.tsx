@@ -104,7 +104,7 @@ export function TestimonialsSection() {
           className="text-center mb-10 font-outfit"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-blue-600 to-pink-600 bg-clip-text text-transparent">
-            Loved by thousands of users ❤️
+            What Our Users Say About MemoZy
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Join our community of happy users who have transformed their
@@ -261,12 +261,12 @@ export function TestimonialsSection() {
                         </div>
 
                         {/* Quote */}
-                        <p
+                        <blockquote
                           className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-3"
                           title={testimonial.quote}
                         >
                           &quot;{testimonial.quote}&quot;
-                        </p>
+                        </blockquote>
 
                         {/* Star Rating */}
                         <div className="flex gap-1">

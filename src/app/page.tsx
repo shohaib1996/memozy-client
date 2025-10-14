@@ -1,9 +1,11 @@
-import { BenefitsSection } from "@/components/BenefitsSection/BenefitsSection";
-import { FaqSection } from "@/components/FaqSection/FaqSection";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
-import { SmartFeaturesSection } from "@/components/SmartFeaturesSection/SmartFeaturesSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection/TestimonialsSection";
-import { VisualDemoSection } from "@/components/VisualDemoSection/VisualDemoSection";
+import dynamic from "next/dynamic";
+
+const BenefitsSection = dynamic(() => import("@/components/BenefitsSection/BenefitsSection").then(mod => mod.BenefitsSection));
+const VisualDemoSection = dynamic(() => import("@/components/VisualDemoSection/VisualDemoSection").then(mod => mod.VisualDemoSection));
+const SmartFeaturesSection = dynamic(() => import("@/components/SmartFeaturesSection/SmartFeaturesSection").then(mod => mod.SmartFeaturesSection));
+const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection/TestimonialsSection").then(mod => mod.TestimonialsSection));
+// const FaqSection = dynamic(() => import("@/components/FaqSection/FaqSection").then(mod => mod.FaqSection));
 
 export default function Home() {
   return (

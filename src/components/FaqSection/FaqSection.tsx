@@ -74,8 +74,8 @@ export function FaqSection() {
             <Lottie
               animationData={faqAnimation}
               loop={true}
-              width={400}
-              height={400}
+              width={300}
+              height={300}
             />
             {/* Decorative elements */}
             <motion.div
@@ -124,7 +124,7 @@ export function FaqSection() {
                   value={`item-${index}`}
                   className="border border-violet-500/40 dark:border-violet-500/30 rounded-lg px-6 bg-background/50 backdrop-blur-sm hover:border-violet-500/40 dark:hover:border-violet-500/50 transition-colors"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline py-4">
+                  <AccordionTrigger className="text-left hover:no-underline py-4 cursor-pointer">
                     <span className="font-semibold text-foreground text-base lg:text-lg">
                       {faq.question}
                     </span>
