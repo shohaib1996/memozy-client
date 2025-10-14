@@ -95,281 +95,6 @@ export function HeroSection() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
-  // const mobileFloatingIcons = [
-  //   {
-  //     Icon: MessageSquare,
-  //     color: "text-violet-400",
-  //     position: { top: "15%", left: "10%" },
-  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-  //     duration: 10,
-  //   },
-  //   {
-  //     Icon: Flame,
-  //     color: "text-violet-400",
-  //     position: { top: "10%", left: "10%" },
-  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-  //     duration: 10,
-  //   },
-  //   {
-  //     Icon: HeartHandshake,
-  //     color: "text-violet-400",
-  //     position: { top: "15%", right: "15%" },
-  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: Drama,
-  //     color: "text-pink-400",
-  //     position: { top: "25%", right: "15%" },
-  //     animation: { x: [10, -10, 10], y: [0, 10, 0] },
-  //     duration: 11,
-  //   },
-  //   {
-  //     Icon: Brain,
-  //     color: "text-purple-400",
-  //     position: { top: "45%", left: "8%" },
-  //     animation: { x: [0, -12, 0], y: [8, -8, 8] },
-  //     duration: 12,
-  //   },
-  //   {
-  //     Icon: Sparkles,
-  //     color: "text-fuchsia-400",
-  //     position: { top: "60%", right: "12%" },
-  //     animation: { x: [8, -8, 8], y: [-10, 10, -10] },
-  //     duration: 10,
-  //   },
-  //   {
-  //     Icon: HeartHandshake,
-  //     color: "text-violet-400",
-  //     position: { top: "75%", left: "15%" },
-  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-  //     duration: 11,
-  //   },
-  //   {
-  //     Icon: Flame,
-  //     color: "text-violet-400",
-  //     position: { top: "35%", right: "20%" },
-  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-  //     duration: 10,
-  //   },
-  //   {
-  //     Icon: Feather,
-  //     color: "text-blue-400",
-  //     position: { top: "35%", right: "10%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  //   {
-  //     Icon: Feather,
-  //     color: "text-blue-400",
-  //     position: { top: "40%", left: "5%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  // ];
-
-  // const desktopFloatingIcons = [
-  //   {
-  //     Icon: MessageSquare,
-  //     color: "text-violet-400",
-  //     position: { top: "15%", left: "10%" },
-  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: ImageIcon,
-  //     color: "text-blue-400",
-  //     position: { top: "15%", left: "50%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  //   {
-  //     Icon: HeartHandshake,
-  //     color: "text-violet-400",
-  //     position: { top: "15%", left: "35%" },
-  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: Flame,
-  //     color: "text-violet-400",
-  //     position: { top: "35%", left: "45%" },
-  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: BookOpen,
-  //     color: "text-indigo-400",
-  //     position: { top: "30%", left: "25%" },
-  //     animation: { x: [-20, 20, -20], y: [20, -20, 20] },
-  //     duration: 9.5,
-  //   },
-  //   {
-  //     Icon: Drama,
-  //     color: "text-pink-400",
-  //     position: { top: "25%", right: "15%" },
-  //     animation: { x: [20, -20, 20], y: [0, 20, 0], rotate: [0, 10, 0] },
-  //     duration: 7,
-  //   },
-  //   {
-  //     Icon: Drama,
-  //     color: "text-pink-400",
-  //     position: { top: "25%", left: "15%" },
-  //     animation: { x: [20, -20, 20], y: [0, 20, 0], rotate: [0, 10, 0] },
-  //     duration: 7,
-  //   },
-  //   {
-  //     Icon: ImageIcon,
-  //     color: "text-blue-400",
-  //     position: { top: "45%", left: "8%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  //   {
-  //     Icon: Feather,
-  //     color: "text-blue-400",
-  //     position: { top: "45%", left: "48%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  //   {
-  //     Icon: Feather,
-  //     color: "text-blue-400",
-  //     position: { top: "70%", left: "48%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  //   {
-  //     Icon: Mic,
-  //     color: "text-emerald-400",
-  //     position: { top: "60%", right: "12%" },
-  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-  //     duration: 6.5,
-  //   },
-  //   {
-  //     Icon: SmilePlus,
-  //     color: "text-emerald-400",
-  //     position: { top: "60%", right: "40%" },
-  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-  //     duration: 6.5,
-  //   },
-  //   {
-  //     Icon: SmilePlus,
-  //     color: "text-emerald-400",
-  //     position: { top: "85%", left: "30%" },
-  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-  //     duration: 6.5,
-  //   },
-  //   {
-  //     Icon: Brain,
-  //     color: "text-purple-400",
-  //     position: { top: "35%", left: "50%" },
-  //     animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
-  //     duration: 8.5,
-  //   },
-  //   {
-  //     Icon: Brain,
-  //     color: "text-purple-400",
-  //     position: { top: "85%", left: "50%" },
-  //     animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
-  //     duration: 8.5,
-  //   },
-  //   {
-  //     Icon: Brain,
-  //     color: "text-purple-400",
-  //     position: { top: "85%", left: "15%" },
-  //     animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
-  //     duration: 8.5,
-  //   },
-  //   {
-  //     Icon: Calendar,
-  //     color: "text-cyan-400",
-  //     position: { top: "70%", left: "15%" },
-  //     animation: { x: [25, -25, 25], y: [0, 15, 0] },
-  //     duration: 7.5,
-  //   },
-  //   {
-  //     Icon: BookOpen,
-  //     color: "text-indigo-400",
-  //     position: { top: "20%", right: "25%" },
-  //     animation: { x: [-20, 20, -20], y: [20, -20, 20] },
-  //     duration: 9.5,
-  //   },
-  //   {
-  //     Icon: BookOpen,
-  //     color: "text-indigo-400",
-  //     position: { top: "20%", right: "45%" },
-  //     animation: { x: [-20, 20, -20], y: [20, -20, 20] },
-  //     duration: 9.5,
-  //   },
-  //   {
-  //     Icon: Bell,
-  //     color: "text-yellow-400",
-  //     position: { top: "55%", right: "20%" },
-  //     animation: { x: [0, -30, 0], y: [-15, 15, -15], rotate: [0, 15, 0] },
-  //     duration: 6,
-  //   },
-  //   {
-  //     Icon: Bell,
-  //     color: "text-yellow-400",
-  //     position: { top: "55%", left: "30%" },
-  //     animation: { x: [0, -30, 0], y: [-15, 15, -15], rotate: [0, 15, 0] },
-  //     duration: 6,
-  //   },
-  //   {
-  //     Icon: Sparkles,
-  //     color: "text-fuchsia-400",
-  //     position: { top: "80%", right: "30%" },
-  //     animation: { x: [15, -15, 15], y: [-20, 20, -20] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: Sparkles,
-  //     color: "text-fuchsia-400",
-  //     position: { top: "80%", right: "10%" },
-  //     animation: { x: [15, -15, 15], y: [-20, 20, -20] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: Flame,
-  //     color: "text-violet-400",
-  //     position: { top: "75%", right: "15%" },
-  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-  //     duration: 8,
-  //   },
-  //   {
-  //     Icon: Feather,
-  //     color: "text-blue-400",
-  //     position: { top: "70%", right: "10%" },
-  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-  //     duration: 9,
-  //   },
-  //   {
-  //     Icon: SmilePlus,
-  //     color: "text-emerald-400",
-  //     position: { top: "75%", left: "40%" },
-  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-  //     duration: 6.5,
-  //   },
-  //   {
-  //     Icon: Wand2,
-  //     color: "text-rose-400",
-  //     position: { top: "40%", right: "8%" },
-  //     animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
-  //     duration: 7,
-  //   },
-  //   {
-  //     Icon: Wand2,
-  //     color: "text-rose-400",
-  //     position: { top: "50%", left: "38%" },
-  //     animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
-  //     duration: 7,
-  //   },
-  // ];
-
-  // const floatingIcons =
-  //   isMobile || isTablet ? mobileFloatingIcons : desktopFloatingIcons;
-
   const sectionBgClass =
     isMobile || isTablet
       ? "bg-gradient-to-b from-blue-400/30 via-blue-700/30 to-violet-400/40"
@@ -379,41 +104,6 @@ export function HeroSection() {
     <section
       className={`relative min-h-[85vh] flex items-center justify-center overflow-hidden ${sectionBgClass}`}
     >
-      {/* {floatingIcons.map((item, index) => (
-        <motion.div
-          key={index}
-          className="absolute pointer-events-none z-0"
-          style={{ ...item.position, willChange: "transform" }}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{
-            opacity: [0.3, 0.6, 0.3],
-            scale: [1, 1.05, 1],
-            ...item.animation,
-          }}
-          transition={{
-            duration:
-              isMobile || isTablet ? item.duration * 1.5 : item.duration, // Slower on mobile
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: index * 0.2,
-          }}
-        >
-          <div className="relative">
-            <div
-              className={`absolute inset-0 ${item.color} opacity-20 ${
-                isMobile ? "blur-sm" : "blur-xl"
-              }`}
-            />
-            <item.Icon
-              className={`${isMobile ? "h-6 w-6" : "h-8 w-8"} ${
-                item.color
-              } relative z-10`}
-              strokeWidth={1.5}
-            />
-          </div>
-        </motion.div>
-      ))} */}
-
       {!isMobile && (
         <>
           <motion.div
@@ -483,71 +173,6 @@ export function HeroSection() {
           </motion.div>
         </>
       )}
-      {/* <motion.div
-        className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        style={{ willChange: "transform, opacity" }}
-      >
-        <motion.div
-          className="absolute top-0 left-0 w-64 h-64 rounded-full bg-violet-700/40 blur-3xl"
-          animate={{
-            opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-8 left-8 w-48 h-48 rounded-full bg-emerald-500/40 blur-2xl"
-          animate={{
-            opacity: [0.4, 1, 0.4],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 2.5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        />
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        style={{ willChange: "transform, opacity" }}
-      >
-        <motion.div
-          className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-emerald-500/40 blur-3xl"
-          animate={{
-            opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 2.2,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-8 right-8 w-48 h-48 rounded-full bg-violet-700/40 blur-2xl"
-          animate={{
-            opacity: [0.4, 1, 0.4],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 2.7,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 0.7,
-          }}
-        />
-      </motion.div> */}
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -582,7 +207,7 @@ export function HeroSection() {
                       height={24}
                     />
                     Play Store
-                    <BorderBeam borderWidth={2} />
+                    <BorderBeam borderWidth={2} isMobile={isMobile} />
                   </Button>
                 </Link>
                 <Link
@@ -601,7 +226,7 @@ export function HeroSection() {
                       height={24}
                     />
                     App Store
-                    <BorderBeam borderWidth={2} />
+                    <BorderBeam borderWidth={2} isMobile={isMobile} />
                   </Button>
                 </Link>
                 <Link
@@ -610,7 +235,7 @@ export function HeroSection() {
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
                   <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                    <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                    <ShinyButton isMobile={isMobile} className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
                       Try on Web
                     </ShinyButton>
                   </div>
@@ -626,7 +251,7 @@ export function HeroSection() {
                   ))}
                 </div>
                 <span className="text-sm font-medium font-outfit">
-                  <AnimatedShinyText>
+                  <AnimatedShinyText isMobile={isMobile}>
                     Trusted by thousands across iOS & Android
                   </AnimatedShinyText>
                 </span>
@@ -694,7 +319,7 @@ export function HeroSection() {
                       height={24}
                     />
                     Play Store
-                    <BorderBeam borderWidth={2} />
+                    <BorderBeam borderWidth={2} isMobile={isMobile} />
                   </Button>
                 </Link>
 
@@ -714,7 +339,7 @@ export function HeroSection() {
                       height={24}
                     />
                     App Store
-                    <BorderBeam borderWidth={2} />
+                    <BorderBeam borderWidth={2} isMobile={isMobile} />
                   </Button>
                 </Link>
                 <Link
@@ -723,7 +348,7 @@ export function HeroSection() {
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
                   <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                    <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                    <ShinyButton isMobile={isMobile} className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
                       Try on Web
                     </ShinyButton>
                   </div>
@@ -745,7 +370,7 @@ export function HeroSection() {
                   ))}
                 </div>
                 <span className="text-sm font-medium font-outfit">
-                  <AnimatedShinyText>
+                  <AnimatedShinyText isMobile={isMobile}>
                     Trusted by thousands across iOS & Android
                   </AnimatedShinyText>
                 </span>
@@ -780,72 +405,6 @@ export function HeroSection() {
               }
               className="relative"
             >
-              {/* === Glowing Radiations (Behind the phone) === */}
-              {/* {!(isMobile || isTablet) && (
-                <motion.div className="absolute inset-0 pointer-events-none z-0">
-                  <motion.div
-                    className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
-                    animate={{
-                      opacity: [0.4, 0.8, 0.4],
-                      scale: [1, 1.2, 1],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
-                    animate={{
-                      opacity: [0.4, 0.8, 0.4],
-                      scale: [1.1, 1.3, 1.1],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute top-1/2 -left-20 -translate-y-1/2 w-72 h-72 rounded-full"
-                    animate={{
-                      opacity: [0.3, 0.7, 0.3],
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute top-1/2 -right-20 -translate-y-1/2 w-72 h-72 rounded-full"
-                    animate={{
-                      opacity: [0.3, 0.7, 0.3],
-                      scale: [1.1, 1.3, 1.1],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                      delay: 1,
-                    }}
-                  >
-                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
-                  </motion.div>
-                </motion.div>
-              )} */}
-
               {/* === Phone Mockup (Above Glows) === */}
               <div className="relative z-10 w-[300px] h-[530px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-[3rem] border-4 border-gray-400/40 shadow-2xl overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black/50 rounded-b-3xl" />
