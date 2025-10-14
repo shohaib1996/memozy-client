@@ -431,7 +431,7 @@ export function HeroSection() {
         </motion.div>
       ))}
 
-      {!isMobile && (
+      {/* {!isMobile && (
         <>
           <motion.div
             className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
@@ -499,10 +499,75 @@ export function HeroSection() {
             />
           </motion.div>
         </>
-      )}
+      )} */}
+      <motion.div
+        className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        style={{ willChange: "transform, opacity" }}
+      >
+        <motion.div
+          className="absolute top-0 left-0 w-64 h-64 rounded-full bg-violet-700/40 blur-3xl"
+          animate={{
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-8 left-8 w-48 h-48 rounded-full bg-emerald-500/40 blur-2xl"
+          animate={{
+            opacity: [0.4, 1, 0.4],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
+        />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        style={{ willChange: "transform, opacity" }}
+      >
+        <motion.div
+          className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-emerald-500/40 blur-3xl"
+          animate={{
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 2.2,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-8 right-8 w-48 h-48 rounded-full bg-violet-700/40 blur-2xl"
+          animate={{
+            opacity: [0.4, 1, 0.4],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 2.7,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: 0.7,
+          }}
+        />
+      </motion.div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -523,7 +588,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl font-outfit md:text-6xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
+              className="text-5xl font-outfit leading-tight md:text-6xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
             >
               Your AI Memory & Companion
             </motion.h1>
@@ -634,7 +699,13 @@ export function HeroSection() {
                 </AnimatedShinyText>
               </span>
             </motion.div>
-            <Image className="hidden lg:flex rounded-xl" src={qrCodeAll} alt="qrcode" width={160} height={160} />
+            <Image
+              className="hidden lg:flex rounded-xl"
+              src={qrCodeAll}
+              alt="qrcode"
+              width={160}
+              height={160}
+            />
           </motion.div>
 
           {/* Right side - Animated mockup */}
@@ -705,7 +776,7 @@ export function HeroSection() {
                       ease: "easeInOut",
                     }}
                   >
-                    <div className="w-full h-full bg-blue-600 blur-[80px] rounded-full" />
+                    <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
                   </motion.div>
 
                   {/* Right Glow */}
