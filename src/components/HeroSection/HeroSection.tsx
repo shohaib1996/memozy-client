@@ -2,23 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  Star,
-  HeartHandshake,
-  Flame,
-  MessageSquare,
-  Drama,
-  ImageIcon,
-  Mic,
-  Brain,
-  Calendar,
-  BookOpen,
-  Bell,
-  Sparkles,
-  Wand2,
-  SmilePlus,
-  Feather,
-} from "lucide-react";
+import { Star } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import Link from "next/link";
@@ -112,277 +96,277 @@ export function HeroSection() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
-  const mobileFloatingIcons = [
-    {
-      Icon: MessageSquare,
-      color: "text-violet-400",
-      position: { top: "15%", left: "10%" },
-      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-      duration: 10,
-    },
-    {
-      Icon: Flame,
-      color: "text-violet-400",
-      position: { top: "10%", left: "10%" },
-      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-      duration: 10,
-    },
-    {
-      Icon: HeartHandshake,
-      color: "text-violet-400",
-      position: { top: "15%", right: "15%" },
-      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-      duration: 8,
-    },
-    {
-      Icon: Drama,
-      color: "text-pink-400",
-      position: { top: "25%", right: "15%" },
-      animation: { x: [10, -10, 10], y: [0, 10, 0] },
-      duration: 11,
-    },
-    {
-      Icon: Brain,
-      color: "text-purple-400",
-      position: { top: "45%", left: "8%" },
-      animation: { x: [0, -12, 0], y: [8, -8, 8] },
-      duration: 12,
-    },
-    {
-      Icon: Sparkles,
-      color: "text-fuchsia-400",
-      position: { top: "60%", right: "12%" },
-      animation: { x: [8, -8, 8], y: [-10, 10, -10] },
-      duration: 10,
-    },
-    {
-      Icon: HeartHandshake,
-      color: "text-violet-400",
-      position: { top: "75%", left: "15%" },
-      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-      duration: 11,
-    },
-    {
-      Icon: Flame,
-      color: "text-violet-400",
-      position: { top: "35%", right: "20%" },
-      animation: { x: [-10, 10, -10], y: [0, -15, 0] },
-      duration: 10,
-    },
-    {
-      Icon: Feather,
-      color: "text-blue-400",
-      position: { top: "35%", right: "10%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-    {
-      Icon: Feather,
-      color: "text-blue-400",
-      position: { top: "40%", left: "5%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-  ];
+  // const mobileFloatingIcons = [
+  //   {
+  //     Icon: MessageSquare,
+  //     color: "text-violet-400",
+  //     position: { top: "15%", left: "10%" },
+  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+  //     duration: 10,
+  //   },
+  //   {
+  //     Icon: Flame,
+  //     color: "text-violet-400",
+  //     position: { top: "10%", left: "10%" },
+  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+  //     duration: 10,
+  //   },
+  //   {
+  //     Icon: HeartHandshake,
+  //     color: "text-violet-400",
+  //     position: { top: "15%", right: "15%" },
+  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: Drama,
+  //     color: "text-pink-400",
+  //     position: { top: "25%", right: "15%" },
+  //     animation: { x: [10, -10, 10], y: [0, 10, 0] },
+  //     duration: 11,
+  //   },
+  //   {
+  //     Icon: Brain,
+  //     color: "text-purple-400",
+  //     position: { top: "45%", left: "8%" },
+  //     animation: { x: [0, -12, 0], y: [8, -8, 8] },
+  //     duration: 12,
+  //   },
+  //   {
+  //     Icon: Sparkles,
+  //     color: "text-fuchsia-400",
+  //     position: { top: "60%", right: "12%" },
+  //     animation: { x: [8, -8, 8], y: [-10, 10, -10] },
+  //     duration: 10,
+  //   },
+  //   {
+  //     Icon: HeartHandshake,
+  //     color: "text-violet-400",
+  //     position: { top: "75%", left: "15%" },
+  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+  //     duration: 11,
+  //   },
+  //   {
+  //     Icon: Flame,
+  //     color: "text-violet-400",
+  //     position: { top: "35%", right: "20%" },
+  //     animation: { x: [-10, 10, -10], y: [0, -15, 0] },
+  //     duration: 10,
+  //   },
+  //   {
+  //     Icon: Feather,
+  //     color: "text-blue-400",
+  //     position: { top: "35%", right: "10%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  //   {
+  //     Icon: Feather,
+  //     color: "text-blue-400",
+  //     position: { top: "40%", left: "5%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  // ];
 
-  const desktopFloatingIcons = [
-    {
-      Icon: MessageSquare,
-      color: "text-violet-400",
-      position: { top: "15%", left: "10%" },
-      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-      duration: 8,
-    },
-    {
-      Icon: ImageIcon,
-      color: "text-blue-400",
-      position: { top: "15%", left: "50%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-    {
-      Icon: HeartHandshake,
-      color: "text-violet-400",
-      position: { top: "15%", left: "35%" },
-      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-      duration: 8,
-    },
-    {
-      Icon: Flame,
-      color: "text-violet-400",
-      position: { top: "35%", left: "45%" },
-      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-      duration: 8,
-    },
-    {
-      Icon: BookOpen,
-      color: "text-indigo-400",
-      position: { top: "30%", left: "25%" },
-      animation: { x: [-20, 20, -20], y: [20, -20, 20] },
-      duration: 9.5,
-    },
-    {
-      Icon: Drama,
-      color: "text-pink-400",
-      position: { top: "25%", right: "15%" },
-      animation: { x: [20, -20, 20], y: [0, 20, 0], rotate: [0, 10, 0] },
-      duration: 7,
-    },
-    {
-      Icon: Drama,
-      color: "text-pink-400",
-      position: { top: "25%", left: "15%" },
-      animation: { x: [20, -20, 20], y: [0, 20, 0], rotate: [0, 10, 0] },
-      duration: 7,
-    },
-    {
-      Icon: ImageIcon,
-      color: "text-blue-400",
-      position: { top: "45%", left: "8%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-    {
-      Icon: Feather,
-      color: "text-blue-400",
-      position: { top: "45%", left: "48%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-    {
-      Icon: Feather,
-      color: "text-blue-400",
-      position: { top: "70%", left: "48%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-    {
-      Icon: Mic,
-      color: "text-emerald-400",
-      position: { top: "60%", right: "12%" },
-      animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-      duration: 6.5,
-    },
-    {
-      Icon: SmilePlus,
-      color: "text-emerald-400",
-      position: { top: "60%", right: "40%" },
-      animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-      duration: 6.5,
-    },
-    {
-      Icon: SmilePlus,
-      color: "text-emerald-400",
-      position: { top: "85%", left: "30%" },
-      animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-      duration: 6.5,
-    },
-    {
-      Icon: Brain,
-      color: "text-purple-400",
-      position: { top: "35%", left: "50%" },
-      animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
-      duration: 8.5,
-    },
-    {
-      Icon: Brain,
-      color: "text-purple-400",
-      position: { top: "85%", left: "50%" },
-      animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
-      duration: 8.5,
-    },
-    {
-      Icon: Brain,
-      color: "text-purple-400",
-      position: { top: "85%", left: "15%" },
-      animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
-      duration: 8.5,
-    },
-    {
-      Icon: Calendar,
-      color: "text-cyan-400",
-      position: { top: "70%", left: "15%" },
-      animation: { x: [25, -25, 25], y: [0, 15, 0] },
-      duration: 7.5,
-    },
-    {
-      Icon: BookOpen,
-      color: "text-indigo-400",
-      position: { top: "20%", right: "25%" },
-      animation: { x: [-20, 20, -20], y: [20, -20, 20] },
-      duration: 9.5,
-    },
-    {
-      Icon: BookOpen,
-      color: "text-indigo-400",
-      position: { top: "20%", right: "45%" },
-      animation: { x: [-20, 20, -20], y: [20, -20, 20] },
-      duration: 9.5,
-    },
-    {
-      Icon: Bell,
-      color: "text-yellow-400",
-      position: { top: "55%", right: "20%" },
-      animation: { x: [0, -30, 0], y: [-15, 15, -15], rotate: [0, 15, 0] },
-      duration: 6,
-    },
-    {
-      Icon: Bell,
-      color: "text-yellow-400",
-      position: { top: "55%", left: "30%" },
-      animation: { x: [0, -30, 0], y: [-15, 15, -15], rotate: [0, 15, 0] },
-      duration: 6,
-    },
-    {
-      Icon: Sparkles,
-      color: "text-fuchsia-400",
-      position: { top: "80%", right: "30%" },
-      animation: { x: [15, -15, 15], y: [-20, 20, -20] },
-      duration: 8,
-    },
-    {
-      Icon: Sparkles,
-      color: "text-fuchsia-400",
-      position: { top: "80%", right: "10%" },
-      animation: { x: [15, -15, 15], y: [-20, 20, -20] },
-      duration: 8,
-    },
-    {
-      Icon: Flame,
-      color: "text-violet-400",
-      position: { top: "75%", right: "15%" },
-      animation: { x: [-20, 20, -20], y: [0, -30, 0] },
-      duration: 8,
-    },
-    {
-      Icon: Feather,
-      color: "text-blue-400",
-      position: { top: "70%", right: "10%" },
-      animation: { x: [0, 30, 0], y: [-20, 20, -20] },
-      duration: 9,
-    },
-    {
-      Icon: SmilePlus,
-      color: "text-emerald-400",
-      position: { top: "75%", left: "40%" },
-      animation: { x: [-15, 15, -15], y: [20, -20, 20] },
-      duration: 6.5,
-    },
-    {
-      Icon: Wand2,
-      color: "text-rose-400",
-      position: { top: "40%", right: "8%" },
-      animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
-      duration: 7,
-    },
-    {
-      Icon: Wand2,
-      color: "text-rose-400",
-      position: { top: "50%", left: "38%" },
-      animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
-      duration: 7,
-    },
-  ];
+  // const desktopFloatingIcons = [
+  //   {
+  //     Icon: MessageSquare,
+  //     color: "text-violet-400",
+  //     position: { top: "15%", left: "10%" },
+  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: ImageIcon,
+  //     color: "text-blue-400",
+  //     position: { top: "15%", left: "50%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  //   {
+  //     Icon: HeartHandshake,
+  //     color: "text-violet-400",
+  //     position: { top: "15%", left: "35%" },
+  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: Flame,
+  //     color: "text-violet-400",
+  //     position: { top: "35%", left: "45%" },
+  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: BookOpen,
+  //     color: "text-indigo-400",
+  //     position: { top: "30%", left: "25%" },
+  //     animation: { x: [-20, 20, -20], y: [20, -20, 20] },
+  //     duration: 9.5,
+  //   },
+  //   {
+  //     Icon: Drama,
+  //     color: "text-pink-400",
+  //     position: { top: "25%", right: "15%" },
+  //     animation: { x: [20, -20, 20], y: [0, 20, 0], rotate: [0, 10, 0] },
+  //     duration: 7,
+  //   },
+  //   {
+  //     Icon: Drama,
+  //     color: "text-pink-400",
+  //     position: { top: "25%", left: "15%" },
+  //     animation: { x: [20, -20, 20], y: [0, 20, 0], rotate: [0, 10, 0] },
+  //     duration: 7,
+  //   },
+  //   {
+  //     Icon: ImageIcon,
+  //     color: "text-blue-400",
+  //     position: { top: "45%", left: "8%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  //   {
+  //     Icon: Feather,
+  //     color: "text-blue-400",
+  //     position: { top: "45%", left: "48%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  //   {
+  //     Icon: Feather,
+  //     color: "text-blue-400",
+  //     position: { top: "70%", left: "48%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  //   {
+  //     Icon: Mic,
+  //     color: "text-emerald-400",
+  //     position: { top: "60%", right: "12%" },
+  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
+  //     duration: 6.5,
+  //   },
+  //   {
+  //     Icon: SmilePlus,
+  //     color: "text-emerald-400",
+  //     position: { top: "60%", right: "40%" },
+  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
+  //     duration: 6.5,
+  //   },
+  //   {
+  //     Icon: SmilePlus,
+  //     color: "text-emerald-400",
+  //     position: { top: "85%", left: "30%" },
+  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
+  //     duration: 6.5,
+  //   },
+  //   {
+  //     Icon: Brain,
+  //     color: "text-purple-400",
+  //     position: { top: "35%", left: "50%" },
+  //     animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
+  //     duration: 8.5,
+  //   },
+  //   {
+  //     Icon: Brain,
+  //     color: "text-purple-400",
+  //     position: { top: "85%", left: "50%" },
+  //     animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
+  //     duration: 8.5,
+  //   },
+  //   {
+  //     Icon: Brain,
+  //     color: "text-purple-400",
+  //     position: { top: "85%", left: "15%" },
+  //     animation: { x: [0, -25, 0], y: [15, -15, 15], rotate: [0, -5, 0] },
+  //     duration: 8.5,
+  //   },
+  //   {
+  //     Icon: Calendar,
+  //     color: "text-cyan-400",
+  //     position: { top: "70%", left: "15%" },
+  //     animation: { x: [25, -25, 25], y: [0, 15, 0] },
+  //     duration: 7.5,
+  //   },
+  //   {
+  //     Icon: BookOpen,
+  //     color: "text-indigo-400",
+  //     position: { top: "20%", right: "25%" },
+  //     animation: { x: [-20, 20, -20], y: [20, -20, 20] },
+  //     duration: 9.5,
+  //   },
+  //   {
+  //     Icon: BookOpen,
+  //     color: "text-indigo-400",
+  //     position: { top: "20%", right: "45%" },
+  //     animation: { x: [-20, 20, -20], y: [20, -20, 20] },
+  //     duration: 9.5,
+  //   },
+  //   {
+  //     Icon: Bell,
+  //     color: "text-yellow-400",
+  //     position: { top: "55%", right: "20%" },
+  //     animation: { x: [0, -30, 0], y: [-15, 15, -15], rotate: [0, 15, 0] },
+  //     duration: 6,
+  //   },
+  //   {
+  //     Icon: Bell,
+  //     color: "text-yellow-400",
+  //     position: { top: "55%", left: "30%" },
+  //     animation: { x: [0, -30, 0], y: [-15, 15, -15], rotate: [0, 15, 0] },
+  //     duration: 6,
+  //   },
+  //   {
+  //     Icon: Sparkles,
+  //     color: "text-fuchsia-400",
+  //     position: { top: "80%", right: "30%" },
+  //     animation: { x: [15, -15, 15], y: [-20, 20, -20] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: Sparkles,
+  //     color: "text-fuchsia-400",
+  //     position: { top: "80%", right: "10%" },
+  //     animation: { x: [15, -15, 15], y: [-20, 20, -20] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: Flame,
+  //     color: "text-violet-400",
+  //     position: { top: "75%", right: "15%" },
+  //     animation: { x: [-20, 20, -20], y: [0, -30, 0] },
+  //     duration: 8,
+  //   },
+  //   {
+  //     Icon: Feather,
+  //     color: "text-blue-400",
+  //     position: { top: "70%", right: "10%" },
+  //     animation: { x: [0, 30, 0], y: [-20, 20, -20] },
+  //     duration: 9,
+  //   },
+  //   {
+  //     Icon: SmilePlus,
+  //     color: "text-emerald-400",
+  //     position: { top: "75%", left: "40%" },
+  //     animation: { x: [-15, 15, -15], y: [20, -20, 20] },
+  //     duration: 6.5,
+  //   },
+  //   {
+  //     Icon: Wand2,
+  //     color: "text-rose-400",
+  //     position: { top: "40%", right: "8%" },
+  //     animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
+  //     duration: 7,
+  //   },
+  //   {
+  //     Icon: Wand2,
+  //     color: "text-rose-400",
+  //     position: { top: "50%", left: "38%" },
+  //     animation: { x: [-25, 25, -25], y: [0, -25, 0], rotate: [0, -10, 0] },
+  //     duration: 7,
+  //   },
+  // ];
 
   // const floatingIcons =
   //   isMobile || isTablet ? mobileFloatingIcons : desktopFloatingIcons;
@@ -569,150 +553,213 @@ export function HeroSection() {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Text content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8 flex items-center flex-col text-center lg:text-left lg:items-start"
-          >
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className=" text-sm font-medium tracking-wider uppercase font-outfit"
-            >
-              Memozy AI Companion
-            </motion.p>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-5xl font-outfit leading-tight md:text-6xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
-            >
-              Your AI Memory & Companion
-            </motion.h1>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              {isMobile ? (
+          {isMobile ? (
+            <div className="space-y-8 flex items-center flex-col text-center lg:text-left lg:items-start">
+              <p className=" text-sm font-medium tracking-wider uppercase font-outfit">
+                Memozy AI Companion
+              </p>
+              <h1 className="text-5xl font-outfit leading-tight md:text-6xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600">
+                Your AI Memory & Companion
+              </h1>
+              <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-pretty block font-outfit min-h-[8rem] sm:min-h-[6.5rem]">
-                  🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you&apos;re chatting with a thoughtful friend.
+                  🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you're chatting with a thoughtful friend.
                 </p>
-              ) : (
-                <TypingSubheading />
-              )}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="flex flex-wrap gap-4 items-center justify-center lg:justify-start"
-            >
-              <Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
-              >
-                <Button
-                  size="lg"
-                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
-                >
-                  <Image
-                    src={playStore}
-                    alt="Play Store"
-                    width={24}
-                    height={24}
-                  />
-                  Play Store
-                  <BorderBeam borderWidth={2} />
-                </Button>
-              </Link>
-
-              <Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
-              >
-                <Button
-                  size="lg"
-                  className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
-                >
-                  <Image
-                    src={appStore}
-                    alt="App Store"
-                    width={24}
-                    height={24}
-                  />
-                  App Store
-                  <BorderBeam borderWidth={2} />
-                </Button>
-              </Link>
-              {/* {platform === "desktop" && (
-                <ReusableDialog
-                  trigger={
-                    <Button
-                      size="lg"
-                      className="relative cursor-pointer overflow-hidden text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointert"
-                    >
-                      <Image
-                        src={qrCode}
-                        alt="Qr Code"
-                        width={24}
-                        height={24}
-                      />{" "}
-                      QR Code
-                    </Button>
-                  }
-                  title="Download by QR Code"
-                  description="This is a placeholder for IOS and Androild App download QR Code."
-                />
-              )} */}
-              <Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
-              >
-                <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                  <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
-                    Try on Web
-                  </ShinyButton>
-                </div>
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="flex items-center gap-2"
-            >
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
               </div>
-              <span className="text-sm font-medium font-outfit">
-                <AnimatedShinyText>
-                  Trusted by thousands across iOS & Android
-                </AnimatedShinyText>
-              </span>
+              <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
+                >
+                  <Button
+                    size="lg"
+                    className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
+                  >
+                    <Image
+                      src={playStore}
+                      alt="Play Store"
+                      width={24}
+                      height={24}
+                    />
+                    Play Store
+                    <BorderBeam borderWidth={2} />
+                  </Button>
+                </Link>
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
+                >
+                  <Button
+                    size="lg"
+                    className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
+                  >
+                    <Image
+                      src={appStore}
+                      alt="App Store"
+                      width={24}
+                      height={24}
+                    />
+                    App Store
+                    <BorderBeam borderWidth={2} />
+                  </Button>
+                </Link>
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
+                >
+                  <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
+                    <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                      Try on Web
+                    </ShinyButton>
+                  </div>
+                </Link>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+                <span className="text-sm font-medium font-outfit">
+                  <AnimatedShinyText>
+                    Trusted by thousands across iOS & Android
+                  </AnimatedShinyText>
+                </span>
+              </div>
+              <Image
+                className="hidden lg:flex rounded-xl"
+                src={qrCodeAll}
+                alt="qrcode"
+                width={160}
+                height={160}
+              />
+            </div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8 flex items-center flex-col text-center lg:text-left lg:items-start"
+            >
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className=" text-sm font-medium tracking-wider uppercase font-outfit"
+              >
+                Memozy AI Companion
+              </motion.p>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-5xl font-outfit leading-tight md:text-6xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-700 via-purple-500 to-blue-600"
+              >
+                Your AI Memory & Companion
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <TypingSubheading />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="flex flex-wrap gap-4 items-center justify-center lg:justify-start"
+              >
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
+                >
+                  <Button
+                    size="lg"
+                    className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
+                  >
+                    <Image
+                      src={playStore}
+                      alt="Play Store"
+                      width={24}
+                      height={24}
+                    />
+                    Play Store
+                    <BorderBeam borderWidth={2} />
+                  </Button>
+                </Link>
+
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
+                >
+                  <Button
+                    size="lg"
+                    className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
+                  >
+                    <Image
+                      src={appStore}
+                      alt="App Store"
+                      width={24}
+                      height={24}
+                    />
+                    App Store
+                    <BorderBeam borderWidth={2} />
+                  </Button>
+                </Link>
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
+                >
+                  <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
+                    <ShinyButton className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                      Try on Web
+                    </ShinyButton>
+                  </div>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="flex items-center gap-2"
+              >
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+                <span className="text-sm font-medium font-outfit">
+                  <AnimatedShinyText>
+                    Trusted by thousands across iOS & Android
+                  </AnimatedShinyText>
+                </span>
+              </motion.div>
+              <Image
+                className="hidden lg:flex rounded-xl"
+                src={qrCodeAll}
+                alt="qrcode"
+                width={160}
+                height={160}
+              />
             </motion.div>
-            <Image
-              className="hidden lg:flex rounded-xl"
-              src={qrCodeAll}
-              alt="qrcode"
-              width={160}
-              height={160}
-            />
-          </motion.div>
+          )}
 
           {/* Right side - Animated mockup */}
           <motion.div
