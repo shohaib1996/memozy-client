@@ -634,7 +634,7 @@ export function HeroSection() {
                 </AnimatedShinyText>
               </span>
             </motion.div>
-            <Image className="hidden lg:flex rounded-xl" src={qrCodeAll} alt="qrcode" width={100} height={100} />
+            <Image className="hidden lg:flex rounded-xl" src={qrCodeAll} alt="qrcode" width={160} height={160} />
           </motion.div>
 
           {/* Right side - Animated mockup */}

@@ -464,8 +464,9 @@ export function TestimonialsSection() {
                     size="lg"
                     className="relative cursor-pointer overflow-hidden text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointert"
                   >
-                    <Image src={qrCode} alt="Qr Code" width={24} height={24} />{" "}
+                    <Image src={qrCode} alt="Qr Code" width={24} height={24} />
                     QR Code
+                    <BorderBeam borderWidth={2} />
                   </Button>
                 }
                 title="Download by QR Code"
