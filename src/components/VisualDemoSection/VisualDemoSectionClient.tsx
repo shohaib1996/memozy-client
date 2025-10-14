@@ -19,6 +19,7 @@ export function VisualDemoSectionClient() {
   const isSmallScreen = isMobile || isTablet;
   const platform = usePlatform();
 
+
   return (
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
       {/* Left Side - Mobile Mockup with Video */}
@@ -318,7 +319,7 @@ export function VisualDemoSectionClient() {
               Try Memozy on Web
               <ArrowRight className="ml-1 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               {/* Border beam effect */}
-              <BorderBeam />
+              <BorderBeam isMobile={isMobile} />
             </Button>
           </Link>
           <span>Or</span>
@@ -338,7 +339,7 @@ export function VisualDemoSectionClient() {
                   width={32}
                   height={32}
                 />
-                <BorderBeam borderWidth={2} />
+                <BorderBeam borderWidth={2} isMobile={isMobile} />
               </Button>
             </Link>
 
@@ -352,7 +353,7 @@ export function VisualDemoSectionClient() {
                 className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-1 md:px-3 lg:px-3 lg:py-3 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer"
               >
                 <Image src={appStore} alt="App Store" width={32} height={32} />
-                <BorderBeam borderWidth={2} />
+                <BorderBeam borderWidth={2} isMobile={isMobile} />
               </Button>
             </Link>
             {platform === "desktop" && (

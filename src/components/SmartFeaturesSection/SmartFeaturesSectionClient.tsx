@@ -30,6 +30,7 @@ import Image from "next/image";
 import { usePlatform } from "@/hooks/usePlatform";
 import { ReusableDialog } from "../ui/reusable-dialog";
 import qrCode from "../../../public/qr-code.png";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -68,13 +69,7 @@ const animationMap: { [key: string]: any } = {
   tools: toolsAnimation,
 };
 
-function FeatureBlock({
-  feature,
-  index,
-}: {
-  feature: any;
-  index: number;
-}) {
+function FeatureBlock({ feature, index }: { feature: any; index: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const isReversed = index % 2 === 1;
@@ -169,7 +164,9 @@ function FeatureBlock({
                     iconGradients[startingGradientIndex + subIndex]
                   } group-hover:shadow-lg group-hover:scale-105 transition-all duration-300 flex items-center justify-center`}
                 >
-                  {Icon && <Icon className="w-5 h-5 text-white animate-pulse" />}
+                  {Icon && (
+                    <Icon className="w-5 h-5 text-white animate-pulse" />
+                  )}
                 </div>
                 <div className="flex-1 space-y-1">
                   <h4 className="font-semibold text-foreground">
@@ -217,6 +214,7 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
   const platform = usePlatform();
   const headerRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <>
@@ -224,9 +222,7 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
       <motion.div
         ref={headerRef}
         initial={{ opacity: 0, y: 30 }}
-        animate={
-          isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-        }
+        animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6 }}
         className="text-center mb-16 md:mb-24 space-y-4"
       >
@@ -259,14 +255,9 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
               size="lg"
               className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer font-outfit"
             >
-              <Image
-                src={playStore}
-                alt="Play Store"
-                width={24}
-                height={24}
-              />
+              <Image src={playStore} alt="Play Store" width={24} height={24} />
               Play Store
-              <BorderBeam borderWidth={2} />
+              <BorderBeam borderWidth={2} isMobile={isMobile} />
             </Button>
           </Link>
           <Link
@@ -280,7 +271,7 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
             >
               <Image src={appStore} alt="App Store" width={24} height={24} />
               App Store
-              <BorderBeam borderWidth={2} />
+              <BorderBeam borderWidth={2} isMobile={isMobile} />
             </Button>
           </Link>
           {platform === "desktop" && (
@@ -290,8 +281,9 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
                   size="lg"
                   className="relative cursor-pointer overflow-hidden text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointert"
                 >
-                 <Image src={qrCode} alt="Qr Code" width={24} height={24} /> QR Code
-                 <BorderBeam borderWidth={2} />
+                  <Image src={qrCode} alt="Qr Code" width={24} height={24} /> QR
+                  Code
+                  <BorderBeam borderWidth={2} />
                 </Button>
               }
               title="Download by QR Code"
