@@ -432,7 +432,7 @@ export function HeroSection() {
         </motion.div>
       ))} */}
 
-      {/* {!isMobile && (
+      {!isMobile && (
         <>
           <motion.div
             className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
@@ -500,7 +500,7 @@ export function HeroSection() {
             />
           </motion.div>
         </>
-      )} */}
+      )}
       {/* <motion.div
         className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
         initial={{ opacity: 0 }}
@@ -730,9 +730,8 @@ export function HeroSection() {
               className="relative"
             >
               {/* === Glowing Radiations (Behind the phone) === */}
-              {!(isMobile || isTablet) && (
+              {/* {!(isMobile || isTablet) && (
                 <motion.div className="absolute inset-0 pointer-events-none z-0">
-                  {/* Top Glow */}
                   <motion.div
                     className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
                     animate={{
@@ -748,7 +747,6 @@ export function HeroSection() {
                     <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
                   </motion.div>
 
-                  {/* Bottom Glow */}
                   <motion.div
                     className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full"
                     animate={{
@@ -764,7 +762,6 @@ export function HeroSection() {
                     <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
                   </motion.div>
 
-                  {/* Left Glow */}
                   <motion.div
                     className="absolute top-1/2 -left-20 -translate-y-1/2 w-72 h-72 rounded-full"
                     animate={{
@@ -780,7 +777,6 @@ export function HeroSection() {
                     <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
                   </motion.div>
 
-                  {/* Right Glow */}
                   <motion.div
                     className="absolute top-1/2 -right-20 -translate-y-1/2 w-72 h-72 rounded-full"
                     animate={{
@@ -797,7 +793,7 @@ export function HeroSection() {
                     <div className="w-full h-full bg-blue-600/50 blur-[80px] rounded-full" />
                   </motion.div>
                 </motion.div>
-              )}
+              )} */}
 
               {/* === Phone Mockup (Above Glows) === */}
               <div className="relative z-10 w-[300px] h-[530px] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-[3rem] border-4 border-gray-400/40 shadow-2xl overflow-hidden">
