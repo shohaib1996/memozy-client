@@ -30,6 +30,7 @@ import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
 // import qrCode from "../../../public/qr-code.png";
 import qrCodeAll from "../../../public/qrcode-all.png";
+import heroMockup from "../../../public/hero-mockup.jpeg";
 import { usePlatform } from "@/hooks/usePlatform";
 // import { ReusableDialog } from "../ui/reusable-dialog";
 
@@ -396,7 +397,7 @@ export function HeroSection() {
     <section
       className={`relative min-h-[85vh] flex items-center justify-center overflow-hidden ${sectionBgClass}`}
     >
-      {floatingIcons.map((item, index) => (
+      {/* {floatingIcons.map((item, index) => (
         <motion.div
           key={index}
           className="absolute pointer-events-none z-0"
@@ -429,7 +430,7 @@ export function HeroSection() {
             />
           </div>
         </motion.div>
-      ))}
+      ))} */}
 
       {/* {!isMobile && (
         <>
@@ -500,7 +501,7 @@ export function HeroSection() {
           </motion.div>
         </>
       )} */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-0 left-0 w-64 h-64 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -564,7 +565,7 @@ export function HeroSection() {
             delay: 0.7,
           }}
         />
-      </motion.div>
+      </motion.div> */}
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -805,7 +806,7 @@ export function HeroSection() {
                 {/* Chat interface with captured image */}
                 <div className="flex items-center justify-center">
                   <Image
-                    src="https://i.imgur.com/gFkfwTH.jpeg"
+                    src={heroMockup}
                     alt="A screenshot of the Memozy app showing a chat interface with an AI companion."
                     className="object-contain rounded-2xl shadow-lg"
                     width={300}
