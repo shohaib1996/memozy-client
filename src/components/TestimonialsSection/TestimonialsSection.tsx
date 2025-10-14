@@ -20,6 +20,7 @@ import appStore from "../../../public/app-store.png";
 import qrCode from "../../../public/qr-code.png";
 import { usePlatform } from "@/hooks/usePlatform";
 import { ReusableDialog } from "@/components/ui/reusable-dialog";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const featuredLogos = [
   { name: "TechCrunch", color: "text-green-500" },
@@ -35,6 +36,8 @@ export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(1);
   const [autoPlay, setAutoPlay] = useState(true);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
 
   const totalSlides = testimonials.length - visibleCount + 1;
 
@@ -440,7 +443,7 @@ export function TestimonialsSection() {
                   height={24}
                 />
                 Play Store
-                <BorderBeam borderWidth={2} />
+                <BorderBeam borderWidth={2} isMobile={isMobile} />
               </Button>
             </Link>
             <Link
@@ -454,7 +457,7 @@ export function TestimonialsSection() {
               >
                 <Image src={appStore} alt="App Store" width={24} height={24} />
                 App Store
-                <BorderBeam borderWidth={2} />
+                <BorderBeam borderWidth={2} isMobile={isMobile} />
               </Button>
             </Link>
             {platform === "desktop" && (
