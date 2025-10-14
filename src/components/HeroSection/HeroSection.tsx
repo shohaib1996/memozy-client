@@ -12,10 +12,9 @@ import { BorderBeam } from "../ui/border-beam";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import playStore from "../../../public/play-store.png";
 import appStore from "../../../public/app-store.png";
-// import qrCode from "../../../public/qr-code.png";
 import qrCodeAll from "../../../public/qrcode-all.png";
 import heroMockup from "../../../public/hero-mockup.jpeg";
-// import { ReusableDialog } from "../ui/reusable-dialog";
+
 
 function TypingSubheading() {
   const texts = React.useMemo(
@@ -563,7 +562,7 @@ export function HeroSection() {
               </h1>
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-pretty block font-outfit min-h-[8rem] sm:min-h-[6.5rem]">
-                  🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you're chatting with a thoughtful friend.
+                  🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you&apos;re chatting with a thoughtful friend.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
