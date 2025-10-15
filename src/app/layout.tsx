@@ -24,7 +24,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
   title: "Memozy – Your AI Memory & Companion",
   description:
@@ -85,6 +84,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Memozy – Your AI Memory & Companion",
       },
+      {
+        url: "https://res.cloudinary.com/dsn66l0iv/image/upload/v1760531366/Untitled_design_6_wvxf6r.png",
+        width: 1200,
+        height: 1200,
+        alt: "Memozy – Your AI Memory & Companion",
+      },
     ],
     locale: "en_US",
     type: "website",
@@ -94,7 +99,10 @@ export const metadata: Metadata = {
     title: "Memozy – Your AI Memory & Companion",
     description:
       "Chat, reflect, and stay organized with your personal AI memory assistant.",
-    images: [`https://res.cloudinary.com/dsn66l0iv/image/upload/v1760520871/Untitled_design_5_icncl8.png`],
+    images: [
+      `https://res.cloudinary.com/dsn66l0iv/image/upload/v1760520871/Untitled_design_5_icncl8.png`,
+      "https://res.cloudinary.com/dsn66l0iv/image/upload/v1760531366/Untitled_design_6_wvxf6r.png",
+    ],
     creator: "@memozyai",
   },
   icons: {
