@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar/Navbar";
 import { FloatingDownloadButton } from "@/components/FloatingDownloadButton/FloatingDownloadButton";
 import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
 import { Footer } from "@/components/Footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -124,6 +125,7 @@ export default function RootLayout({
           <Footer />
           <FloatingDownloadButton />
           <ScrollToTop />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
