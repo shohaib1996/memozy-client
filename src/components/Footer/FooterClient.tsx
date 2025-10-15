@@ -34,7 +34,7 @@ export function FooterClient({ quickLinks, features }: FooterClientProps) {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-black dark:from-slate-950 dark:via-slate-900 dark:to-black text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-black dark:from-slate-950 dark:via-slate-900 dark:to-black text-white overflow-hidden font-outfit">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient orbs */}
