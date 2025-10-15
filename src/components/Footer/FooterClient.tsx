@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, Music2, Mail, LucideIcon } from "lucide-react";
+import { Instagram, Music2, Mail } from "lucide-react";
 import qrCodeAll from "../../../public/qrcode-all.png";
 import logo from "../../../public/logo.png";
 

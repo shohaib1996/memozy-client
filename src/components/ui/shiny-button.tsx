@@ -37,7 +37,7 @@ export const ShinyButton = React.forwardRef<
   HTMLButtonElement,
   ShinyButtonProps & { isMobile?: boolean }
 >(({ children, className, isMobile, ...props }, ref) => {
-  const motionProps = isMobile ? {} : animationProps;
+  // const motionProps = isMobile ? {} : animationProps;
 
   return (
       <motion.button
