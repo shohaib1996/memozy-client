@@ -33,7 +33,7 @@ export function Navbar() {
                   <li>
                     <Link
                       target="_blank"
-                      rel="noopener noreferrer external nofollow"
+                      rel="noopener noreferrer"
                       href="https://www.memozy.ai/how-to-use-memozy.html"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -43,7 +43,7 @@ export function Navbar() {
                   <li>
                     <Link
                       target="_blank"
-                      rel="noopener noreferrer external nofollow"
+                      rel="noopener noreferrer"
                       href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -53,7 +53,7 @@ export function Navbar() {
                   <li>
                     <Link
                       target="_blank"
-                      rel="noopener noreferrer external nofollow"
+                      rel="noopener noreferrer"
                       href="https://versusly.ai/"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -80,7 +80,7 @@ export function Navbar() {
               <li>
                 <Link
                   target="_blank"
-                  rel="noopener noreferrer external nofollow"
+                  rel="noopener noreferrer"
                   href="https://www.memozy.ai/how-to-use-memozy.html"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -90,7 +90,7 @@ export function Navbar() {
               <li>
                 <Link
                   target="_blank"
-                  rel="noopener noreferrer external nofollow"
+                  rel="noopener noreferrer"
                   href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -100,7 +100,7 @@ export function Navbar() {
               <li>
                 <Link
                   target="_blank"
-                  rel="noopener noreferrer external nofollow"
+                  rel="noopener noreferrer"
                   href="https://versusly.ai/"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >

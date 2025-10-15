@@ -87,7 +87,7 @@ export function BenefitsSection() {
     })),
   };
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-violet-50 via-blue-50 to-cyan-50 dark:from-violet-950/30 dark:via-blue-950/30 dark:to-cyan-950/30">
+    <section className="relative py-16 overflow-hidden bg-gradient-to-br from-violet-50 via-blue-50 to-cyan-50 dark:from-violet-950/30 dark:via-blue-950/30 dark:to-cyan-950/30">
       <Head>
         <script
           type="application/ld+json"

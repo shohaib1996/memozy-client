@@ -21,7 +21,7 @@ export function VisualDemoSection() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative py-20 overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

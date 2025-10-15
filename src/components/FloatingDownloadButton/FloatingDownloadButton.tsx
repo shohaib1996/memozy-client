@@ -7,6 +7,10 @@ import { usePlatform } from "@/hooks/usePlatform";
 export function FloatingDownloadButton() {
   const platform = usePlatform();
 
+  if (!platform) {
+    return null;
+  }
+
   const downloadLinks = {
     android: "https://play.google.com/store/apps/details?id=com.memozy.memozy",
     ios: "https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131",

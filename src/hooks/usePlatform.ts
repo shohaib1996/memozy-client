@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 
 type Platform = "android" | "ios" | "desktop"
 
-export function usePlatform(): Platform {
-  const [platform, setPlatform] = useState<Platform>("desktop")
+export function usePlatform(): Platform | null {
+  const [platform, setPlatform] = useState<Platform | null>(null)
 
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera
