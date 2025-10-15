@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { FloatingDownloadButton } from "@/components/FloatingDownloadButton/FloatingDownloadButton";
 import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
-// import { Footer } from "@/components/Footer/Footer";
+import { Footer } from "@/components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -117,7 +117,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          {/* <Footer/> */}
+          <Footer/>
           <FloatingDownloadButton />
           <ScrollToTop />
         </ThemeProvider>
