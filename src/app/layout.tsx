@@ -85,7 +85,7 @@ export const metadata: Metadata = {
         alt: "Memozy – Your AI Memory & Companion",
       },
       {
-        url: "https://res.cloudinary.com/dsn66l0iv/image/upload/v1760531366/Untitled_design_6_wvxf6r.png",
+        url: "https://res.cloudinary.com/dsn66l0iv/image/upload/v1760531714/Untitled_design_7_ea3jng.png",
         width: 1200,
         height: 1200,
         alt: "Memozy – Your AI Memory & Companion",
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
       "Chat, reflect, and stay organized with your personal AI memory assistant.",
     images: [
       `https://res.cloudinary.com/dsn66l0iv/image/upload/v1760520871/Untitled_design_5_icncl8.png`,
-      "https://res.cloudinary.com/dsn66l0iv/image/upload/v1760531366/Untitled_design_6_wvxf6r.png",
+      "https://res.cloudinary.com/dsn66l0iv/image/upload/v1760531714/Untitled_design_7_ea3jng.png",
     ],
     creator: "@memozyai",
   },
