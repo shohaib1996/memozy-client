@@ -38,7 +38,7 @@ export function FloatingDownloadButton() {
     <Link
       href={downloadLinks[platform]}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer external nofollow"
       className={`group fixed ${
         platform === "desktop"
           ? "top-2 left-1/2 -translate-x-1/2" // top center for desktop

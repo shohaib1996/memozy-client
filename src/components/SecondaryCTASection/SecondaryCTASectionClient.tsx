@@ -194,7 +194,7 @@ export function SecondaryCTASectionClient({ children }: { children: React.ReactN
             {/* Google Play Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                rel="noopener noreferrer"
+                rel="noopener noreferrer external nofollow"
                 target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
               >
@@ -217,7 +217,7 @@ export function SecondaryCTASectionClient({ children }: { children: React.ReactN
             {/* App Store Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                rel="noopener noreferrer"
+                rel="noopener noreferrer external nofollow"
                 target="_blank"
                 href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
               >
@@ -240,7 +240,7 @@ export function SecondaryCTASectionClient({ children }: { children: React.ReactN
             {/* Try on Web Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                rel="noopener noreferrer"
+                rel="noopener noreferrer external nofollow"
                 target="_blank"
                 href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
               >

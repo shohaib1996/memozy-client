@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { SmartFeaturesSectionClient } from "./SmartFeaturesSectionClient";
 
 const features = [
@@ -78,8 +79,25 @@ const features = [
 ];
 
 export function SmartFeaturesSection() {
+  const featureJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Memozy Smart Features",
+    itemListElement: features.map((feature, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: feature.title,
+      description: feature.description,
+    })),
+  };
   return (
     <section className="py-14 md:py-20 px-4 relative overflow-hidden">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(featureJsonLd) }}
+        />
+      </Head>
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-violet-500/30 via-blue-400/60 to-emerald-500/50 dark:from-violet-600/30 dark:via-blue-500/50 dark:to-emerald-600/40 -z-10" />
 

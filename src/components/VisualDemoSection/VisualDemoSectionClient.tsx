@@ -79,6 +79,7 @@ export function VisualDemoSectionClient() {
             <div className="relative w-full h-full bg-black rounded-[2.5rem] overflow-hidden">
               {/* Video */}
               <video
+                aria-label="Memozy demo video showing AI chat and smart note features"
                 autoPlay
                 muted
                 loop
@@ -308,7 +309,7 @@ export function VisualDemoSectionClient() {
           <Link
             href="https://app.memozy.ai/?_gl=1*1bn9gnb*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxNTcwNjkkbzExJGcwJHQxNzYwMTU3MDcwJGo1OSRsMCRoMA..#/login"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external nofollow"
           >
             <Button
               variant="outline"
@@ -324,7 +325,7 @@ export function VisualDemoSectionClient() {
           <span>Or</span>
           <div className="flex gap-3">
             <Link
-              rel="noopener noreferrer"
+              rel="noopener noreferrer external nofollow"
               target="_blank"
               href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
             >
@@ -343,7 +344,7 @@ export function VisualDemoSectionClient() {
             </Link>
 
             <Link
-              rel="noopener noreferrer"
+              rel="noopener noreferrer external nofollow"
               target="_blank"
               href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
             >

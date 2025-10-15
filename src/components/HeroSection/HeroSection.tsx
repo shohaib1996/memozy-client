@@ -211,7 +211,7 @@ export function HeroSection() {
               </div>
               <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
                 <Link
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   target="_blank"
                   href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
                 >
@@ -230,7 +230,7 @@ export function HeroSection() {
                   </Button>
                 </Link>
                 <Link
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   target="_blank"
                   href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
                 >
@@ -249,7 +249,7 @@ export function HeroSection() {
                   </Button>
                 </Link>
                 <Link
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   target="_blank"
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
@@ -323,7 +323,7 @@ export function HeroSection() {
                 className="flex flex-wrap gap-4 items-center justify-center lg:justify-start"
               >
                 <Link
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   target="_blank"
                   href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
                 >
@@ -343,7 +343,7 @@ export function HeroSection() {
                 </Link>
 
                 <Link
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   target="_blank"
                   href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
                 >
@@ -362,7 +362,7 @@ export function HeroSection() {
                   </Button>
                 </Link>
                 <Link
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   target="_blank"
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
@@ -397,7 +397,7 @@ export function HeroSection() {
               <Image
                 className="hidden lg:flex rounded-xl"
                 src={qrCodeAll}
-                alt="qrcode"
+                alt="QR code to download the Memozy app"
                 width={160}
                 height={160}
               />

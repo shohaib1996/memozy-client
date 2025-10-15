@@ -247,7 +247,7 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
       <div className="text-center mt-20 md:mt-24 flex items-center justify-center gap-2 flex-wrap">
         <div className="flex flex-wrap gap-4">
           <Link
-            rel="noopener noreferrer "
+            rel="noopener noreferrer external nofollow "
             target="_blank"
             href="https://play.google.com/store/apps/details?id=com.memozy.memozy"
           >
@@ -255,13 +255,13 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
               size="lg"
               className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer font-outfit"
             >
-              <Image src={playStore} alt="Play Store" width={24} height={24} />
+              <Image src={playStore} alt="Download Memozy AI app on Google Play Store" width={24} height={24} />
               Play Store
               <BorderBeam borderWidth={2} isMobile={isMobile} />
             </Button>
           </Link>
           <Link
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external nofollow"
             target="_blank"
             href="https://apps.apple.com/us/app/memozy-ai-memory-w-character/id6740183131"
           >
@@ -269,7 +269,7 @@ export function SmartFeaturesSectionClient({ features }: { features: any[] }) {
               size="lg"
               className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer font-outfit"
             >
-              <Image src={appStore} alt="App Store" width={24} height={24} />
+              <Image src={appStore} alt="Download Memozy AI app on Apple App Store" width={24} height={24} />
               App Store
               <BorderBeam borderWidth={2} isMobile={isMobile} />
             </Button>

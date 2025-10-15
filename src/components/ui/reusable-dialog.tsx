@@ -147,9 +147,9 @@ export function ReusableDialog({ trigger, title, description, children }: Reusab
                   <Image
                     src={qrcodeAll || "/placeholder.svg"}
                     alt="QR Code"
-                    width={180}
+                    width={200}
                     height={180}
-                    className="w-full h-auto"
+                    className=""
                   />
                 </div>
               </motion.div>

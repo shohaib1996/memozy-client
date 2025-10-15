@@ -40,10 +40,23 @@ export function FaqSection() {
         text: faq.answer,
       },
     })),
+    publisher: {
+      "@type": "Organization",
+      name: "Memozy",
+      url: "https://memozy.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://memozy.ai/favicon.png",
+      },
+    },
   };
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section
+      id="faq"
+      aria-label="Frequently Asked Questions about Memozy"
+      className="py-20 px-4 relative overflow-hidden"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

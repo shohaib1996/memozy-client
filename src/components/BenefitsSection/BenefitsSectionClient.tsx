@@ -158,11 +158,11 @@ export function BenefitsSectionClient({ benefits }: { benefits: any[] }) {
                         isMobile ? "pulse-glow-slow" : "pulse-glow"
                       }`}
                     >
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-white" aria-hidden="true" />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-foreground mb-3 font-outfit">
+                    <h3 id={benefit.title.toLowerCase().replace(/\s+/g, "-")}>
                       {benefit.title}
                     </h3>
 

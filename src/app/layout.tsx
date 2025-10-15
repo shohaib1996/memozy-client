@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const metadata: Metadata = {
   title: "Memozy – Your AI Memory & Companion",
@@ -67,6 +67,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Memozy Team" }],
   creator: "Memozy AI",
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+  },
   openGraph: {
     title: "Memozy – Your AI Memory & Companion",
     description:
@@ -75,7 +80,7 @@ export const metadata: Metadata = {
     siteName: "Memozy",
     images: [
       {
-        url: `${basePath}/og-image.png`,
+        url: `https://res.cloudinary.com/dsn66l0iv/image/upload/v1760520871/Untitled_design_5_icncl8.png`,
         width: 1200,
         height: 630,
         alt: "Memozy – Your AI Memory & Companion",
@@ -89,14 +94,14 @@ export const metadata: Metadata = {
     title: "Memozy – Your AI Memory & Companion",
     description:
       "Chat, reflect, and stay organized with your personal AI memory assistant.",
-    images: [`${basePath}/og-image.png`],
+    images: [`https://res.cloudinary.com/dsn66l0iv/image/upload/v1760520871/Untitled_design_5_icncl8.png`],
     creator: "@memozyai",
   },
   icons: {
-    icon: `${basePath}/favicon.png`,
-    apple: `${basePath}/apple-touch-icon.png`,
+    icon: `/favicon.png`,
+    apple: `/apple-touch-icon.png`,
   },
-  manifest: `${basePath}/site.webmanifest`,
+  manifest: `/site.webmanifest`,
 };
 
 export default function RootLayout({
@@ -117,7 +122,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <Footer/>
+          <Footer />
           <FloatingDownloadButton />
           <ScrollToTop />
         </ThemeProvider>

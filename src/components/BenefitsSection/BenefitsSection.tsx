@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { BenefitsSectionClient } from "./BenefitsSectionClient";
 
 const benefits = [
@@ -74,8 +75,26 @@ const benefits = [
 ];
 
 export function BenefitsSection() {
+  const benefitsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Memozy App Features",
+    itemListElement: benefits.map((benefit, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: benefit.title,
+      description: benefit.description,
+    })),
+  };
   return (
     <section className="relative py-20 overflow-hidden bg-gradient-to-br from-violet-50 via-blue-50 to-cyan-50 dark:from-violet-950/30 dark:via-blue-950/30 dark:to-cyan-950/30">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(benefitsJsonLd) }}
+        />
+      </Head>
+
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 via-blue-500/5 to-cyan-500/5 dark:from-violet-500/10 dark:via-blue-500/10 dark:to-cyan-500/10" />
 

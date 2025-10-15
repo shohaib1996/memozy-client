@@ -8,6 +8,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 // import { ModeToggle } from "../ModeToggle/ModeToggle";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
+import logo from "../../../public/logo.png";
+import Image from "next/image";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -31,7 +33,7 @@ export function Navbar() {
                   <li>
                     <Link
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer external nofollow"
                       href="https://www.memozy.ai/how-to-use-memozy.html"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -41,7 +43,7 @@ export function Navbar() {
                   <li>
                     <Link
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer external nofollow"
                       href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -51,7 +53,7 @@ export function Navbar() {
                   <li>
                     <Link
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer external nofollow"
                       href="https://versusly.ai/"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -63,15 +65,22 @@ export function Navbar() {
             </Sheet>
             <Link
               href="/"
-              className="font-semibold text-lg hover:text-primary transition-colors font-outfit"
+              className="font-semibold text-lg hover:text-primary transition-colors font-outfit flex items-center gap-2"
             >
+              <Image
+                src={logo}
+                alt="logo"
+                width={30}
+                height={30}
+                className="animate-pulse"
+              />
               Memozy
             </Link>
             <ul className="hidden md:flex items-center gap-6 font-outfit">
               <li>
                 <Link
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   href="https://www.memozy.ai/how-to-use-memozy.html"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -81,7 +90,7 @@ export function Navbar() {
               <li>
                 <Link
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -91,7 +100,7 @@ export function Navbar() {
               <li>
                 <Link
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external nofollow"
                   href="https://versusly.ai/"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -104,7 +113,7 @@ export function Navbar() {
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* <ModeToggle/> */}
-            <AnimatedThemeToggler/>
+            <AnimatedThemeToggler />
           </div>
         </div>
       </div>
