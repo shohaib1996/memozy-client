@@ -41,7 +41,7 @@ export function FloatingDownloadButton() {
       rel="noopener noreferrer"
       className={`group fixed ${
         platform === "desktop"
-          ? "top-4 left-1/2 -translate-x-1/2" // top center for desktop
+          ? "top-2 left-1/2 -translate-x-1/2" // top center for desktop
           : "bottom-6 left-5" // bottom-left for mobile
       } bg-gradient-to-r ${gradient} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center gap-1 px-2 py-2 hover:scale-105 active:scale-95`}
     >

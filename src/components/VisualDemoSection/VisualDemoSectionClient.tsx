@@ -86,7 +86,7 @@ export function VisualDemoSectionClient() {
                 className="w-full h-full object-cover"
                 title="A demo of Memozy, an AI assistant for meeting setup, smart notes, and AI conversations."
               >
-                <source src="/loop-video.mp4" type="video/mp4" />
+                <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/loop-video.mp4`} type="video/mp4" />
                 Your browser does not support the video tag. See a demo of
                 Memozi, your AI assistant for meeting setup, smart notes, and AI
                 conversations.
