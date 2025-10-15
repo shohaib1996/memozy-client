@@ -79,7 +79,13 @@ export function FooterClient({ quickLinks, features }: FooterClientProps) {
           >
             <Link href="/" className="flex items-center gap-2 group">
               <div className="relative">
-                <Image src={logo} alt="logo" width={32} height={32} className="animate-pulse" />
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={32}
+                  height={32}
+                  className="animate-pulse"
+                />
                 <motion.div
                   animate={{
                     scale: [1, 1.2, 1],
@@ -93,9 +99,7 @@ export function FooterClient({ quickLinks, features }: FooterClientProps) {
                   className="absolute inset-0 bg-violet-500/20 rounded-full blur-md"
                 />
               </div>
-              <span className="text-2xl font-bold">
-                Memozy
-              </span>
+              <span className="text-2xl font-bold">Memozy</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               Memozy — Your AI Memory.
@@ -106,8 +110,8 @@ export function FooterClient({ quickLinks, features }: FooterClientProps) {
               <div className="px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full text-xs text-violet-400">
                 AI Powered
               </div>
-              <div className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-400">
-                10k+ Users
+              <div className="px-3 py-1 bg-blue-500/10 border-blue-500/20 rounded-full text-xs text-blue-400">
+                10K+ Users 
               </div>
             </div>
 
@@ -120,13 +124,13 @@ export function FooterClient({ quickLinks, features }: FooterClientProps) {
               className=""
             >
               <div className="">
-                <div className="inline-flex flex-col gap-2 p-2 rounded-lg light:bg-white dark:bg-slate-800/50 light:border light:border-gray-200 dark:border dark:border-slate-700/50">
+                <div className="inline-flex flex-col gap-2 p-2 rounded-lg bg-slate-800/50 border border-slate-700/50">
                   <Image
                     src={qrCodeAll}
                     alt="Scan QR code for Memozy"
                     width={120}
                     height={120}
-                    className="light:filter dark:filter dark:invert"
+                    className="light:filter dark:filter dark:invert rounded-xl "
                   />
                 </div>
               </div>
