@@ -24,6 +24,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: "Memozy – Your AI Memory & Companion",
   description:
@@ -106,10 +108,10 @@ export const metadata: Metadata = {
     creator: "@memozyai",
   },
   icons: {
-    icon: `/favicon.png`,
-    apple: `/apple-touch-icon.png`,
+    icon: `${basePath}/favicon.png`,
+    apple: `${basePath}/apple-touch-icon.png`,
   },
-  manifest: `/site.webmanifest`,
+  manifest: `${basePath}/site.webmanifest`,
 };
 
 export default function RootLayout({
