@@ -7,6 +7,7 @@ import { FloatingDownloadButton } from "@/components/FloatingDownloadButton/Floa
 import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
 import { Footer } from "@/components/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -121,6 +122,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EJ2RK3CM1T"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('event', 'memozy_web_landing');
+            gtag('config', 'G-EJ2RK3CM1T');
+          `}
+        </Script>
+        <Script id="google-analytics-conversion" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion_event_page_view', {
+              // <event_parameters>
+            });
+          `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
       >
