@@ -12,7 +12,7 @@ import qrCode from "../../../public/qr-code.png";
 import { ShinyButton } from "../ui/shiny-button";
 import Link from "next/link";
 import { VideoModal } from "./VideoModal"; // Adjust the import path as needed
-// import { NoteTaking } from "./NoteTaking";
+import { NoteTaking } from "./NoteTaking";
 
 export const HowToUsePage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -194,7 +194,7 @@ export const HowToUsePage = () => {
           </div>
         )}
       </div>
-      {/* <NoteTaking/> */}
+      <NoteTaking/>
     </div>
   );
 };
