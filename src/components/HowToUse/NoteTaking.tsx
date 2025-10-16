@@ -147,7 +147,7 @@ export function NoteTaking() {
               {/* Phone Frame */}
               <div className="relative bg-black rounded-3xl shadow-2xl overflow-hidden border-5 border-gray-200">
                 {/* Notch */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-20" />
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-3 bg-gray-200 rounded-b-3xl z-20" />
 
                 {/* Video Container */}
                 <div className="relative w-full aspect-[9/16] bg-black">
