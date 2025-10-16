@@ -16,7 +16,13 @@ import heroMockup from "../../../public/hero-mockup.jpeg";
 import { motion } from "framer-motion";
 
 // Large Static Lightning Circle Component
-const LightningCircle = ({ size = 500, opacity = 0.3, zIndex = 0, offsetX = 0, offsetY = 0 }) => {
+const LightningCircle = ({
+  size = 500,
+  opacity = 0.3,
+  zIndex = 0,
+  offsetX = 0,
+  offsetY = 0,
+}) => {
   return (
     <div
       className="absolute rounded-full bg-gradient-to-r from-blue-400/30 via-blue-600/30 to-violet-500/30 animate-pulse"
@@ -206,7 +212,9 @@ export function HeroSection() {
               </h1>
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-pretty block font-outfit min-h-[8rem] sm:min-h-[6.5rem]">
-                  🗣️ Natural AI Conversations – Talk, journal, take notes, and organize tasks like you&apos;re chatting with a thoughtful friend.
+                  🗣️ Natural AI Conversations – Talk, journal, take notes, and
+                  organize tasks like you&apos;re chatting with a thoughtful
+                  friend.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
@@ -254,7 +262,10 @@ export function HeroSection() {
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
                   <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                    <ShinyButton isMobile={isMobile} className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                    <ShinyButton
+                      isMobile={isMobile}
+                      className=" py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit"
+                    >
                       Try on Web
                     </ShinyButton>
                   </div>
@@ -282,6 +293,14 @@ export function HeroSection() {
                 width={160}
                 height={160}
               />
+              <div className="text-center font-outfit block lg:hidden">
+                <h1 className="text-2xl font-bold text-green-600 mb-2">
+                  Memozy is Free!
+                </h1>
+                <p className="text-xs text-gray-700 dark:text-gray-300">
+                  Just download and start using it today.
+                </p>
+              </div>
             </div>
           ) : (
             <motion.div
@@ -337,9 +356,35 @@ export function HeroSection() {
                       width={24}
                       height={24}
                     />
+                     {/* Floating Free Badge at Top-Right Corner */}
+                    {/* <motion.span
+                      className="absolute -top-2 -right-2 bg-white/20 text-white text-[10px] font-bold px-2 py-1 rounded-full ring-1 ring-white/30 shadow-lg z-10"
+                      initial={{ scale: 0.8, opacity: 0, y: -10 }}
+                      animate={{
+                        scale: [1, 1.1, 1],
+                        opacity: 1,
+                        y: [0, -5, 0],
+                      }}
+                      transition={{
+                        scale: {
+                          duration: 0.6,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
+                        y: {
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
+                        opacity: { duration: 0.3 },
+                      }}
+                      whileHover={{ scale: 1.1, y: -8 }} // Extra "pull" on hover
+                    >
+                      Free!
+                    </motion.span> */}
                     Play Store
-                    <BorderBeam borderWidth={2} isMobile={isMobile} />
-                  </Button>
+                    <BorderBeam borderWidth={2} isMobile={isMobile} />     
+                  </Button>   
                 </Link>
 
                 <Link
@@ -367,7 +412,10 @@ export function HeroSection() {
                   href="https://app.memozy.ai/?_gl=1*qodnzp*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjIwNzMkajYwJGwwJGgw#/login"
                 >
                   <div className="relative inline-block rounded-xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 hover:from-violet-500 hover:to-blue-500 transition-all duration-300">
-                    <ShinyButton isMobile={isMobile} className="py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit">
+                    <ShinyButton
+                      isMobile={isMobile}
+                      className="py-2 md:py-2 lg:py-3 px-3 md:px-5 lg:px-6 rounded-xl bg-white dark:bg-neutral-900 text-primary font-semibold hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-500 hover:text-white transition-all duration-300 font-outfit"
+                    >
                       Try on Web
                     </ShinyButton>
                   </div>
@@ -394,13 +442,23 @@ export function HeroSection() {
                   </AnimatedShinyText>
                 </span>
               </motion.div>
-              <Image
-                className="hidden dark:invert lg:flex rounded-xl"
-                src={qrCodeAll}
-                alt="QR code to download the Memozy app"
-                width={160}
-                height={160}
-              />
+              <div className="flex items-center justify-center gap-4">
+                <Image
+                  className="hidden dark:invert lg:flex rounded-xl"
+                  src={qrCodeAll}
+                  alt="QR code to download the Memozy app"
+                  width={160}
+                  height={160}
+                />
+                <div className="text-left font-outfit hidden lg:block">
+                  <h1 className="text-3xl font-bold text-green-600 mb-2">
+                    Memozy is Free!
+                  </h1>
+                  <p className="text-lg text-gray-700 dark:text-gray-300">
+                    Just scan the QR code and start using it today.
+                  </p>
+                </div>
+              </div>
             </motion.div>
           )}
 

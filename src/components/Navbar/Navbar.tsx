@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm z-50 ">
-      <div className="border-b border-border py-3">
+      <div className="border-b border-border py-3 lg:py-4">
         <div className="flex items-center justify-between container mx-auto px-4">
           {/* Left side navigation */}
 
@@ -32,9 +32,9 @@ export function Navbar() {
                 <ul className="flex flex-col gap-6 mt-8 mx-3 font-outfit">
                   <li>
                     <Link
-                      target="_blank"
+                      // target="_blank"
                       rel="noopener noreferrer"
-                      href="https://www.memozy.ai/how-to-use-memozy.html"
+                      href="/howtouse"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       How to use Memozy
@@ -65,7 +65,7 @@ export function Navbar() {
             </Sheet>
             <Link
               href="/"
-              className="font-semibold text-lg hover:text-primary transition-colors font-outfit flex items-center gap-2"
+              className="font-semibold text-violet-500 dark:text-white text-lg hover:text-primary transition-colors font-outfit flex items-center gap-2"
             >
               <Image
                 src={logo}
@@ -79,9 +79,9 @@ export function Navbar() {
             <ul className="hidden md:flex items-center gap-6 font-outfit">
               <li>
                 <Link
-                  target="_blank"
+                  // target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.memozy.ai/how-to-use-memozy.html"
+                  href="/howtouse"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   How to use Memozy
@@ -97,7 +97,7 @@ export function Navbar() {
                   Web App
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export function Navbar() {
                 >
                   Versusly AI
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

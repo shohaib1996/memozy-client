@@ -11,6 +11,7 @@ export function Footer() {
     { name: "Privacy Policy", href: "https://www.memozy.ai/privacy-policy.html" },
     { name: "Delete Account", href: "https://www.memozy.ai/delete-account.html" },
     { name: "Company", href: "https://agenteex.com/" },
+    {name: "Versusly AI", href: "https://versusly.ai/"}
   ]
 
   const features = [
