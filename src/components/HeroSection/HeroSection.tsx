@@ -356,32 +356,6 @@ export function HeroSection() {
                       width={24}
                       height={24}
                     />
-                     {/* Floating Free Badge at Top-Right Corner */}
-                    {/* <motion.span
-                      className="absolute -top-2 -right-2 bg-white/20 text-white text-[10px] font-bold px-2 py-1 rounded-full ring-1 ring-white/30 shadow-lg z-10"
-                      initial={{ scale: 0.8, opacity: 0, y: -10 }}
-                      animate={{
-                        scale: [1, 1.1, 1],
-                        opacity: 1,
-                        y: [0, -5, 0],
-                      }}
-                      transition={{
-                        scale: {
-                          duration: 0.6,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        },
-                        y: {
-                          duration: 1.5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        },
-                        opacity: { duration: 0.3 },
-                      }}
-                      whileHover={{ scale: 1.1, y: -8 }} // Extra "pull" on hover
-                    >
-                      Free!
-                    </motion.span> */}
                     Play Store
                     <BorderBeam borderWidth={2} isMobile={isMobile} />     
                   </Button>   

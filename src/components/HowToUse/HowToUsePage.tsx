@@ -13,6 +13,11 @@ import { ShinyButton } from "../ui/shiny-button";
 import Link from "next/link";
 import { VideoModal } from "./VideoModal"; // Adjust the import path as needed
 import { NoteTaking } from "./NoteTaking";
+import SmartReminders from "./SmartReminders";
+import StayOnSchedule from "./StayOnSchedule";
+import TrackPersonalInfo from "./TrackPersonalInfo";
+import FindAnything from "./FindAnything";
+import PromptExplorer from "./PromptExplorer";
 
 export const HowToUsePage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -195,6 +200,11 @@ export const HowToUsePage = () => {
         )}
       </div>
       <NoteTaking/>
+      <SmartReminders/>
+      <StayOnSchedule/>
+      <TrackPersonalInfo/>
+      <FindAnything/>
+      <PromptExplorer/>
     </div>
   );
 };

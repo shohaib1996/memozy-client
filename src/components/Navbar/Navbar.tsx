@@ -24,7 +24,7 @@ export function Navbar() {
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden">
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-5 w-5 text-violet-500 dark:text-white" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>

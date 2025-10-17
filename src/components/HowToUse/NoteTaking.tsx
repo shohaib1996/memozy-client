@@ -79,7 +79,7 @@ export function NoteTaking() {
               </h2>
 
               <p className="text-lg md:text-xl">
-                📝 With Memozy, you can save notes anytime using voice or text.
+                With Memozy, you can save notes anytime using voice or text.
               </p>
             </motion.div>
 
@@ -102,14 +102,25 @@ export function NoteTaking() {
               </h3>
               <div className="space-y-3">
                 {[
-                  { icon: Mic, text: "Saves your note for future reference." },
+                  {
+                    icon: Mic,
+                    title: "Voice Notes",
+                    description: "Quickly capture your thoughts with voice-to-text transcription.",
+                  },
                   {
                     icon: Search,
-                    text: "Makes it searchable with smart keywords.",
+                    title: "Smart Search",
+                    description: "Find your notes instantly with powerful keyword search.",
                   },
                   {
                     icon: Share2,
-                    text: "Lets you share and collaborate instantly.",
+                    title: "Easy Sharing",
+                    description: "Share your notes with friends and colleagues with a single tap.",
+                  },
+                  {
+                    icon: Share2, // Replace with a more appropriate icon if available
+                    title: "Effortless Organization",
+                    description: "Organize your notes with tags and categories for easy retrieval.",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -117,10 +128,13 @@ export function NoteTaking() {
                     variants={isMobile ? {} : itemVariants}
                     className="flex items-start gap-4 cursor-pointer bg-violet-500/10 dark:bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-blue-500 dark:border-white/10 hover:bg-blue-500/10 dark:hover:bg-white/10 transition-colors"
                   >
-                    <div className="flex-shrink-0 mt-1">
+                    <div className="flex-shrink-0 mt-1 text-blue-500">
                       <item.icon className="w-6 h-6 " />
                     </div>
-                    <p className=" text-base md:text-lg">{item.text}</p>
+                    <div>
+                      <p className="font-bold text-base md:text-lg">{item.title}</p>
+                      <p className="text-sm md:text-base">{item.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -141,9 +155,9 @@ export function NoteTaking() {
             initial="visible"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="flex justify-center items-center"
+            className="flex justify-center lg:justify-end items-center"
           >
-            <div className="relative w-full max-w-sm">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md ">
               {/* Phone Frame */}
               <div className="relative bg-black rounded-3xl shadow-2xl overflow-hidden border-5 border-gray-200">
                 {/* Notch */}
