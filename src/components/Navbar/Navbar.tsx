@@ -34,7 +34,7 @@ export function Navbar() {
                     <Link
                       // target="_blank"
                       rel="noopener noreferrer"
-                      href="/howtousememozy"
+                      href="/how-to-use-memozy.html"
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       How to use Memozy
@@ -81,7 +81,7 @@ export function Navbar() {
                 <Link
                   // target="_blank"
                   rel="noopener noreferrer"
-                  href="/howtousememozy"
+                  href="/how-to-use-memozy.html"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   How to use Memozy
