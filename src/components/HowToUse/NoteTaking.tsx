@@ -40,23 +40,6 @@ export function NoteTaking() {
     <div id="note-taking" className="relative w-full overflow-hidden font-outfit">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-300/70 via-violet-300/20 to-purple-300/40 dark:from-blue-600/30 dark:via-violet-600/30 dark:to-purple-600/30" />
-
-      {/* Animated Background Elements */}
-      {/* {!isMobile && (
-        <>
-          <motion.div
-            className="absolute top-20 left-10 w-72 h-72 bg-violet-400/50 rounded-full blur-2xl"
-            animate={{ y: [0, 30, 0] }}
-            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/50 rounded-full blur-2xl"
-            animate={{ y: [0, -30, 0] }}
-            transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY }}
-          />
-        </>
-      )} */}
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -176,18 +159,6 @@ export function NoteTaking() {
                     />
                   </video>
                 </div>
-
-                {/* Shine Effect */}
-                {/* {!isMobile && (
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
-                    animate={{ x: ["100%", "-100%"] }}
-                    transition={{
-                      duration: 3,
-                      repeat: Number.POSITIVE_INFINITY,
-                    }}
-                  />
-                )} */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
                   animate={{ x: ["100%", "-100%"] }}

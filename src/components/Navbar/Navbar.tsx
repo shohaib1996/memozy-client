@@ -113,7 +113,7 @@ export function Navbar() {
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* <ModeToggle/> */}
-            <AnimatedThemeToggler />
+            <AnimatedThemeToggler className="cursor-pointer" />
           </div>
         </div>
       </div>
