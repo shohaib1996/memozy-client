@@ -65,7 +65,7 @@ export default function FindAnything() {
               <h2 className="py-2 text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-800  to-violet-800 dark:from-blue-500 dark:to-violet-500 bg-clip-text text-transparent font-outfit">
                 Find Anything Instantly 🔍
               </h2>
-              <p className="text-lg md:text-xl text-slate-800 dark:text-emerald-100 font-outfit">Can't find a specific note, task, or document? Memozy's powerful natural language search helps you find anything instantly. Just ask, and Memozy will find it for you.</p>
+              <p className="text-lg md:text-xl text-slate-800 dark:text-emerald-100 font-outfit">Can&apos;t find a specific note, task, or document? Memozy&apos;s powerful natural language search helps you find anything instantly. Just ask, and Memozy will find it for you.</p>
             </motion.div>
 
             {/* Example */}

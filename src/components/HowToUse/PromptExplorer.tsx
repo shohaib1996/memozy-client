@@ -107,7 +107,7 @@ export default function PromptExplorer() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-800 to-pink-800 dark:from-purple-500 dark:to-pink-500 bg-clip-text text-transparent font-outfit">
                 Prompt Explorer
               </h2>
-              <p className="text-lg md:text-xl text-slate-800 dark:text-pink-100 font-outfit">Unlock your creativity and explore new ideas with Memozy's Prompt Explorer. Get inspired with a universe of prompts for writing, self-reflection, and more.</p>
+              <p className="text-lg md:text-xl text-slate-800 dark:text-pink-100 font-outfit">Unlock your creativity and explore new ideas with Memozy&apos;s Prompt Explorer. Get inspired with a universe of prompts for writing, self-reflection, and more.</p>
             </motion.div>
 
             {/* Example */}

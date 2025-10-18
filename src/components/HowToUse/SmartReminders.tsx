@@ -106,7 +106,7 @@ export default function SmartReminders() {
               <h2 className="py-2 text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-violet-800 to-blue-800 dark:from-violet-500 dark:to-blue-500 bg-clip-text text-transparent font-outfit">
                 Set Smart Reminders & Never Forget Tasks
               </h2>
-              <p className="text-lg md:text-xl text-slate-800 dark:text-blue-100 font-outfit">Never forget important tasks or events again. Memozy's smart reminders help you stay organized and on track. Set reminders for appointments, deadlines, and other important moments with ease.</p>
+              <p className="text-lg md:text-xl text-slate-800 dark:text-blue-100 font-outfit">Never forget important tasks or events again. Memozy&apos;s smart reminders help you stay organized and on track. Set reminders for appointments, deadlines, and other important moments with ease.</p>
             </motion.div>
 
             {/* Example */}
