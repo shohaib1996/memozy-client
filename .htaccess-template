@@ -4,3 +4,10 @@ RewriteEngine On
 # --- Force non-www (redirect to https://memozy.ai) ---
 RewriteCond %{HTTP_HOST} ^www\.memozy\.ai [NC]
 RewriteRule ^(.*)$ https://memozy.ai/$1 [L,R=301]
+
+RewriteRule ^download_app\.html$ /? [R=301,L]
+# RewriteRule ^download-app\.html$ /? [R=301,L]
+
+# Redirect image requests to not_found.png
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^for4_llm_img/.*\.(jpg|jpeg|png|gif|webp|bmp)\.?$ /not_found.png [L]
