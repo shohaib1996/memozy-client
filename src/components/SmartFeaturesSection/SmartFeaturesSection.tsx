@@ -99,7 +99,7 @@ export function SmartFeaturesSection() {
         />
       </Head>
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-violet-500/30 via-blue-400/60 to-emerald-500/50 dark:from-violet-600/30 dark:via-blue-500/50 dark:to-emerald-600/40 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-violet-400/30 via-blue-400/30 to-emerald-500/30 dark:from-violet-600/30 dark:via-blue-500/50 dark:to-emerald-600/40 -z-10" />
 
       <div className="container mx-auto">
         <SmartFeaturesSectionClient features={features} />

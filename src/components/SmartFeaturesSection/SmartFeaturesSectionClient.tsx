@@ -176,7 +176,7 @@ function FeatureBlock({ feature, index }: { feature: any; index: number }) {
                     {subFeature.description}
                   </p>
                 </div>
-                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-5 h-5 text-green-700 dark:text-green-400 flex-shrink-0 mt-1" />
               </motion.div>
             );
           })}
