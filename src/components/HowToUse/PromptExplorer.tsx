@@ -40,7 +40,7 @@ export default function PromptExplorer() {
   };
 
   return (
-    <div className="relative w-full bg-gradient-to-tr from-violet-700/30 via-blue-500/40 to-pink-400/40 overflow-hidden py-12 md:py-20">
+    <div className="relative w-full bg-gradient-to-tr from-violet-300/50 via-blue-300/20 to-pink-300/20 dark:from-violet-700/30 dark:via-blue-500/40 dark:to-pink-400/40 overflow-hidden py-12 md:py-20">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={containerRef}

@@ -39,7 +39,7 @@ export function NoteTaking() {
   return (
     <div className="relative w-full overflow-hidden font-outfit">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-violet-300 to-purple-400 dark:from-blue-600/30 dark:via-violet-600/30 dark:to-purple-600/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-300/70 via-violet-300/20 to-purple-300/40 dark:from-blue-600/30 dark:via-violet-600/30 dark:to-purple-600/30" />
 
       {/* Animated Background Elements */}
       {/* {!isMobile && (

@@ -39,7 +39,7 @@ export default function SmartReminders() {
   };
 
   return (
-    <div className="relative w-full bg-gradient-to-bl from-violet-300 via-blue-300 to-emerald-200 dark:from-violet-900/70 dark:via-blue-900/70 dark:to-emerald-900/70 overflow-hidden py-12 md:py-20">
+    <div className="relative w-full bg-gradient-to-bl from-violet-300/70 via-blue-300/20 to-emerald-200/30 dark:from-violet-900/70 dark:via-blue-900/70 dark:to-emerald-900/70 overflow-hidden py-12 md:py-20">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={containerRef}
