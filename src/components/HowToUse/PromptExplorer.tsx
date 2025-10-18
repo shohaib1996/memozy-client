@@ -71,7 +71,7 @@ export default function PromptExplorer() {
                     className="w-full h-full object-cover"
                   >
                     <source
-                      src="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760705682/Purple_Gradient_Coming_Soon_Mobile_Video_5_qiadh3.webm"
+                      src="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760786029/Purple_Gradient_Coming_Soon_Mobile_Video_9_w2tkgo.webm"
                       type="video/webm"
                     />
                   </video>

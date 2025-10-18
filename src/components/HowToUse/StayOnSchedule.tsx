@@ -157,7 +157,7 @@ export default function StayOnSchedule() {
                     loop
                     playsInline
                     className="w-full h-full object-cover"
-                    src="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760681868/Purple_Gradient_Coming_Soon_Mobile_Video_2_jgkta7.webm"
+                    src="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760777484/Purple_Gradient_Coming_Soon_Mobile_Video_7_hsg6yj.webm"
                   />
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"

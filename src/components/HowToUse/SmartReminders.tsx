@@ -70,7 +70,7 @@ export default function SmartReminders() {
                     className="w-full h-full object-cover"
                   >
                     <source
-                      src="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760674429/Purple_Gradient_Coming_Soon_Mobile_Video_1_t8ilgu.webm"
+                      src="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760776181/Purple_Gradient_Coming_Soon_Mobile_Video_6_wqwhmg.webm"
                       type="video/webm"
                     />
                   </video>
