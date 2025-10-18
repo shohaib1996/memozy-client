@@ -1,0 +1,6 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# --- Force non-www (redirect to https://memozy.ai) ---
+RewriteCond %{HTTP_HOST} ^www\.memozy\.ai [NC]
+RewriteRule ^(.*)$ https://memozy.ai/$1 [L,R=301]
