@@ -39,7 +39,7 @@ export default function SmartReminders() {
   };
 
   return (
-    <div className="relative w-full bg-gradient-to-bl from-violet-300/70 via-blue-300/20 to-emerald-200/30 dark:from-violet-900/70 dark:via-blue-900/70 dark:to-emerald-900/70 overflow-hidden py-12 md:py-20">
+    <div id="smart-reminders" className="relative w-full bg-gradient-to-bl from-violet-300/70 via-blue-300/20 to-emerald-200/30 dark:from-violet-900/70 dark:via-blue-900/70 dark:to-emerald-900/70 overflow-hidden py-12 md:py-20">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={containerRef}
@@ -106,10 +106,7 @@ export default function SmartReminders() {
               <h2 className="py-2 text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-violet-800 to-blue-800 dark:from-violet-500 dark:to-blue-500 bg-clip-text text-transparent font-outfit">
                 Set Smart Reminders & Never Forget Tasks
               </h2>
-              <p className="text-lg md:text-xl text-slate-800 dark:text-blue-100 font-outfit">
-                Memozy helps you set reminders effortlessly, so you never miss
-                important moments.
-              </p>
+              <p className="text-lg md:text-xl text-slate-800 dark:text-blue-100 font-outfit">Never forget important tasks or events again. Memozy's smart reminders help you stay organized and on track. Set reminders for appointments, deadlines, and other important moments with ease.</p>
             </motion.div>
 
             {/* Example */}

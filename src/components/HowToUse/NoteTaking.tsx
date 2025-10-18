@@ -37,7 +37,7 @@ export function NoteTaking() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden font-outfit">
+    <div id="note-taking" className="relative w-full overflow-hidden font-outfit">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-300/70 via-violet-300/20 to-purple-300/40 dark:from-blue-600/30 dark:via-violet-600/30 dark:to-purple-600/30" />
 
@@ -78,9 +78,7 @@ export function NoteTaking() {
                 Capture Ideas & Notes Instantly
               </h2>
 
-              <p className="text-lg md:text-xl">
-                With Memozy, you can save notes anytime using voice or text.
-              </p>
+              <p className="text-lg md:text-xl">Memozy makes it easy to capture your thoughts and ideas on the go. Save notes, memos, and other important information anytime, anywhere, using voice or text.</p>
             </motion.div>
 
             <motion.div

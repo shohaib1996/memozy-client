@@ -39,7 +39,7 @@ export default function TrackPersonalInfo() {
   };
 
   return (
-    <div className="relative w-full bg-gradient-to-tr from-violet-300/50 via-emerald-300/15 to-pink-300/30 dark:from-violet-600/30 dark:via-emerald-600/30 dark:to-pink-600/30 overflow-hidden py-12 md:py-20">
+    <div id="track-personal-info" className="relative w-full bg-gradient-to-tr from-violet-300/50 via-emerald-300/15 to-pink-300/30 dark:from-violet-600/30 dark:via-emerald-600/30 dark:to-pink-600/30 overflow-hidden py-12 md:py-20">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={containerRef}
@@ -106,9 +106,7 @@ export default function TrackPersonalInfo() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-violet-800 to-blue-800 dark:from-violet-500 dark:to-blue-500 bg-clip-text text-transparent font-outfit">
                 Track Personal Information 👨‍👩‍👦
               </h2>
-              <p className="text-lg md:text-xl text-slate-800 dark:text-emerald-100 font-outfit">
-                Store birthdays, preferences, and important personal details.
-              </p>
+              <p className="text-lg md:text-xl text-slate-800 dark:text-emerald-100 font-outfit">Keep track of important personal information for yourself and your contacts. Store birthdays, anniversaries, gift ideas, and other personal details in one secure place.</p>
             </motion.div>
 
             {/* Example */}

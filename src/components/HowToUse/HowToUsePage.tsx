@@ -18,6 +18,7 @@ import StayOnSchedule from "./StayOnSchedule";
 import TrackPersonalInfo from "./TrackPersonalInfo";
 import FindAnything from "./FindAnything";
 import PromptExplorer from "./PromptExplorer";
+import Script from "next/script";
 
 export const HowToUsePage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -57,8 +58,59 @@ export const HowToUsePage = () => {
     },
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to use Memozy",
+    description:
+      "Learn how to use Memozy to capture ideas, set reminders, manage your schedule, and much more.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Capture Ideas & Notes Instantly",
+        text: "With Memozy, you can save notes anytime using voice or text. For example, say 'Memozy, save a note: Brainstorm ideas for my next project.'",
+        url: "https://www.memozy.ai/how-to-use-memozy.html#note-taking",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Set Smart Reminders & Never Forget Tasks",
+        text: "Memozy helps you set reminders effortlessly, so you never miss important moments. For example, say 'Remind me tomorrow at 10 AM to call Mr. Smith.'",
+        url: "https://www.memozy.ai/how-to-use-memozy.html#smart-reminders",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Stay on Top of Your Schedule",
+        text: "View and manage appointments with ease. Never miss an important meeting or event again. For example, ask 'What appointments do I have this week?'",
+        url: "https://www.memozy.ai/how-to-use-memozy.html#stay-on-schedule",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Track Personal Information",
+        text: "Store birthdays, preferences, and important personal details. For example, say 'Memozy, save my mom's birthday on June 15th.'",
+        url: "https://www.memozy.ai/how-to-use-memozy.html#track-personal-info",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Find Anything Instantly",
+        text: "Need to find a note or task? Just ask! For example, say 'Show me my notes about marketing.'",
+        url: "https://www.memozy.ai/how-to-use-memozy.html#find-anything",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Prompt Explorer",
+        text: "Unlock your creativity with a universe of prompts. For example, say 'Give me a tarot reading for my current situation.'",
+        url: "https://www.memozy.ai/how-to-use-memozy.html#prompt-explorer",
+      },
+    ],
+  };
+
   return (
-    <div>
+    <main>
+      <Script
+        id="howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <div className="relative w-full h-[70vh] md:h-[85vh] lg:h-[90vh] overflow-hidden font-outfit">
         {/* Video Background */}
         <video
@@ -119,7 +171,7 @@ export const HowToUsePage = () => {
                     size="lg"
                     className="relative cursor-pointer overflow-visible text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300"
                   >
-                    <Image src={qrCode} alt="Qr Code" width={24} height={24} />{" "}
+                    <Image src={qrCode} alt="QR code to download the Memozy app" width={24} height={24} />{" "}
                     Get The App
                     <BorderBeam borderWidth={2} />
                     {/* Floating Free Badge at Top-Right Corner */}
@@ -205,6 +257,6 @@ export const HowToUsePage = () => {
       <TrackPersonalInfo/>
       <FindAnything/>
       <PromptExplorer/>
-    </div>
+    </main>
   );
 };

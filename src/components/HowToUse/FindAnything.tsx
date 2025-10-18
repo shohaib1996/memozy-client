@@ -39,7 +39,7 @@ export default function FindAnything() {
   };
 
   return (
-    <div className="relative w-full bg-gradient-to-br from-violet-400/40 via-blue-300/20 to-purple-300/20 dark:from-violet-600/30 dark:via-blue-600/50 dark:to-purple-700/30 overflow-hidden py-12 md:py-20">
+    <div id="find-anything" className="relative w-full bg-gradient-to-br from-violet-400/40 via-blue-300/20 to-purple-300/20 dark:from-violet-600/30 dark:via-blue-600/50 dark:to-purple-700/30 overflow-hidden py-12 md:py-20">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={containerRef}
@@ -65,9 +65,7 @@ export default function FindAnything() {
               <h2 className="py-2 text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-800  to-violet-800 dark:from-blue-500 dark:to-violet-500 bg-clip-text text-transparent font-outfit">
                 Find Anything Instantly 🔍
               </h2>
-              <p className="text-lg md:text-xl text-slate-800 dark:text-emerald-100 font-outfit">
-                Need to find a note or task? Just ask!
-              </p>
+              <p className="text-lg md:text-xl text-slate-800 dark:text-emerald-100 font-outfit">Can't find a specific note, task, or document? Memozy's powerful natural language search helps you find anything instantly. Just ask, and Memozy will find it for you.</p>
             </motion.div>
 
             {/* Example */}
