@@ -2,20 +2,18 @@
 
 import { useEffect, useState } from "react";
 import { easeOut, motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
 import Lottie from "lottie-react";
 import brain from "../../../../public/Brain.json";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import Link from "next/link";
-import Image from "next/image";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { usePlatform } from "@/hooks/usePlatform";
 import { VideoModal } from "../HowToUse/VideoModal";
+import { Play } from "lucide-react";
 
 export default function OverloadedMind() {
   const [isMobile, setIsMobile] = useState(false);
-  const platform = usePlatform();
   const [showVideoModal, setShowVideoModal] = useState(false);
 
   useEffect(() => {
@@ -83,10 +81,10 @@ export default function OverloadedMind() {
 
             <motion.div className="space-y-4" variants={itemVariants}>
               <p className="text-base md:text-lg text-slate-700 dark:text-slate-200 font-outfit leading-relaxed">
-                Your brain wasn't built to remember everything.
+                Your brain wasn&apos;t built to remember everything.
               </p>
               <p className="text-base md:text-lg text-slate-700 dark:text-slate-200 font-outfit leading-relaxed">
-                In today's world, we're constantly juggling tasks, ideas,
+                In today&apos;s world, we&apos;re constantly juggling tasks, ideas,
                 meetings, and reminders. Your mind gets cluttered. Important
                 thoughts slip away. Deadlines get missed.
               </p>

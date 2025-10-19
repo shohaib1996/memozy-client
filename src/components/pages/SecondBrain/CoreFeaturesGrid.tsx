@@ -1,18 +1,11 @@
 "use client";
 
+import React from "react";
 import { easeOut, motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import { useState, useEffect } from "react";
 
-import {
-  BookOpen,
-  Clock,
-  Zap,
-  Calendar,
-  Sparkles,
-  Bot,
-  Lightbulb,
-  Layers,
-} from "lucide-react";
+import { BookOpen, Clock, Zap, Sparkles, Bot, Lightbulb } from "lucide-react";
 
 export const features = [
   {
@@ -67,6 +60,17 @@ export const features = [
 
 export default function CoreFeaturesGrid() {
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % features.length);
+    }, 3000); // Auto-advance every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isMobile]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -97,11 +101,63 @@ export default function CoreFeaturesGrid() {
         },
   };
 
+  interface Feature {
+    icon: (props?: any) => any;
+    title: string;
+    description: string;
+    gradient: string;
+    borderGradient: string;
+  }
+
+  const renderFeatureCard = (
+    feature: Feature,
+    index: number
+  ): React.ReactElement => {
+    const Icon = feature.icon;
+    return (
+      <motion.div
+        key={index}
+        variants={itemVariants}
+        whileHover={isMobile ? {} : "hover"}
+        className="group relative cursor-pointer flex-shrink-0 w-full"
+      >
+        {/* Card background with gradient border */}
+        <div
+          className={`absolute inset-0 bg-gradient-to-r ${feature.borderGradient} rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl cursor-pointer`}
+        />
+
+        {/* Card content */}
+        <motion.div
+          variants={cardVariants}
+          className={`relative bg-gradient-to-br ${feature.gradient} backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full flex flex-col transition-all duration-300`}
+        >
+          {/* Icon container */}
+          <div className="mb-6 inline-flex">
+            <div
+              className={`bg-gradient-to-br ${feature.borderGradient} p-3 rounded-xl`}
+            >
+              <Icon className="w-6 h-6 text-white" />
+            </div>
+          </div>
+
+          {/* Title */}
+          <h3 className="text-xl font-bold font-outfit text-foreground mb-3">
+            {feature.title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-muted-foreground font-outfit text-sm leading-relaxed flex-grow">
+            {feature.description}
+          </p>
+        </motion.div>
+      </motion.div>
+    );
+  };
+
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50 dark:from-violet-500/30 dark:via-blue-500/30 dark:to-pink-500/20 pointer-events-none" />
-
       <div className="relative container px-3 lg:px-5 mx-auto">
         {/* Section header */}
         <motion.div
@@ -114,61 +170,55 @@ export default function CoreFeaturesGrid() {
           <h2 className="text-4xl sm:text-5xl font-bold font-outfit bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
             Core Features
           </h2>
-
           <p className="text-lg text-muted-foreground font-outfit max-w-2xl mx-auto">
             Everything you need to organize your mind and boost productivity
           </p>
         </motion.div>
 
-        {/* Features grid */}
+        {/* Features display: Slider on mobile, Grid on larger screens */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className={
+            isMobile
+              ? "w-full"
+              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          }
         >
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={isMobile ? {} : "hover"}
-                className="group relative cursor-pointer"
-              >
-                {/* Card background with gradient border */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-r ${feature.borderGradient} rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl cursor-pointer`}
-                />
-
-                {/* Card content */}
+          {isMobile ? (
+            <>
+              {/* Slider container */}
+              <div className="overflow-hidden rounded-lg mb-8">
                 <motion.div
-                  variants={cardVariants}
-                  className={`relative bg-gradient-to-br ${feature.gradient} backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full flex flex-col transition-all duration-300`}
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentIndex * 100}%)`,
+                  }}
                 >
-                  {/* Icon container */}
-                  <div className="mb-6 inline-flex">
-                    <div
-                      className={`bg-gradient-to-br ${feature.borderGradient} p-3 rounded-xl`}
-                    >
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold font-outfit text-foreground mb-3">
-                    {feature.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground font-outfit text-sm leading-relaxed flex-grow">
-                    {feature.description}
-                  </p>
+                  {features.map(renderFeatureCard)}
                 </motion.div>
-              </motion.div>
-            );
-          })}
+              </div>
+
+              {/* Indicator dots */}
+              <div className="flex justify-center space-x-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentIndex
+                        ? "bg-sky-500"
+                        : "bg-gray-300 dark:bg-gray-600"
+                    }`}
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            features.map(renderFeatureCard)
+          )}
         </motion.div>
       </div>
     </section>
