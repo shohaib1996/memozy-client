@@ -2,14 +2,14 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
-import { BorderBeam } from "../ui/border-beam";
+import { Button } from "../../ui/button";
+import { BorderBeam } from "../../ui/border-beam";
 import { Play, ChevronDown } from "lucide-react";
 import { usePlatform } from "@/hooks/usePlatform";
 import Image from "next/image";
-import { ReusableDialog } from "../ui/reusable-dialog";
-import qrCode from "../../../public/qr-code.png";
-import { ShinyButton } from "../ui/shiny-button";
+import { ReusableDialog } from "../../ui/reusable-dialog";
+import qrCode from "../../../../public/qr-code.png";
+import { ShinyButton } from "../../ui/shiny-button";
 import Link from "next/link";
 import { VideoModal } from "./VideoModal"; // Adjust the import path as needed
 import { NoteTaking } from "./NoteTaking";

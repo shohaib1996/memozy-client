@@ -6,10 +6,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import Image from "next/image";
-import { BorderBeam } from "../ui/border-beam";
-import { ShinyButton } from "../ui/shiny-button";
-import playStore from "../../../public/play-store.png";
-import appStore from "../../../public/app-store.png";
+import { BorderBeam } from "../../ui/border-beam";
+import { ShinyButton } from "../../ui/shiny-button";
+import playStore from "../../../../public/play-store.png";
+import appStore from "../../../../public/app-store.png";
 
 export const WhyUseMemozy = () => {
   const [isMobile, setIsMobile] = useState(false);
