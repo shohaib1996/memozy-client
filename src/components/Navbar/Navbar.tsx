@@ -41,6 +41,19 @@ export function Navbar() {
                     </Link>
                   </li>
                   <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/memozy-second-brain.html";
+                      }}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Second Brain
+                    </a>
+                  </li>
+
+                  <li>
                     <Link
                       target="_blank"
                       rel="noopener noreferrer"
@@ -88,15 +101,18 @@ export function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="/memozy-second-brain.html"
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = "/memozy-second-brain.html";
+                  }}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Second Brain
-                </Link>
+                </a>
               </li>
+
               <li>
                 <Link
                   target="_blank"
