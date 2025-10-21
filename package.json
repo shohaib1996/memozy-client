@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack && npm run copy-htaccess",
-    "start": "next start",
+    "dev": "node init && next dev --turbopack",
+    "build": "node init && next build --turbopack && npm run copy-htaccess",
+    "start": "node init && next start",
     "lint": "eslint",
     "copy-htaccess": "cp .htaccess-template out/.htaccess"
   },
