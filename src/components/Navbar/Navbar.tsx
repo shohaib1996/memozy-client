@@ -91,22 +91,22 @@ export function Navbar() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
+                  href="/memozy-second-brain.html"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Second Brain
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://app.memozy.ai/?_gl=1*p17y2l*_gcl_au*MjAxMDA4MTc1My4xNzYwMDcyOTQ4*_ga*MTIwODMwOTMzNC4xNzYwMDcyOTQ4*_ga_EJ2RK3CM1T*czE3NjAxMjE2NDckbzgkZzEkdDE3NjAxMjE2NzQkajMzJGwwJGgw#/login"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Web App
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://versusly.ai/"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Versusly AI
-                </Link>
-              </li> */}
             </ul>
           </div>
 

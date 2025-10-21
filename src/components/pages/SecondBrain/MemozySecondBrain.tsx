@@ -123,7 +123,7 @@ export const MemozySecondBrainPage = () => {
               size="lg"
               className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
             >
-              <Image src={playStore} alt="Play Store" width={24} height={24} />
+              <Image src={playStore} alt="Get it on Google Play" width={24} height={24} />
               Play Store
               <BorderBeam borderWidth={2} isMobile={isMobile} />
             </Button>
@@ -137,7 +137,7 @@ export const MemozySecondBrainPage = () => {
               size="lg"
               className="relative overflow-hidden text-sm md:text-sm lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300 cursor-pointer uppercase font-outfit"
             >
-              <Image src={appStore} alt="App Store" width={24} height={24} />
+              <Image src={appStore} alt="Download on the App Store" width={24} height={24} />
               App Store
               <BorderBeam borderWidth={2} isMobile={isMobile} />
             </Button>

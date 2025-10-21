@@ -12,13 +12,17 @@ import qrCode from "../../../../public/qr-code.png";
 import { ShinyButton } from "../../ui/shiny-button";
 import Link from "next/link";
 import { VideoModal } from "./VideoModal"; // Adjust the import path as needed
-import { NoteTaking } from "./NoteTaking";
-import SmartReminders from "./SmartReminders";
-import StayOnSchedule from "./StayOnSchedule";
-import TrackPersonalInfo from "./TrackPersonalInfo";
-import FindAnything from "./FindAnything";
-import PromptExplorer from "./PromptExplorer";
+import dynamic from "next/dynamic";
 import Script from "next/script";
+
+const NoteTaking = dynamic(() =>
+  import("./NoteTaking").then((mod) => mod.NoteTaking)
+);
+const SmartReminders = dynamic(() => import("./SmartReminders"));
+const StayOnSchedule = dynamic(() => import("./StayOnSchedule"));
+const TrackPersonalInfo = dynamic(() => import("./TrackPersonalInfo"));
+const FindAnything = dynamic(() => import("./FindAnything"));
+const PromptExplorer = dynamic(() => import("./PromptExplorer"));
 
 export const HowToUsePage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -146,7 +150,7 @@ export const HowToUsePage = () => {
           </motion.div>
 
           <motion.div
-            className="mt-2 sm:mt-3 md:mt-5 mb-6 sm:mb-8 md:mb-7 w-full px-2"
+            className="mt-2 sm:mt-3 md:mt-5 mb-6 sm:mb-8 md:mb-7 max-w-5xl px-2"
             variants={itemVariants}
           >
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center text-white/95 drop-shadow-md text-balance font-light leading-relaxed">
@@ -254,7 +258,7 @@ export const HowToUsePage = () => {
               >
                 ×
               </button>
-              <VideoModal videoUrl="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760611102/Fashion_Promo_Instagram_Reel_in_Minimal_Style_hvmy7t.webm" />
+              <VideoModal videoUrl="https://res.cloudinary.com/dsn66l0iv/video/upload/v1761052499/Fashion_Promo_Instagram_Reel_in_Minimal_Style_xddxw3.webm" />
             </div>
           </div>
         )}

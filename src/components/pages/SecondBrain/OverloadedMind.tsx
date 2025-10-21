@@ -8,7 +8,6 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import Link from "next/link";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
-import { usePlatform } from "@/hooks/usePlatform";
 import { VideoModal } from "../HowToUse/VideoModal";
 import { Play } from "lucide-react";
 
@@ -136,9 +135,10 @@ export default function OverloadedMind() {
       </div>
       {/* Video Modal */}
       {showVideoModal && (
-        <div
+        <section
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
           onClick={() => setShowVideoModal(false)}
+          aria-label="Video player modal"
         >
           <div
             className="relative max-w-md w-full mx-4"
@@ -146,13 +146,13 @@ export default function OverloadedMind() {
           >
             <button
               onClick={() => setShowVideoModal(false)}
-              className="absolute -top-6 -right-3 text-white text-xl font-bold z-10 bg-red-500/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-500/70 transition-colors"
+              className="absolute -top-6 -right-3 text-white text-xl font-bold z-10 bg-red-500/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-500/70 transition-colors cursor-pointer"
             >
               ×
             </button>
-            <VideoModal videoUrl="https://res.cloudinary.com/dsn66l0iv/video/upload/v1760611102/Fashion_Promo_Instagram_Reel_in_Minimal_Style_hvmy7t.webm" />
+            <VideoModal videoUrl="https://res.cloudinary.com/dsn66l0iv/video/upload/v1761052499/Fashion_Promo_Instagram_Reel_in_Minimal_Style_xddxw3.webm" />
           </div>
-        </div>
+        </section>
       )}
     </section>
   );

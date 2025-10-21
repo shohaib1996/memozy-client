@@ -90,9 +90,14 @@ export function WhySecondBrainMatters() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl mx-auto"
           >
-            Your brain wasn&apos;t designed to store everything — it was designed to
-            think, create, and connect. Memozy takes the mental load off your
-            mind, giving you space to focus on what truly matters.
+            Your brain wasn&apos;t designed to store everything — it was
+            designed to think, create, and connect. Memozy takes the mental load
+            off your mind, giving you space to focus on what truly matters.
+            Learn how to use Memozy by visiting our{" "}
+            <Link target="_blank" href="/how-to-use-memozy">
+              How to Use Memozy
+            </Link>
+            page.
           </motion.p>
 
           {/* Quote cards grid */}
@@ -121,8 +126,8 @@ export function WhySecondBrainMatters() {
               className="p-6 sm:p-8 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/5 to-violet-500/5 backdrop-blur-sm hover:border-blue-500/40 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-violet-500/10 transition-all duration-300"
             >
               <p className="text-foreground/80 italic text-sm sm:text-base leading-relaxed mb-4">
-                &qout;Externalizing your thoughts reduces mental clutter, improves
-                clarity, and enhances long-term focus.&qout;
+                &qout;Externalizing your thoughts reduces mental clutter,
+                improves clarity, and enhances long-term focus.&qout;
               </p>
               <p className="font-semibold text-foreground">
                 — Tiago Forte, Building a Second Brain
@@ -152,7 +157,7 @@ export function WhySecondBrainMatters() {
                 href="https://fortelabs.com/blog/basboverview/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-lg border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all duration-300 group"
+                className="p-4 rounded-lg border border-violet-500 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all duration-300 group "
               >
                 <p className="font-semibold text-foreground group-hover:text-violet-500 transition-colors">
                   Building a Second Brain
@@ -164,7 +169,7 @@ export function WhySecondBrainMatters() {
                 href="https://hbr.org/2015/12/4-ways-to-become-a-better-learner"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-lg border border-blue-500/20 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all duration-300 group"
+                className="p-4 rounded-lg border border-blue-500 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all duration-300 group"
               >
                 <p className="font-semibold text-foreground group-hover:text-blue-500 transition-colors">
                   4 Ways to Become a Better Learner
@@ -178,7 +183,7 @@ export function WhySecondBrainMatters() {
                 href="https://www.apa.org/topics/stress"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-lg border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all duration-300 group"
+                className="p-4 rounded-lg border border-violet-500 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all duration-300 group"
               >
                 <p className="font-semibold text-foreground group-hover:text-violet-500 transition-colors">
                   Stress Management
@@ -192,7 +197,7 @@ export function WhySecondBrainMatters() {
                 href="https://www.msn.com/en-us/money/smallbusiness/how-wordle-and-other-games-can-improve-your-leadership-skills/ar-AA1p4oOW?ocid=BingNewsVerp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-lg border border-blue-500/20 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all duration-300 group"
+                className="p-4 rounded-lg border border-blue-500 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all duration-300 group"
               >
                 <p className="font-semibold text-foreground group-hover:text-blue-500 transition-colors">
                   7 Benefits of Word Games for Leaders
