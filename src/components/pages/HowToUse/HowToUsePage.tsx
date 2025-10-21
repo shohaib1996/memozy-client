@@ -141,16 +141,19 @@ export const HowToUsePage = () => {
             variants={itemVariants}
           >
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-purple-500 to-blue-400 drop-shadow-lg mb-2 sm:mb-4 md:mb-6 text-balance leading-tight tracking-tight">
-              Meet Memozy — Your AI Memory & Companion
+              How to Use Memozy
             </h1>
           </motion.div>
 
           <motion.div
-            className="mt-2 sm:mt-3 md:mt-5 mb-6 sm:mb-8 md:mb-10 w-full px-2"
+            className="mt-2 sm:mt-3 md:mt-5 mb-6 sm:mb-8 md:mb-7 w-full px-2"
             variants={itemVariants}
           >
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center text-white/95 drop-shadow-md text-balance font-light leading-relaxed">
-              Capture. Remember. Reflect.
+              Learn how to make the most of Memozy with simple, step-by-step
+              guides. This page shows you how to create reminders, add and
+              organize journals, set up your daily notes, and use Memozy&apos;s
+              features to boost your productivity and mindfulness.
             </p>
           </motion.div>
 
@@ -171,7 +174,12 @@ export const HowToUsePage = () => {
                     size="lg"
                     className="relative cursor-pointer overflow-visible text-sm md:text-sm bg-gradient-to-r from-violet-500 to-blue-500 lg:text-lg px-2 md:px-4 lg:px-5 lg:py-6 font-outfit text-white font-semibold flex items-center gap-2 hover:opacity-90 transition-all duration-300"
                   >
-                    <Image src={qrCode} alt="QR code to download the Memozy app" width={24} height={24} />{" "}
+                    <Image
+                      src={qrCode}
+                      alt="QR code to download the Memozy app"
+                      width={24}
+                      height={24}
+                    />{" "}
                     Get The App
                     <BorderBeam borderWidth={2} />
                     {/* Floating Free Badge at Top-Right Corner */}
@@ -251,12 +259,12 @@ export const HowToUsePage = () => {
           </div>
         )}
       </div>
-      <NoteTaking/>
-      <SmartReminders/>
-      <StayOnSchedule/>
-      <TrackPersonalInfo/>
-      <FindAnything/>
-      <PromptExplorer/>
+      <NoteTaking />
+      <SmartReminders />
+      <StayOnSchedule />
+      <TrackPersonalInfo />
+      <FindAnything />
+      <PromptExplorer />
     </main>
   );
 };

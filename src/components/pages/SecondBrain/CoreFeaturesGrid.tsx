@@ -155,7 +155,7 @@ export default function CoreFeaturesGrid() {
   };
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50 dark:from-violet-500/30 dark:via-blue-500/30 dark:to-pink-500/20 pointer-events-none" />
       <div className="relative container px-3 lg:px-5 mx-auto">

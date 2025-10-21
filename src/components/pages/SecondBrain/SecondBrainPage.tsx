@@ -3,6 +3,8 @@ import React from 'react'
 import OverloadedMind from './OverloadedMind'
 import { MemozySecondBrainPage } from './MemozySecondBrain'
 import CoreFeaturesGrid from './CoreFeaturesGrid'
+import { WhySecondBrainMatters } from './WhySecondBrainMatter'
+import { RoadmapSection } from './RoadmapSection'
 
 const SecondBrainPage = () => {
   return (
@@ -10,6 +12,8 @@ const SecondBrainPage = () => {
       <MemozySecondBrainPage/>
       <OverloadedMind/>
       <CoreFeaturesGrid/>
+      <WhySecondBrainMatters/>
+      <RoadmapSection/>
     </>
   )
 }
