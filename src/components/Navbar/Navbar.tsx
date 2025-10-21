@@ -106,7 +106,7 @@ export function Navbar() {
                 >
                   Web App
                 </Link>
-              </li>so 
+              </li>
             </ul>
           </div>
 
