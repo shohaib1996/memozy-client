@@ -122,7 +122,7 @@ export function HeroSection() {
       ? "bg-gradient-to-b from-blue-400/30 via-blue-700/30 to-violet-400/40"
       : "bg-gradient-to-tl from-blue-400/10 via-blue-700/10 to-violet-400/40 dark:from-blue-400/30 dark:via-blue-700/30 dark:to-violet-400/40 ";
 
-  // Responsive circle sizes
+  // Update responsive circle sizes
   const circleSize = isMobile ? 400 : isTablet ? 450 : 650;
 
   return (
@@ -357,8 +357,8 @@ export function HeroSection() {
                       height={24}
                     />
                     Play Store
-                    <BorderBeam borderWidth={2} isMobile={isMobile} />     
-                  </Button>   
+                    <BorderBeam borderWidth={2} isMobile={isMobile} />
+                  </Button>
                 </Link>
 
                 <Link

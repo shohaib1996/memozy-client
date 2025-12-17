@@ -99,7 +99,7 @@ export function BenefitsSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 via-blue-500/5 to-cyan-500/5 dark:from-violet-500/10 dark:via-blue-500/10 dark:to-cyan-500/10" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Update Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent font-outfit">
             Why People Fall in Love with Memozy

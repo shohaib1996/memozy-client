@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
-import Lottie from 'lottie-react';
-import faqAnimation from '../../../public/FAQ.json';
+} from "@/components/ui/accordion";
+import Lottie from "lottie-react";
+import faqAnimation from "../../../public/FAQ.json";
 
 interface Faq {
   question: string;
@@ -18,7 +18,7 @@ interface Faq {
 export function FaqSectionClient({ faqs }: { faqs: Faq[] }) {
   return (
     <div className="container mx-auto relative z-10">
-      {/* Section header */}
+      {/* Update Section header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export function FaqSectionClient({ faqs }: { faqs: Faq[] }) {
             transition={{
               duration: 4,
               repeat: Number.POSITIVE_INFINITY,
-              ease: 'easeInOut',
+              ease: "easeInOut",
             }}
             className="absolute -top-10 -left-2 md:-left-5 lg:-left-10 w-16 md:w-28 lg:w-36 h-16 md:h-28 lg:h-36 bg-violet-500/20 rounded-full"
           />
@@ -71,7 +71,7 @@ export function FaqSectionClient({ faqs }: { faqs: Faq[] }) {
             transition={{
               duration: 4,
               repeat: Number.POSITIVE_INFINITY,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               delay: 2,
             }}
             className="absolute -bottom-10 -right-2 md:-right-5 lg:-right-10 w-16 md:w-28 lg:w-36 h-16 md:h-28 lg:h-36 bg-blue-500/20 rounded-full"
